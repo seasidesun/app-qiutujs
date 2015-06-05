@@ -1,0 +1,25 @@
+{
+  "name": "app-qtbody",
+  "version": "0.0.0",
+  "authors": [
+    "haibin <sunhaibin@goyoo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "angular": "~1.4.0",
+    "angular-cookies": "~1.4.0",
+    "angular-resource": "",
+    "angular-sanitize": "",
+    "angular-bootstrap": "",
+    "angular-ui-router": "",
+    "lodash": "~3.9.3"
+  }
+}
