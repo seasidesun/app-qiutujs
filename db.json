@@ -1,8 +1,47 @@
 {
-  "comments": [
-    {
-      "body": "some comment",
-      "postId": 1
+    "movement": {
+        "1": {
+          "name": "俯卧撑",
+          "position": 1,
+          "nameEn": "Push Up",
+          "muscleGroup": "",
+          "description": ""
+        },
+        "2": {
+          "name": "深蹲",
+          "position": 2,
+          "nameEn": "squats",
+          "muscleGroup": "",
+          "description": ""
+        },
+        "3": {
+          "name": "引体向上",
+          "position": 3,
+          "nameEn": "Pull Up",
+          "muscleGroup": "",
+          "description": ""
+        },
+        "4": {
+          "name": "举腿",
+          "position": 4,
+          "nameEn": "Leg Raise",
+          "muscleGroup": "",
+          "description": ""
+        },
+        "5": {
+          "name": "桥",
+          "position": 5,
+          "nameEn": "Bridge",
+          "muscleGroup": "",
+          "description": ""
+        },
+        "6": {
+          "name": "倒立撑",
+          "position": 6,
+          "nameEn": "Handstand Push Up",
+          "muscleGroup": "",
+          "description": ""
+        }
     }
-  ]
+
 }
