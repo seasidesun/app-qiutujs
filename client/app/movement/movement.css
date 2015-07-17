@@ -1,0 +1,32 @@
+.movement {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+}
+
+.movement .item {
+    margin-bottom: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 50%;
+    height: 120px;
+    float: left;
+    border-bottom: 1px solid #eee;
+}
+
+/*.item .pic {
+    height: 90%;
+    width: 25%;
+    float: left;
+}*/
+
+.item img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.detail a {
+    text-decoration: none;
+}
