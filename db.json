@@ -42,6 +42,17 @@
           "muscleGroup": "",
           "description": ""
         }
+    },
+    "article": {
+        "1": {
+            "title": "我的健身之道",
+            "author": "five_trees",
+            "imgUrlList": ["http://imgsrc.baidu.com/forum/pic/item/c9fcc3cec3fdfc03623b0a2ed43f8794a5c226e1.jpg"],
+            "commentCount": 0,
+            "star": 0,
+            "unstar": 0,
+            "createAt": "2014-01-01"
+        }
     }
 
 }

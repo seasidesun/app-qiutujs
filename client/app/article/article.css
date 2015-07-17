@@ -1,0 +1,62 @@
+.article {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+}
+
+.item {
+    margin-bottom: 20px;
+    height: 120px;
+    background-color: inherit;
+    border-bottom: 1px solid #eee;
+}
+
+.item .pic {
+    height: 90%;
+    width: 25%;
+    float: left;
+}
+
+.item .pic img {
+    height: 100%;
+    width: 100%;
+}
+
+.item .detail {
+    padding-left: 20px;
+    height: 90%;
+    width: 75%;
+    display: block;
+    float: right;
+}
+
+.detail .title {
+    width: 50%;
+    float: left;
+    margin-bottom: 8px;
+}
+
+.detail .stats {
+    width: 20%;
+    float: right;
+    margin-right: 20px;
+}
+
+.detail a {
+    text-decoration: none;
+}
+
+.item .detail span {
+    margin-top: 10px;
+}
+
+.item .content {
+    height: 35%;
+    float: left;
+    overflow: hidden;
+}
+
+.item .pot {
+    float: left;
+}

@@ -1,5 +1,28 @@
 'use strict';
 
 myApp.controller('articleCtrl', function mainCtrl ($scope, $location) {
-    $scope.title = "success";
+
+    var article = [
+        {
+            "title": "我的健身之道1",
+            "content": "这不是一本教你练出“可爱肌肉”的书，而是一本教你练出能用的力量、极限的力量、生存的力量的书。作者保罗·威德在美国最严酷的监狱中度过了19年，在其中逐渐挖掘出了一套最古老的健身法，在商业社会中早已失传的力量哲学，并凭此成为了地球上最强壮的人之一——这让他得以有尊严地生存下来。出狱之后，他把这套失传的技艺整理并公之于世——这是他带给我们的最珍贵礼物。",
+            "author": "five_trees",
+            "imgUrlList": ["http://life.southmoney.com/jiankang/UploadFiles_5829/201503/20150324171248788.jpg"],
+            "commentCount": 0,
+            "star": 1873,
+            "unstar": 0,
+            "createAt": "2014-01-01"
+        },
+        {
+            "title": "健身",
+            "content": "健身是一种体育项目，如各种徒手健美操、韵律操、形体操以及各种自抗力动作，体操可以增强力量、柔韧性，增加耐力，提高协调，控制身体各部分的能力，从而使身体强健。如果要达到缓解压力的目的，至少一周锻炼3次。",
+            "author": "five_trees",
+            "imgUrlList": ["http://img4.imgtn.bdimg.com/it/u=3428645313,3623140499&fm=21&gp=0.jpg"],
+            "commentCount": 0,
+            "star": 345,
+            "unstar": 0,
+            "createAt": "2014-01-12"
+        }
+    ];
+    $scope.articleList = article;
 });
