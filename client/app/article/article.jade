@@ -1,14 +1,14 @@
 div.article
-  li(ng-repeat="article in articleList").item
-    div.pic
-      img(src="{{article.imgUrlList[0]}}")
-    div.detail
-      div.title
-        a {{article.title}}
-      div.content
-        {{article.content}}
-      div.pot
-        a ......
-      div.stats
-        span.glyphicon.glyphicon-star(aria-hidden="true")
-        a &nbsp;{{article.star}}
+    li(ng-repeat="article in articleList").item
+        div.pic
+            img(src="{{article.imgUrlList[0]}}")
+        div.detail
+            div.title
+                a {{article.title}}
+            div.content
+                {{article.content}}
+            div.pot
+                a ......
+            div.stats
+                span.glyphicon.glyphicon-star(aria-hidden="true")
+                a &nbsp;{{article.star}}

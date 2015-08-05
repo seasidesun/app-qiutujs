@@ -1,3 +1,4 @@
+var config = require('./server/config');
 
 module.exports = function(grunt) {
     // require('jit-grunt')(grunt, {
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
       },
       express: {
         options: {
-          port: process.env.PORT || 3000
+          port: config.PORT
         },
         dev: {
           options: {

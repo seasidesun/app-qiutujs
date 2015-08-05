@@ -1,1 +1,18 @@
-a {{movement}}
+div.movement
+    div.show
+        h4 {{movement.name}} - {{movement.nameEn}}
+        h5 {{movement.slogan}}
+        div.muscle-groupgroup
+            img(src="{{movement.muscleGroupImgList}}")
+        div.description
+            a &nbsp &nbsp {{movement.description}}
+    h4 十式
+    div.steps
+        div.sun-nav
+            ul(class="nav")
+                li(role="presentation",ng-repeat="step in steps")
+                    a(href="") {{step.name}}
+        div.sun-content
+            li(ng-repeat="action in actions")
+                img(src="{{action.img}}")
+                {{action.description}}

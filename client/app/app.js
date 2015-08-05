@@ -21,7 +21,7 @@ var myApp = angular.module('qtbody', ['ui.router'])
           .state('movementList', {
               url: '/movement',
               templateUrl: 'app/movement/movement.html',
-            //   controller: 'movementListCtrl'
+              controller: 'movementListCtrl'
           })
           .state('movementShow', {
               url: '/movement/:id',

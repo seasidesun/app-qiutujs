@@ -12,18 +12,18 @@
     border-bottom: 1px solid #eee;
 }
 
-.item .pic {
+.article .item .pic {
     height: 90%;
     width: 25%;
     float: left;
 }
 
-.item .pic img {
+.article .item .pic img {
     height: 100%;
     width: 100%;
 }
 
-.item .detail {
+.article .item .detail {
     padding-left: 20px;
     height: 90%;
     width: 75%;
@@ -31,33 +31,33 @@
     float: right;
 }
 
-.detail .title {
+.article .item .detail .title {
     width: 50%;
     float: left;
     margin-bottom: 8px;
 }
 
-.detail .stats {
+.article .item .detail .stats {
     width: 25%;
     float: right;
     margin-right: 20px;
 }
 
-.detail a {
+.article .item .detail a {
     text-decoration: none;
 }
 
-.item .detail span {
+.article .item .detail span {
     margin-top: 10px;
 }
 
-.item .content {
+.article .item .content {
     height: 35%;
     float: left;
     overflow: hidden;
 }
 
-.item .pot {
+.article .item .pot {
     float: left;
     margin-top: 6px;
 }

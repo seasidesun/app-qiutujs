@@ -1,6 +1,4 @@
 .top
-  a 囚徒健身
+    a 囚徒健身
 .navigation
-    a.btn.btn-xs.btn-primary.option(href="/home#/article") 个人心得
-    a.btn.btn-xs.btn-primary.option(href="/home#/movement")  六艺十式
-    a.btn.btn-xs.btn-primary.option(href="/home#/training")  训练计划
+    a(class="{{navigation.pos}}",ng-repeat="navigation in navigations",ng-click="selectNav($index)",ng-class="{selected: $index==selectedNow}",href="/home#/{{navigation.href}}").option {{navigation.title}}

@@ -22,8 +22,8 @@ appRouter.get('/home', function (req, res) { res.sendFile(rootPath + '/client/in
 appRouter.get('/ping', function (req, res) { res.send('ok'); });
 server.use('/', appRouter);
 
-//favicon
-server.use(favicon(rootPath + '/favicon.ico'));
+// favicon
+// server.use(favicon(rootPath + '/favicon.ico'));
 
 // public dir
 server.use(express.static(path.join(rootPath, 'client')));
