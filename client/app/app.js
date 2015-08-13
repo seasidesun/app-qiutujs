@@ -28,4 +28,9 @@ var myApp = angular.module('qtbody', ['ui.router'])
               templateUrl: 'app/movement/movement_show.html',
               controller: 'movementShowCtrl'
           })
+          .state('setp', {
+              url: '/movement/:mId/step/:sId',
+              templateUrl: 'app/step/step.html',
+              controller: 'stepCtrl'
+          })
     });

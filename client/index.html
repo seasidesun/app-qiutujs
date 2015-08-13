@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="app/main/main.css">
     <link rel="stylesheet" href="app/article/article.css">
     <link rel="stylesheet" href="app/movement/movement.css">
+    <link rel="stylesheet" href="app/step/step.css">
     <!-- endinjector -->
 
     <!-- injector:js -->
@@ -41,14 +42,17 @@
     <script src="app/main/main.controller.js"></script>
     <script src="app/article/article.controller.js"></script>
     <script src="app/movement/movement.controller.js"></script>
+    <script src="app/step/step.controller.js"></script>
     <!-- endinjector -->
 
 </head>
 
 <body>
+    <div class="home center-block">
     <!-- Add your site or application content here -->
     <div ng-controller='mainCtrl' ng-include="'app/main/top.html'"></div>
     <div ui-view></div>
+    </div>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 .movement {
     margin-top: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
     list-style: none;
 }
 
@@ -23,26 +23,24 @@
 
 
 /* show */
-.show {
+.movement .show {
     height: auto;
     background-color: #eee;
     padding-top: 2px;
     margin-bottom: 20px;
 }
 
-h4 {
+.movement .show h4,
+.movement .show h5 {
     text-align: center;
 }
 
-.show h5 {
-    text-align: center;
-}
 
-.show .muscle-groupgroup {
+.movement .show .muscle-groupgroup {
     /*height: 200px;*/
 }
 
-.show .muscle-groupgroup img {
+.movement .show .muscle-groupgroup img {
     margin: 0 5% 10px 5%;
     width: 90%;
 }
@@ -52,55 +50,86 @@ h4 {
     padding-right: 2%;
 }
 
-.show a {
+.movement .show a {
     text-decoration: none;
 }
 
 
-/* steps */
-.steps {
-    /*width: 100%;*/
-    height: 800px;
-    /*padding-right: 5%;*/
-    /*margin-top: -10px;*/
+.movement .steps {
+    width: 100%;
+    height: 100px;
+    color: #FFFFFF;
+    background: #787D7B;
+    margin-bottom: 10px;
 }
 
-.steps .sun-nav {
-    width: 75px;
+.movement .steps a {
+    color: #FFFFFF;
+}
+
+.movement .steps .link {
+    width: 100%;
+    height: 100%;
+}
+
+.movement .steps .title {
+    height: 30px;
+    margin-top: -6px;
+}
+
+.movement .steps .title h4 {
+    margin-left: 10px;
+    line-height: 30px;
+}
+
+.movement .steps .level {
+    height: auto;
+    margin-top: 5px;
+    margin-left: 30px;
+    font-size: smaller;
+}
+
+.movement .steps .level li {
+    list-style: initial;
+}
+
+.movement .steps .left {
     float: left;
-    margin-left: -10px;
+    height: 100%;
 }
 
-.steps .sun-content {
-    /*width: 100%;*/
-    margin-top: 10px;
-    margin-left: 70px;
-    background-color: #eee;
+.movement .steps .right {
+    height: 100%;
+    width: 100px;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
 }
 
-.steps .sun-content li {
-    margin-bottom: 20px;
-}
-
-.steps .sun-content li img {
-    width: 100%
+.movement .steps .right img {
+    width: 100%;
+    height: 100%;
 }
 
 
-/* sstep */
+
+
+
+/* ssteps */
 /*
-.sstep {
+.ssteps {
     margin-top: 10px;
 }
 
-.sstep .syuan {
+.ssteps .syuan {
     position: relative;
     width: 20px;
     height: 20px;
     float: left;
 }
 
-.sstep .syuan::before {
+.ssteps .syuan::before {
     position: absolute;
     top: 50%;
     left: -20px;
@@ -110,7 +139,7 @@ h4 {
     content: '';
 }
 
-.sstep .syuan::after {
+.ssteps .syuan::after {
     position: absolute;
     top: 50%;
     left: 100%;
@@ -121,6 +150,6 @@ h4 {
 }
 
 
-.sstep .syuan a {
+.ssteps .syuan a {
     margin-top: -2px;
 }*/

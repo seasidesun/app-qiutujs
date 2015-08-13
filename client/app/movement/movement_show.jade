@@ -6,13 +6,13 @@ div.movement
             img(src="{{movement.muscleGroupImgList}}")
         div.description
             a &nbsp &nbsp {{movement.description}}
-    h4 十式
-    div.steps
-        div.sun-nav
-            ul(class="nav")
-                li(role="presentation",ng-repeat="step in steps")
-                    a(href="") {{step.name}}
-        div.sun-content
-            li(ng-repeat="action in actions")
-                img(src="{{action.img}}")
-                {{action.description}}
+        div.steps(ng-repeat="step in steps")
+            a(href="/home#/movement/{{movement.position}}/step/{{step.position}}")
+                div.link
+                    div.left
+                        div.title
+                            h4 {{step.name}}
+                        div.level
+                            li(ng-repeat="level in step.level") {{level}}
+                    div.right
+                        img(src="app/movement/112.jpg")
