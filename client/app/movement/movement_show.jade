@@ -11,8 +11,8 @@ div.movement
                 div.link
                     div.left
                         div.title
-                            h4 {{step.name}}
+                            h4 {{step.title}}
                         div.level
-                            li(ng-repeat="level in step.level") {{level}}
+                            li(ng-repeat="level in step.level") {{level.title + "："}} {{level.group}} X {{level.count}}
                     div.right
                         img(src="app/movement/112.jpg")
