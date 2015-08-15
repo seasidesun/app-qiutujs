@@ -5,7 +5,7 @@
     list-style: none;
 }
 
-.movement .item {
+/*.movement .item {
     width: 100%;
     float: left;
     height: 130px;
@@ -19,8 +19,64 @@
 .movement .item img {
     height: 100%;
     width: 100%;
+}*/
+
+/* list */
+.movement .list {
+
 }
 
+.movement .list .item {
+    width: 100%;
+    height: 100px;
+    color: #FFFFFF;
+    background: #787D7B;
+    margin-bottom: 10px;
+    /*border-bottom: 1px solid #eee*/
+}
+
+.movement .list .item a {
+    color: #FFFFFF;
+}
+
+.movement .list .item .link {
+    width: 100%;
+    height: 100%;
+}
+
+.movement .list .item .link::after {
+    content: "";
+    border-bottom: 1px solid #fff;
+}
+
+.movement .list .item .left {
+    height: 100%;
+    width: 100px;
+    float: left;
+    padding: 5px 0px 5px 5px;
+}
+
+.movement .list .item .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.movement .list .item .right {
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    height: 100%;
+}
+
+.movement .list .item .right .title {
+    height: 30px;
+    margin-top: -6px;
+}
+
+.movement .list .item .right .title h4 {
+    /*margin-left: 10px;*/
+    line-height: 30px;
+}
 
 /* show */
 .movement .show {
@@ -45,7 +101,7 @@
     width: 90%;
 }
 
-.show .description {
+.movement .show .description {
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -55,7 +111,7 @@
 }
 
 
-.movement .steps {
+.movement .show .steps {
     width: 100%;
     height: 100px;
     color: #FFFFFF;
@@ -63,42 +119,42 @@
     margin-bottom: 10px;
 }
 
-.movement .steps a {
+.movement .show .steps a {
     color: #FFFFFF;
 }
 
-.movement .steps .link {
+.movement .show .steps .link {
     width: 100%;
     height: 100%;
 }
 
-.movement .steps .title {
+.movement .show .steps .left {
+    float: left;
+    height: 100%;
+}
+
+.movement .show .steps .title {
     height: 30px;
     margin-top: -6px;
 }
 
-.movement .steps .title h4 {
+.movement .show .steps .title h4 {
     margin-left: 10px;
     line-height: 30px;
 }
 
-.movement .steps .level {
+.movement .show .steps .level {
     height: auto;
     margin-top: 5px;
     margin-left: 30px;
     font-size: smaller;
 }
 
-.movement .steps .level li {
+.movement .show .steps .level li {
     list-style: initial;
 }
 
-.movement .steps .left {
-    float: left;
-    height: 100%;
-}
-
-.movement .steps .right {
+.movement .show .steps .right {
     height: 100%;
     width: 100px;
     float: right;
@@ -107,7 +163,7 @@
     padding-right: 10px;
 }
 
-.movement .steps .right img {
+.movement .show .steps .right img {
     width: 100%;
     height: 100%;
 }

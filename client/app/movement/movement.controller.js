@@ -1,16 +1,10 @@
 'use strict';
 
-myApp.controller('movementListCtrl', ['$scope', function mainCtrl ($scope) {
+myApp.controller('movementListCtrl', ['$scope', 'steps', function mainCtrl ($scope, steps) {
 
-    var movements = [
-        {
-            'name': '俯卧撑',
-            'position': 1,
-            'img': 'http://www.tinengwang.com/uploads/allimg/130717/1-130GGH400509.jpg'
-        }
-    ];
-
-    $scope.movements = movements;
+    steps.getMovements(function (err, ret) {
+        if (ret) $scope.movements = ret;
+    });
 }]);
 
 myApp.controller('movementShowCtrl', ['$scope', '$location', '$stateParams', 'steps', function mainCtrl ($scope, $location, $stateParams, steps) {

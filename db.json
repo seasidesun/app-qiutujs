@@ -6,8 +6,59 @@
       "nameEn": "Push Up",
       "muscleGroup": "胸肌（胸大肌和胸小肌）、三角肌前束、肱三头肌",
       "muscleGroupImgList": "http://epaper.dfdaily.com/dfzb/res/1/1/2015-02/25/A12/res07_attpic_brief.jpg",
+      "backgroundImgUrl": "steps_1_10_1.png",
       "descriptions": "  不同形式的俯卧撑锻炼肌肉的程度不同,但俯卧撑的所有变式都能增强力量、打肌肉。 俯卧撑尤其锻炼胸大肌、三角肌前束和胸小肌,从而最大限度地发展你躯干上的推力肌肉。 此外,俯卧撑还能够锻炼肱三头肌(上臂的主要肌肉)的三个头。",
       "slogan": "铠甲般的胸肌与钢铁般的肱三头肌"
+    },
+    "2": {
+      "name": "深蹲",
+      "position": 2,
+      "nameEn": "Squats",
+      "muscleGroup": "",
+      "muscleGroupImgList": "",
+      "backgroundImgUrl": "steps_2_10_1.png",
+      "descriptions": "",
+      "slogan": "升降机般的大腿"
+    },
+    "3": {
+      "name": "引体向上",
+      "position": 3,
+      "nameEn": "Pull Up",
+      "muscleGroup": "",
+      "muscleGroupImgList": "",
+      "backgroundImgUrl": "steps_3_10_1.png",
+      "descriptions": "",
+      "slogan": "仓门般的背部与大炮般的肱二头肌"
+    },
+    "4": {
+      "name": "举腿",
+      "position": 4,
+      "nameEn": "Leg Raise",
+      "muscleGroup": "",
+      "muscleGroupImgList": "",
+      "backgroundImgUrl": "steps_4_10_2.png",
+      "descriptions": "",
+      "slogan": "魔鬼六块"
+    },
+    "5": {
+      "name": "桥",
+      "position": 5,
+      "nameEn": "Bridge",
+      "muscleGroup": "",
+      "muscleGroupImgList": "",
+      "backgroundImgUrl": "steps_5_10_1.png",
+      "descriptions": "",
+      "slogan": "严阵以待的脊柱"
+    },
+    "6": {
+      "name": "倒立撑",
+      "position": 6,
+      "nameEn": "Hand Stand",
+      "muscleGroup": "",
+      "muscleGroupImgList": "",
+      "backgroundImgUrl": "steps_6_10_1.png",
+      "descriptions": "",
+      "slogan": "健康、强力的肩膀"
     }
   },
   "article": {
@@ -53,16 +104,16 @@
           {
             "level": 2,
             "title": "初级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 25,
             "description": "中级标准:2 组,每组25次"
           },
           {
             "level": 3,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
-            "description": "升级标准:3 组,每组30次"
+            "count": 50,
+            "description": "升级标准:3 组,每组50次"
           }
         ],
         "suggest": "只要身体没有残疾、没有严重的伤病或疾病,一般人应该都能完成这个动作。如果你刚 好处于伤病或手术的恢复期,那么这个动作就是很好的“测试”,能让你了解自己的身体在 恢复期的弱点。"
@@ -95,15 +146,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "中级标准:2组, 每组20次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 40,
             "description": "升级标准:3组, 每组40次"
           }
         ],
@@ -137,15 +188,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 30,
             "description": "升级标准:3组, 每组30次"
           }
         ],
@@ -173,21 +224,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 12,
             "description": "中级标准:2组, 每组12次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 25,
             "description": "升级标准:2组, 每组25次"
           }
         ],
@@ -215,21 +266,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "升级标准:2组, 每组20次"
           }
         ],
@@ -257,22 +308,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
-            "description": "初级标准:1组, 每组次"
+            "count": 5,
+            "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
-            "description": "中级标准:2组, 每组次"
+            "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:3组, 每组次"
+            "group": 3,
+            "count": 20,
+            "description": "升级标准:3组, 每组20次"
           }
         ],
         "suggest": "如果你做不了双手相触的窄距俯卧撑(如上所述),可以继续做标准俯卧撑,在次数不 变的前提下,让双手逐渐靠近,每次靠近几厘米。"
@@ -299,22 +350,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:2组, 每组10次（每侧）"
+            "group": 2,
+            "count": "20（每侧）",
+            "description": "升级标准:2组, 每组20次（每侧）"
           }
         ],
         "suggest": "能正确地完成窄距俯卧撑的人都可以信心十足地尝试这个动作。如果刚开始你觉得有些 困难,那是因为你的协调性不好,而不是力量不足。你可以用固定的物体,而不用会滚来滚 去的篮球。砖块是个不错的选择,等你可以在一块砖上重复此动作 20 次之后,你就可以尝 试将两块砖探起来做这个动作。在你可以在三块垒起的砖上重复此动作 20 次之后,你就可 以尝试用篮球练习了。"
@@ -341,21 +392,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "20（每侧）",
             "description": "升级标准:2组, 每组20次（每侧）"
           }
         ],
@@ -383,21 +434,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "20（每侧）",
             "description": "升级标准:2组, 每组20次（每侧）"
           }
         ],
@@ -425,22 +476,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
-            "description": "初级标准:1组, 每组1次（每侧）"
+            "count": "5（每侧）",
+            "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
             "group": 1,
-            "count": 10,
+            "count": "10（每侧）",
             "description": "中级标准:6组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
             "group": 1,
-            "count": 10,
-            "description": "升级标准:1组, 每组次（每侧）"
+            "count": "100（每侧）",
+            "description": "升级标准:1组, 每组100次（每侧）"
           }
         ],
         "suggest": "如果你已经攻克了杠杆俯卧撑,那么单臂俯卧撑对你而言就不是特别恐怖了。但是,如 果你还不能标准地完成 5 次单臂俯卧撑,那么你还是回到第九式,确保自己可以标准地完成 20 次杠杆俯卧撑。如果你能做到这一点,但做单臂俯卧撑还是有问题,那么请你继续练习 杠杆俯卧撑,直到你可以完成 30 次反复,然后再挑战单臂俯卧撑。"
@@ -471,20 +522,20 @@
             "title": "初级标准",
             "group": 1,
             "count": 10,
-            "description": "初级标准:1组, 每组1次"
+            "description": "初级标准:1组, 每组10次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 25,
             "description": "中级标准:2组, 每组25次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 50,
             "description": "升级标准:3组, 每组50次"
           }
         ],
@@ -513,20 +564,20 @@
             "title": "初级标准",
             "group": 1,
             "count": 10,
-            "description": "初级标准:1组, 每组1次"
+            "description": "初级标准:1组, 每组10次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "中级标准:2组, 每组20次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 40,
             "description": "升级标准:3组, 每组40次"
           }
         ],
@@ -560,15 +611,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 30,
             "description": "升级标准:3组, 每组30次"
           }
         ],
@@ -596,22 +647,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 35,
             "description": "中级标准:2组, 每组35次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:3组, 每组50次"
+            "group": 2,
+            "count": 50,
+            "description": "升级标准:2组, 每组50次"
           }
         ],
         "suggest": "如果做不了半深蹲,那就先做四分之一深蹲,每当你感到有余力时,就可以适当加大动 作幅度。"
@@ -638,22 +689,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:3组, 每组30次"
+            "group": 2,
+            "count": 30,
+            "description": "升级标准:2组, 每组30次"
           }
         ],
         "suggest": "如果你已经达到了半深蹲的升级标准,那么做标准深蹲就不会有太大问题。由于杠杆原 理,当动作到达最低点时难度最大,对个子较高的人来说尤其如此。如果你达不到初级标准 的目标,那就继续去做半深蹲。如果你感到自己变强了,那就增加几厘米的动作幅度。不要 心急,一定不要借助惯性起身、让脚跟离地或是摇晃前倾。要纯粹使用肌肉力量,否则就别 练了!"
@@ -680,22 +731,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:3组, 每组20次"
+            "group": 2,
+            "count": 20,
+            "description": "升级标准:2组, 每组20次"
           }
         ],
         "suggest": "很多训练者练习前几式时进展神速,但到了窄距深蹲就会碰到问题——在动作最低点或 接近最低点时,身体有可能失去平衡而后倾。这些问题在腿骨长、个头高的训练者身上尤为 突出。之所以会出现这些问题,是因为训练者胫骨前侧的肌肉缺乏力量以及平衡能力不强。 如果练习前几式时你的进度太快,那就回到标准深蹲,在练习过程中逐渐缩小双脚之间的距 离——每次缩小几厘米。双臂前伸能够让重心前移。此外,你也可以手拿重物——如哑铃、 书或矿泉水瓶等——练习该动作,不过最好还是空手能完成。有些训练者由于身体结构的原 因,做该动作真的很困难,如果你就是这样,那么可以让双脚脚跟保持一掌的距离。"
@@ -722,21 +773,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "20（每侧）",
             "description": "升级标准:2组, 每组20次（每侧）"
           }
         ],
@@ -764,21 +815,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "20（每侧）",
             "description": "升级标准:2组, 每组20次（每侧）"
           }
         ],
@@ -806,21 +857,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "20（每侧）",
             "description": "升级标准:2组, 每组20次（每侧）"
           }
         ],
@@ -848,21 +899,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "10（每侧）",
             "description": "中级标准:2组, 每组10次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "50（每侧）",
             "description": "升级标准:2组, 每组50次（每侧）"
           }
         ],
@@ -899,15 +950,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "中级标准:2组, 每组20次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 40,
             "description": "升级标准:3组, 每组40次"
           }
         ],
@@ -941,15 +992,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "中级标准:2组, 每组20次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 30,
             "description": "升级标准:3组, 每组30次"
           }
         ],
@@ -983,15 +1034,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 20,
             "description": "升级标准:3组, 每组20次"
           }
         ],
@@ -1019,21 +1070,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 11,
             "description": "中级标准:2组, 每组11次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
         ],
@@ -1061,20 +1112,20 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 8,
             "description": "中级标准:2组, 每组8次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "升级标准:2组, 每组10次"
           }
@@ -1103,20 +1154,20 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 8,
             "description": "中级标准:2组, 每组8次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "升级标准:2组, 每组10次"
           }
@@ -1145,21 +1196,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "7（每侧）",
             "description": "中级标准:2组, 每组7次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "8（每侧）",
             "description": "升级标准:2组, 每组8次（每侧）"
           }
         ],
@@ -1187,21 +1238,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "4（每侧）",
             "description": "初级标准:1组, 每组4次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
-            "description": "中级标准:2组, 每组11次（每侧）"
+            "group": 2,
+            "count": "6（每侧）",
+            "description": "中级标准:2组, 每组6次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "8（每侧）",
             "description": "升级标准:2组, 每组8次（每侧）"
           }
         ],
@@ -1229,21 +1280,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "3（每侧）",
             "description": "初级标准:1组, 每组3次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "5（每侧）",
             "description": "中级标准:2组, 每组5次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "7（每侧）",
             "description": "升级标准:2组, 每组7次（每侧）"
           }
         ],
@@ -1271,21 +1322,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "1（每侧）",
             "description": "初级标准:1组, 每组1次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "3（每侧）",
             "description": "中级标准:2组, 每组3次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "6（每侧）",
             "description": "升级标准:2组, 每组6次（每侧）"
           }
         ],
@@ -1322,15 +1373,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 25,
             "description": "中级标准:2组, 每组25次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 40,
             "description": "升级标准:3组, 每组40次"
           }
         ],
@@ -1364,15 +1415,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "中级标准:2组, 每组20次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 35,
             "description": "升级标准:3组, 每组35次"
           }
         ],
@@ -1406,15 +1457,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 30,
             "description": "升级标准:3组, 每组30次"
           }
         ],
@@ -1446,21 +1497,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 25,
             "description": "升级标准:3组, 每组25次"
           }
         ],
@@ -1488,21 +1539,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "升级标准:2组, 每组20次"
           }
         ],
@@ -1530,21 +1581,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
         ],
@@ -1572,21 +1623,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
         ],
@@ -1618,21 +1669,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
         ],
@@ -1660,21 +1711,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
         ],
@@ -1702,21 +1753,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 5,
             "description": "初级标准:1组, 每组5次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 30,
             "description": "升级标准:2组, 每组30次"
           }
         ],
@@ -1753,15 +1804,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 25,
             "description": "中级标准:2组, 每组25次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 50,
             "description": "升级标准:3组, 每组50次"
           }
         ],
@@ -1795,15 +1846,15 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "中级标准:2组, 每组20次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 40,
             "description": "升级标准:3组, 每组40次"
           }
         ],
@@ -1831,21 +1882,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 3,
+            "count": 30,
             "description": "升级标准:3组, 每组30次"
           }
         ],
@@ -1873,21 +1924,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 25,
             "description": "升级标准:2组, 每组25次"
           }
         ],
@@ -1915,21 +1966,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 8,
             "description": "初级标准:1组, 每组8次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "中级标准:2组, 每组15次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 20,
             "description": "升级标准:2组, 每组20次"
           }
         ],
@@ -1957,21 +2008,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 6,
             "description": "初级标准:1组, 每组6次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
         ],
@@ -1999,22 +2050,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 3,
             "description": "初级标准:1组, 每组3次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 6,
             "description": "中级标准:2组, 每组6次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
-            "description": "升级标准:3组, 每组10次"
+            "description": "升级标准:2组, 每组10次"
           }
         ],
         "suggest": "第一次做该动作就能“走”到墙根的人寥寥无几。你可以一点点地增加动作幅度——每 次训练都降得更低一点儿。另外,“把步子迈得小一些”也会更容易一些。"
@@ -2041,22 +2092,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 2,
             "description": "初级标准:1组, 每组2次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 4,
             "description": "中级标准:2组, 每组4次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:3组, 每组8次"
+            "group": 2,
+            "count": 8,
+            "description": "升级标准:2组, 每组8次"
           }
         ],
         "suggest": "与第七式一样,想要完美地做成该动作,关键在于逐渐增加动作幅度。首次尝试时,只 要顺墙壁向下“走’到某一点就可以了—确保你还能从这一点再向上“走”回来。如果觉得 有用,就用粉笔把这一点标记下来,并逐渐降低下降的高度。"
@@ -2083,21 +2134,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 1,
             "description": "初级标准:1组, 每组1次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 3,
             "description": "中级标准:2组, 每组3次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 6,
             "description": "升级标准:2组, 每组6次"
           }
         ],
@@ -2125,21 +2176,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": 1,
             "description": "初级标准:1组, 每组1次"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 3,
             "description": "中级标准:2组, 每组3次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": 30,
             "description": "升级标准:2组, 每组30次"
           }
         ],
@@ -2170,21 +2221,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 30,
+            "count": "30秒",
             "description": "初级标准:30秒"
           },
           {
             "level": 2,
             "title": "中级标准",
             "group": 1,
-            "count": 60,
+            "count": "1分钟",
             "description": "中级标准:1分钟"
           },
           {
             "level": 3,
             "title": "升级标准",
             "group": 1,
-            "count": 120,
+            "count": "2分钟",
             "description": "升级标准:2分钟"
           }
         ],
@@ -2212,21 +2263,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "10秒",
             "description": "初级标准:10秒"
           },
           {
             "level": 2,
             "title": "中级标准",
             "group": 1,
-            "count": 30,
+            "count": "30秒",
             "description": "中级标准:30秒"
           },
           {
             "level": 3,
             "title": "升级标准",
             "group": 1,
-            "count": 60,
+            "count": "1分钟",
             "description": "升级标准:1分钟"
           }
         ],
@@ -2254,21 +2305,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 30,
+            "count": "30秒",
             "description": "初级标准:30秒"
           },
           {
             "level": 2,
             "title": "中级标准",
             "group": 1,
-            "count": 60,
+            "count": "1分钟",
             "description": "中级标准:1分钟"
           },
           {
             "level": 3,
             "title": "升级标准",
             "group": 1,
-            "count": 120,
+            "count": "2分钟",
             "description": "升级标准:2分钟"
           }
         ],
@@ -2302,14 +2353,14 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
+            "group": 2,
             "count": 20,
             "description": "升级标准:2组, 每组20次"
           }
@@ -2344,14 +2395,14 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 10,
             "description": "中级标准:2组, 每组10次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
+            "group": 2,
             "count": 15,
             "description": "升级标准:2组, 每组15次"
           }
@@ -2386,14 +2437,14 @@
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
+            "group": 2,
             "count": 9,
             "description": "中级标准:2组, 每组9次"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
+            "group": 2,
             "count": 12,
             "description": "升级标准:2组, 每组12次"
           }
@@ -2422,22 +2473,22 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 5,
+            "count": "5（每侧）",
             "description": "初级标准:1组, 每组5次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 8,
+            "group": 2,
+            "count": "8（每侧）",
             "description": "中级标准:2组, 每组8次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
-            "description": "升级标准:3组, 每组10次（每侧）"
+            "group": 2,
+            "count": "10（每侧）",
+            "description": "升级标准:2组, 每组10次（每侧）"
           }
         ],
         "suggest": "使用篮球要求训练者有高度的力量与平衡能力,还有快速的反应能力。我建议所有训练 者刚开始练习这个时都使用稳固的物体,而不是篮球。可以使用一块砖头来起步,到后来用 三块垒起来的砖头。在监狱里,很多家伙刚开始练习时会把几本薄书摞起来,以后再逐步往 上加书。等到书与篮球一样高时,再用篮球做尝试。总之,安全至上。"
@@ -2464,21 +2515,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 4,
+            "count": "4（每侧）",
             "description": "初级标准:1组, 每组4次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "6（每侧）",
             "description": "中级标准:2组, 每组6次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "8（每侧）",
             "description": "升级标准:2组, 每组8次（每侧）"
           }
         ],
@@ -2506,21 +2557,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "3（每侧）",
             "description": "初级标准:1组, 每组3次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "4（每侧）",
             "description": "中级标准:2组, 每组4次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "6（每侧）",
             "description": "升级标准:2组, 每组6次（每侧）"
           }
         ],
@@ -2548,21 +2599,21 @@
             "level": 1,
             "title": "初级标准",
             "group": 1,
-            "count": 10,
+            "count": "1（每侧）",
             "description": "初级标准:1组, 每组1次（每侧）"
           },
           {
             "level": 2,
             "title": "中级标准",
-            "group": 1,
-            "count": 10,
+            "group": 2,
+            "count": "2（每侧）",
             "description": "中级标准:2组, 每组2次（每侧）"
           },
           {
             "level": 3,
             "title": "升级标准",
             "group": 1,
-            "count": 10,
+            "count": "5（每侧）",
             "description": "升级标准:1组, 每组5次（每侧）"
           }
         ],

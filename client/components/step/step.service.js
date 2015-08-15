@@ -32,6 +32,9 @@ myApp.factory('steps', function ($http) {
             .error(function (err) {
                 return callback(err, null);
             });
+        },
+        getImgUrl: function (imgArray) {
+            return "7xl4qs.com1.z0.glb.clouddn.com";
         }
     };
 });
