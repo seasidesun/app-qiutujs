@@ -15,11 +15,6 @@
   "dependencies": {
     "bootstrap": "~3.3.4",
     "angular": "",
-    "angular-cookies": "",
-    "angular-resource": "",
-    "angular-sanitize": "",
-    "angular-bootstrap": "",
-    "lodash": "~3.9.3",
     "angular-ui-router": "~0.2.15"
   }
 }
