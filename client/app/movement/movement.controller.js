@@ -3,7 +3,9 @@
 myApp.controller('movementListCtrl', ['$scope', 'steps', function mainCtrl ($scope, steps) {
 
     steps.getMovements(function (err, ret) {
-        if (ret) $scope.movements = ret;
+        if (ret) {
+            $scope.movements = ret;
+        }
     });
 }]);
 
@@ -12,11 +14,12 @@ myApp.controller('movementShowCtrl', ['$scope', '$location', '$stateParams', 'st
     var mId = $stateParams.mId;
 
     steps.getMovements(function (err, ret) {
-        if (ret) $scope.movement = ret[mId];
+        if (ret) {
+            $scope.movement = ret[mId];
+        }
     });
 
     steps.getStepsBymID(mId, function (err, ret) {
-        delete ret.id
         if (ret) $scope.steps = ret;
     });
 

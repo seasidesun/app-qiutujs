@@ -15,4 +15,4 @@ div.movement
                         div.level
                             li(ng-repeat="level in step.level") {{level.title + "："}} {{level.group}} X {{level.count}}
                     div.right
-                        img(src="app/movement/112.jpg")
+                        img(src="{{step.imgList[1].imgUrl}}")

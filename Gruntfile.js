@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       // pkg: grunt.file.readJSON('package.json'),
       watch: {
         express: {
-          files:  [ 'server/*.js', 'client/app/**/*.{jade,css}', 'client/app/**/*.js' ],
+          files:  [ 'server/*.js', 'client/app/**/*.{jade,css}', 'client/app/**/*.js', 'client/components/**/*.js' ],
           tasks:  [ 'express:dev', 'jade', 'copy' ],
           options: {
             spawn: false,

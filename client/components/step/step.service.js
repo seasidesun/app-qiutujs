@@ -3,6 +3,7 @@
 myApp.factory('steps', function ($http) {
 
     var url = 'http://127.0.0.1:3001/api';
+    var imgUri = 'http://7xl4qs.com1.z0.glb.clouddn.com';
 
     var steps = {};
     var movements = null;
@@ -13,6 +14,12 @@ myApp.factory('steps', function ($http) {
 
             $http.get(url + '/steps/' + mId)
             .success(function (data) {
+                delete data.id;
+                for (var i in data) {
+                    for (var j = 0; j < data[i].imgList.length; j++) {
+                        data[i].imgList[j].imgUrl = imgUri + '/' + data[i].imgList[j].imgUrl;
+                    }
+                }
                 steps[mId] = data;
                 return callback(null, data);
             })
@@ -26,15 +33,15 @@ myApp.factory('steps', function ($http) {
 
             $http.get(url + '/movements')
             .success(function (data) {
+                for (var i in data) {
+                    data[i].backgroundImgUrl = imgUri + '/' + data[i].backgroundImgUrl;
+                }
                 movements = data;
                 return callback(null, data);
             })
             .error(function (err) {
                 return callback(err, null);
             });
-        },
-        getImgUrl: function (imgArray) {
-            return "7xl4qs.com1.z0.glb.clouddn.com";
         }
     };
 });
