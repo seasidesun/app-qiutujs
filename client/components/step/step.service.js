@@ -2,7 +2,7 @@
 
 myApp.factory('steps', function ($http) {
 
-    var url = 'http://127.0.0.1:3001/api';
+    var url = window.parent.location.origin + '/api';
     var imgUri = 'http://7xl4qs.com1.z0.glb.clouddn.com';
 
     var steps = {};
