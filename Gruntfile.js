@@ -55,7 +55,7 @@ module.exports = function(grunt) {
       copy: {
         build: {
           cwd: 'client',
-          src: [ 'bower_components/**/*', 'app/**/*.js' ],
+          src: [ 'bower_components/**/*', 'app/**/*.{js,css}', 'components/**/*.js', '*.html' ],
           dest: '.tmp',
           expand: true
         },
