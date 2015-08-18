@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 var myApp = angular.module('qtbody', ['ui.router'])
 
-    .config(function ($urlRouterProvider, $stateProvider) {
+    .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
 
       $urlRouterProvider
         .otherwise('/');
@@ -32,5 +32,5 @@ var myApp = angular.module('qtbody', ['ui.router'])
               url: '/movement/:mId/step/:sId',
               templateUrl: 'app/step/step.html',
               controller: 'stepCtrl'
-          })
-    });
+          });
+    }]);

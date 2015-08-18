@@ -3,7 +3,7 @@ div.movement
         h4 {{movement.name}} - {{movement.nameEn}}
         h5 {{movement.slogan}}
         div.muscle-groupgroup
-            img(src="{{movement.muscleGroupImgList}}")
+            img(ng-src="{{movement.muscleGroupImgList}}")
         div.description
             a &nbsp &nbsp {{movement.description}}
         div.steps(ng-repeat="step in steps")
@@ -15,4 +15,4 @@ div.movement
                         div.level
                             li(ng-repeat="level in step.level") {{level.title + "："}} {{level.group}} X {{level.count}}
                     div.right
-                        img(src="{{step.imgList[1].imgUrl}}")
+                        img(ng-src="{{step.imgList[1].imgUrl}}")

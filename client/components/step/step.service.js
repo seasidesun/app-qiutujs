@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-myApp.factory('steps', function ($http) {
+myApp.factory('steps', ['$http', function ($http) {
 
     var url = window.parent.location.origin + '/api';
     var imgUri = 'http://7xl4qs.com1.z0.glb.clouddn.com';
@@ -44,4 +44,4 @@ myApp.factory('steps', function ($http) {
             });
         }
     };
-});
+}]);

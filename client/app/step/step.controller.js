@@ -1,12 +1,9 @@
-'use strict';
+"use strict";
 
 myApp.controller('stepCtrl', ['$scope', '$stateParams', '$location', 'steps', function mainCtrl ($scope, $stateParams, $location, steps) {
 
     var sId = $stateParams.sId;
     var mId = $stateParams.mId;
-
-    console.log('s = ', sId);
-    console.log('m = ', mId);
 
     var step = {};
     $scope.step = step;

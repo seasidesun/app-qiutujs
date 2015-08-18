@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 myApp.controller('movementListCtrl', ['$scope', 'steps', function mainCtrl ($scope, steps) {
 

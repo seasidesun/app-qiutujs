@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-myApp.controller('articleCtrl', function mainCtrl ($scope, $location) {
+myApp.controller('articleCtrl', ['$scope', function mainCtrl ($scope) {
 
     var article = [
         {
@@ -35,4 +35,4 @@ myApp.controller('articleCtrl', function mainCtrl ($scope, $location) {
         }
     ];
     $scope.articleList = article;
-});
+}]);
