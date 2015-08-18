@@ -65,14 +65,14 @@ module.exports = function(grunt) {
           separator: ';'
         },
         js: {
-          src: [ 'client/app/**/*.js', 'client/components/**/*.js', 'bower_components/angular/angular.js', 'bower_components/angular-ui-router/release/angular-ui-router.js' ],
+          src: [ 'client/bower_components/angular/angular.js', 'client/bower_components/angular-ui-router/release/angular-ui-router.js', 'client/app/**/*.js', 'client/components/**/*.js' ],
           dest: '.tmp/dist/default.js'
         }
       },
       uglify: {
-        jsuglify: {
+        dist: {
           option: {
-            mangle: false
+            report: 'min'
           },
           files: {
             '.tmp/dist/default.min.js': ['.tmp/dist/default.js']

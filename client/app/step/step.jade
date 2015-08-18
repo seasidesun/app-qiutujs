@@ -10,7 +10,7 @@ div.step
             h4 图解
         div.content
             div(ng-repeat="img in step.imgList").img-show-item
-                img(ng-src="{{img.imgUrl}}")
+                img(ng-src="{{img.imgUrl}}" + '?imageMogr2/thumbnail/250x250')
                 {{img.description}}
     div.analysis.item
         div.title

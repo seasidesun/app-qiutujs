@@ -15,4 +15,4 @@ div.movement
                         div.level
                             li(ng-repeat="level in step.level") {{level.title + "："}} {{level.group}} X {{level.count}}
                     div.right
-                        img(ng-src="{{step.imgList[1].imgUrl}}")
+                        img(ng-src="{{step.imgList[1].imgUrl}}" + '?imageMogr2/thumbnail/100x100')
