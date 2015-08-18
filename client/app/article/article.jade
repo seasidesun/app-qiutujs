@@ -1,7 +1,7 @@
 div.article
     li(ng-repeat="article in articleList").item
         div.pic
-            img(ng-src="{{article.imgUrlList[0]}}")
+            img(ng-src="{{article.imgUrlList[0]}}" + "?imageMogr2/thumbnail/80x100")
         div.detail
             div.title
                 a {{article.title}}
