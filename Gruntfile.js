@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       watch: {
         express: {
           files:  [ 'server/*.js', 'client/app/**/*.{jade,css}', 'client/app/**/*.js', 'client/components/**/*.js', 'client/index.html' ],
-          tasks:  [ 'express:dev', 'jade', 'copy', 'concat', 'uglify' ],
+          tasks:  [ 'express:dev', 'jade', 'copy', 'concat', 'cssmin'],
           options: {
             spawn: false,
             livereload: true
@@ -110,7 +110,6 @@ module.exports = function(grunt) {
           'copy',
           'jade',
           'concat',
-          'uglify',
           'cssmin',
           'watch',
         ]);
@@ -118,15 +117,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', function (argument) {
         grunt.task.run([
-          'jade'
-        //   'concat'
-        ]);
-    });
-
-    grunt.registerTask('test', function (argument) {
-        grunt.task.run([
-          'jshint'
-        //   'concat'
+          'copy',
+          'jade',
+          'concat',
+          'uglify',
+          'cssmin'
         ]);
     });
 };

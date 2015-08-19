@@ -9,7 +9,7 @@ myApp.controller('movementListCtrl', ['$scope', 'steps', function mainCtrl ($sco
     });
 }]);
 
-myApp.controller('movementShowCtrl', ['$scope', '$location', '$stateParams', 'steps', function mainCtrl ($scope, $location, $stateParams, steps) {
+myApp.controller('movementShowCtrl', ['$scope', '$stateParams', 'steps', function mainCtrl ($scope, $stateParams, steps) {
 
     var mId = $stateParams.mId;
 
