@@ -1,4 +1,4 @@
-var config = require('./server/config');
+var config = require('./config');
 
 module.exports = function(grunt) {
     // require('jit-grunt')(grunt, {
@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       // pkg: grunt.file.readJSON('package.json'),
       watch: {
         express: {
-          files:  [ 'server/*.js', 'client/app/**/*.{jade,css}', 'client/app/**/*.js', 'client/components/**/*.js', 'client/index.html' ],
+          files:  [ 'client/app/**/*.{jade,css}', 'client/app/**/*.js', 'client/components/**/*.js', 'client/index.html' ],
           tasks:  [ 'express:dev', 'jade', 'copy', 'concat', 'cssmin'],
           options: {
             spawn: false,
@@ -24,13 +24,13 @@ module.exports = function(grunt) {
         },
         dev: {
           options: {
-            script: 'server/single_core.js',
+            script: 'app.js',
             debug: true
           }
         },
         prod: {
           options: {
-            script: 'server/single_core.js'
+            script: 'app.js'
           }
         }
       },
