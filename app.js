@@ -5,10 +5,9 @@ var favicon = require('serve-favicon');
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var config = require('./server/config');
+var config = require('./config');
 
 var rootPath = path.resolve(__dirname);
-console.log(rootPath);
 
 // Returns an Express server
 var server = jsonServer.create();
