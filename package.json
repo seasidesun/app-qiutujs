@@ -12,19 +12,20 @@
     "async": "^1.2.0",
     "body-parser": "^1.12.4",
     "express": "^4.12.4",
-    "grunt-contrib-cssmin": "^0.13.0",
-    "grunt-contrib-jshint": "^0.11.2",
     "json-server": "^0.7.12",
     "morgan": "^1.5.3",
     "serve-favicon": "^2.3.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "connect-livereload": "^0.5.3",
     "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "",
     "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^0.11.2",
     "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-jade": "^0.11.0",
+    "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-express-server": "^0.5.1"

@@ -36,10 +36,14 @@
 }
 
 .movement .list .item a {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    display: block;
     color: #FFFFFF;
 }
 
-.movement .list .item .link {
+/*.movement .list .item .link {
     width: 100%;
     height: 100%;
 }
@@ -47,7 +51,7 @@
 .movement .list .item .link::after {
     content: "";
     border-bottom: 1px solid #fff;
-}
+}*/
 
 .movement .list .item .left {
     height: 100%;
@@ -62,10 +66,10 @@
 }
 
 .movement .list .item .right {
-    margin-top: 10px;
-    margin-left: 10px;
-    float: left;
     height: 100%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 .movement .list .item .right .title {
@@ -120,13 +124,17 @@
 }
 
 .movement .show .steps a {
-    color: #FFFFFF;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    display: block;
+    color: #FFF;
 }
 
-.movement .show .steps .link {
+/*.movement .show .steps .link {
     width: 100%;
     height: 100%;
-}
+}*/
 
 .movement .show .steps .left {
     float: left;

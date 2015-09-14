@@ -2,11 +2,10 @@ div.movement
     div.list
         div.item(ng-repeat="movement in movements")
             a(href="/home#/movement/{{movement.position}}")
-                div.link
-                    div.left
-                        img(ng-src="{{movement.backgroundImgUrl}}" + "?imageMogr2/thumbnail/100x100")
-                    div.right
-                        div.title
-                            h4 {{movement.name}} - {{movement.nameEn}}
-                        div.slogan
-                            h6 {{movement.slogan}}
+                div.left
+                    img(ng-src="{{movement.backgroundImgUrl}}" + "?imageMogr2/thumbnail/100x100")
+                div.right
+                    div.title
+                        h4 {{movement.name}} - {{movement.nameEn}}
+                    div.slogan
+                        h6 {{movement.slogan}}

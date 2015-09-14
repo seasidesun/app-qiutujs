@@ -8,11 +8,10 @@ div.movement
             a &nbsp &nbsp {{movement.description}}
         div.steps(ng-repeat="step in steps")
             a(href="/home#/movement/{{movement.position}}/step/{{step.position}}")
-                div.link
-                    div.left
-                        div.title
-                            h4 {{step.title}}
-                        div.level
-                            li(ng-repeat="level in step.level") {{level.title + "："}} {{level.group}} X {{level.count}}
-                    div.right
-                        img(ng-src="{{step.imgList[1].imgUrl}}" + '?imageMogr2/thumbnail/100x100')
+                div.left
+                    div.title
+                        h4 {{step.title}}
+                    div.level
+                        li(ng-repeat="level in step.level") {{level.title + "："}} {{level.group}} X {{level.count}}
+                div.right
+                    img(ng-src="{{step.imgList[1].imgUrl}}" + '?imageMogr2/thumbnail/100x100')
