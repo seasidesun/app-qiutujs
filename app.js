@@ -1,45 +1,33 @@
 'use strict';
 
-var jsonServer = require('json-server');
-var favicon = require('serve-favicon');
 var express = require('express');
-var morgan = require('morgan');
 var path = require('path');
+var favicon = require('serve-favicon');
+var morgan = require('morgan');
 var config = require('./config');
+var apiRouter = require('./server/lib/api/router');
 
-var rootPath = path.resolve(__dirname);
+var app = express();
 
-// Returns an Express server
-var server = jsonServer.create();
+var env = process.env.NODE_ENV || 'dev';
+var publicPath = 'client';
+if (env === 'pro') {
+    var publicPath = '.tmp';
+}
 
-//redirect from '/' to '/home#/movement'
-server.use(function (req, res, next) { if (req.url==='/') return res.redirect('/home#/movement'); next(); });
+app.use(morgan('dev'));
+app.use(favicon(__dirname + '/favicon.ico'));
+app.use(express.static(path.join(__dirname, publicPath)));
 
-// logger, static and cors middlewares
-server.use(jsonServer.defaults);
+app.get('/', function (req, res) { res.sendFile(path.resolve(__dirname) + '/' + publicPath + '/index_' + env + '.html'); });
+app.get('/ping', function (req, res) { res.send('ok'); });
+app.use('/api', apiRouter);
 
-// Returns an Express router
-var apiRouter = jsonServer.router(config.DB);
+app.listen(config.port, function() {
+    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+    console.log('Express server listening on port ' + config.port);
+    console.log('Environment is ' + env);
 
-// api router
-server.use('/api', apiRouter);
-
-// app router
-var appRouter = require('express').Router();
-appRouter.get('/home', function (req, res) { res.sendFile(rootPath + '/.tmp/index.html'); });
-appRouter.get('/ping', function (req, res) { res.send('ok'); });
-server.use('/', appRouter);
-
-// favicon
-// server.use(favicon(rootPath + '/favicon.ico'));
-
-// public dir
-server.use(express.static(path.join(rootPath, '.tmp')));
-
-server.listen(config.PORT, function (error) {
-    if (error) console.error(error);
-
-    console.log('\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
-    console.log('Json-Server is listening on port', config.PORT);
-    // console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n');
 });
+
+module.exports = app;

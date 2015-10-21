@@ -1,5 +1,5 @@
 {
-  "name": "app-qtbody",
+  "name": "app-qiutujs",
   "version": "0.0.0",
   "authors": [
     "haibin <sunhaibin@goyoo.com>"
@@ -8,12 +8,9 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "client/bower_components",
-    "test",
-    "tests"
+    "client/bower_components"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4",
     "angular": "~1.4.4",
     "angular-ui-router": "~0.2.15"
   }

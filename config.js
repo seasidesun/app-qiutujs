@@ -1,7 +1,6 @@
 
 module.exports = {
-    // dev config stuff
-    appName: 'qybody',
-    PORT: process.env.PORT || 3007,
-    DB: './db.json'
+    // dev config
+    appName: 'qiutujs',
+    port: process.env.PORT || 3007,
 };
