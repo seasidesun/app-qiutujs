@@ -111,7 +111,8 @@ module.exports = function(grunt) {
           'jade',
           'concat',
           'cssmin',
-          'watch',
+          'uglify',
+          'watch'
         ]);
     });
 
