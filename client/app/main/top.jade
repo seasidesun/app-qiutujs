@@ -1,4 +1,2 @@
-.top
+#top(ng-class="{hidden: hidden}")
     a 囚徒健身
-.navigation
-    a(class="{{navigation.pos}}",ng-repeat="navigation in navigations",ng-click="selectNav($index)",ng-class="{selected: $index==selectedNow}",href="/home#/{{navigation.href}}").option {{navigation.title}}

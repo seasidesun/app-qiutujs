@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>movement</title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+
+<style>
+.body {
+    background-image: url(http://www.kfc.com/assets/images/touts/busy-people.jpg);
+    background-position: 50%;
+}
+</style>
+
+<div class="body"></div>
+
+<div class="points">
+    <div class="wrapper">
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+        <div class="point"><i></i></div>
+    </div>
+
+    <div class="slider"></div>
+</div>
+
+<script type="text/javascript">
+!function () {
+    var _lastPositon;
+    $('.body').on('touchstart',function (e) {
+        // console.log(e);
+        console.log(e.originalEvent.touches[0].pageX);
+        _lastPositon = e.originalEvent.touches[0].pageX;
+        // console.log(pageX);
+    });
+    $('.body').on('touchmove',function (e) {
+        // console.log(e);
+        // console.log(e.originalEvent.touches[0]);
+        var nowPosition = e.originalEvent.touches[0].pageX;
+        // console.log($('.slider').css('left'));
+        // var left = $('.slider').css('left');
+        console.log($('.slider').offset().left);
+        var left = $('.slider').offset().left+20;
+        console.log(left);
+        if (nowPosition < _lastPositon)
+            // $('.slider').attr('class', 'slider move');
+            $('.slider').animate({left: left + 'px'});
+    });
+
+}();
+
+</script>
+
+</body>
+</html>

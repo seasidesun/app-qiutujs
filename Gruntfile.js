@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       express: {
         options: {
-          port: config.PORT
+          port: config.port
         },
         dev: {
           options: {
@@ -47,7 +47,8 @@ module.exports = function(grunt) {
             src: [
               'app/**/*.jade'
             ],
-            dest: '.tmp',
+            // dest: '.tmp',
+            dest: 'client',
             ext: '.html'
           }]
         }
@@ -111,7 +112,7 @@ module.exports = function(grunt) {
           'jade',
           'concat',
           'cssmin',
-          'uglify',
+        //   'uglify',
           'watch'
         ]);
     });

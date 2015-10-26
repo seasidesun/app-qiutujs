@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>DEV</title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8">
+    <link href='http://fonts.useso.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="body">
+
+    <div class="body-head">
+        <img class="body-head-bg" src="http://storage.yunpro.cn/file/8d588bf6ddf5d343139a" alt="" />
+        <div class="info">
+            <h1 class="l1" style="color: #37a4ef; top: 20px; left: 8.5px;">CONVICT</h1>
+            <h1 class="l1" style="color: #ed4a21; top: 20px; left: 12.5px;">CONVICT</h1>
+            <h1 class="l1">CONVICT</h1>
+            <h1 class="l2" style="color: #37a4ef; top: 50px; left: 8.5px;">CONDITIONING</h1>
+            <h1 class="l2" style="color: #ed4a21; top: 50px; left: 12.5px;">CONDITIONING</h1>
+            <h1 class="l2">CONDITIONING</h1>
+
+            <p>囚徒健身速查手册</p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="view">
+            <div class="list">
+                <div class="item">
+                    <div class="bg"></div>
+                    <h1>Movement Testing</h1>
+                    <p>第一部分，自我指导</p>
+                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
+                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                </div>
+                <div class="item">
+                    <div class="bg"></div>
+                    <h1>Movement Testing</h1>
+                    <p>第一部分，自我指导</p>
+                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
+                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                </div>
+                <div class="item">
+                    <div class="bg"></div>
+                    <h1>Movement Testing</h1>
+                    <p>第一部分，自我指导</p>
+                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
+                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                </div>
+                <div class="item">
+                    <div class="bg"></div>
+                    <h1>Movement Testing</h1>
+                    <p>第一部分，自我指导</p>
+                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
+                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                </div>
+                <div class="item">
+                    <div class="bg"></div>
+                    <h1>Movement Testing</h1>
+                    <p>第一部分，自我指导</p>
+                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
+                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                </div>
+                <div class="item">
+                    <div class="bg"></div>
+                    <h1>Movement Testing</h1>
+                    <p>第一部分，自我指导</p>
+                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
+                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="foot"></div>
+
+<script type="text/javascript">
+!function() {
+    var _lastScrollTop = 200;
+
+    $('.wrapper').scroll(function(e) {
+
+        var top = $('.list').offset().top;
+        console.log(top);
+        if (top < _lastScrollTop && top < 180)
+            $('.body-head').attr('class', 'body-head zoom');
+        else if (top > 150)
+            $('.body-head').attr('class', 'body-head');
+
+        _lastScrollTop = top;
+    })
+}();
+
+</script>
+
+</body>
+</html>

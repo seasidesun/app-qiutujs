@@ -1,6 +1,6 @@
 "use strict";
 
-var myApp = angular.module('qtbody', ['ui.router'])
+var myApp = angular.module('qiutujs', ['ui.router'])
 
     .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
 
