@@ -82,7 +82,73 @@ html, body {
     background-color: #333;
     border-bottom: 1px solid #333;
 }
-.body .list .item .bg {
+.body .list .item .bg1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+
+    background-color: #FFE400;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/articles_u=3935349081,1710853432&fm=21&gp=0.jpg);
+
+    opacity: 0.8;
+}
+.body .list .item .bg2 {
+    position: absolute;
+    /*top: -60px;*/
+    width: 100%;
+    height: 120px;
+
+    background-color: #FFE400;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 20%;
+    background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/articles_14bOOOPIC87_1024.jpg);
+
+    opacity: 0.8;
+}
+.body .list .item .bg3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+
+    background-color: #FFE400;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/articles_u=1923100949,2116820217&fm=21&gp=0.jpg);
+
+    opacity: 0.8;
+}
+.body .list .item .bg4 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+
+    background-color: #FFE400;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(http://storage.yunpro.cn/file/aa294c62df3a3bfd2a48);
+
+    opacity: 0.8;
+}
+.body .list .item .bg5 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+
+    background-color: #FFE400;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(http://storage.yunpro.cn/file/aa294c62df3a3bfd2a48);
+
+    opacity: 0.8;
+}
+.body .list .item .bg6 {
     position: absolute;
     top: 0;
     width: 100%;

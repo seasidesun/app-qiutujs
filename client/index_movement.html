@@ -42,27 +42,93 @@
 
 <script type="text/javascript">
 !function () {
-    var _lastPositon;
-    $('.body').on('touchstart',function (e) {
-        // console.log(e);
-        console.log(e.originalEvent.touches[0].pageX);
+    var _lastPositon = null;
+    var pot = 1;
+    // var sliding = false;
+    // $('.body').on('touchstart', function (e) {
+    //     // if (move) return;
+    //     // move = true;
+    //     _lastPositon = e.originalEvent.touches[0].pageX;
+    // });
+    // $('.body').on('touchend', function (e) {
+    //     console.log(sliding);
+    //     if (!sliding) sliding = true;
+    //     else return;
+    //     var nowPosition = e.originalEvent.changedTouches[0].pageX;
+    //     var changed = nowPosition - _lastPositon;
+    //     // if(!_lastPositon) return;
+    //
+    //     if (nowPosition < _lastPositon) {
+    //         console.log('right');
+    //         if (pot >= 10) return sliding = false;
+    //         var left = $('.slider').position().left + 22.85;
+    //         // $('.slider').css('left', left+'px');
+    //         // pot++;
+    //         // sliding = false;
+    //         $('.slider').animate({left: left + 'px'}, function () {
+    //             pot++;
+    //             sliding = false;
+    //             return;
+    //         });
+    //     } else if (nowPosition > _lastPositon) {
+    //         console.log('left');
+    //         if (pot <= 1) return sliding = false;
+    //         var left = $('.slider').position().left - 22.85;
+    //         // $('.slider').css('left', left+'px');
+    //         // pot--;
+    //         // sliding = false;
+    //         $('.slider').animate({left: left + 'px'}, function () {
+    //             pot--;
+    //             sliding = false;
+    //             return;
+    //         });
+    //     } else {
+    //         sliding = false;
+    //         return;
+    //     }
+    // });
+    var start = false;
+    var end = false;
+    $('.body').on('touchstart', function (e) {
+        console.log('start: ', start);
+        if (!start) start = true;
+        else return;
         _lastPositon = e.originalEvent.touches[0].pageX;
-        // console.log(pageX);
     });
-    $('.body').on('touchmove',function (e) {
-        // console.log(e);
-        // console.log(e.originalEvent.touches[0]);
-        var nowPosition = e.originalEvent.touches[0].pageX;
-        // console.log($('.slider').css('left'));
-        // var left = $('.slider').css('left');
-        console.log($('.slider').offset().left);
-        var left = $('.slider').offset().left+20;
-        console.log(left);
-        if (nowPosition < _lastPositon)
-            // $('.slider').attr('class', 'slider move');
-            $('.slider').animate({left: left + 'px'});
-    });
+    $('.body').on('touchend', function (e) {
+        console.log('end: ', end);
+        if (!end) end = true;
+        else return;
+        var nowPosition = e.originalEvent.changedTouches[0].pageX;
+        var changed = nowPosition - _lastPositon;
 
+        if (nowPosition < _lastPositon) {
+            console.log('right');
+            if (pot >= 10) {start = false; end = false; return;}
+            var left = $('.slider').position().left + 22.85;
+            // $('.slider').css('left', left+'px');
+            // pot++;
+            // start = false;
+            $('.slider').animate({left: left + 'px'}, refresh);
+            pot++;
+            return;
+        } else if (nowPosition > _lastPositon) {
+            console.log('left');
+            if (pot <= 1) {start = false; end = false; return;}
+            var left = $('.slider').position().left - 22.85;
+            // $('.slider').css('left', left+'px');
+            // pot--;
+            // sliding = false;
+            $('.slider').animate({left: left + 'px'}, refresh);
+            pot--;
+            return;
+        } else {
+            start = false;
+            end = false;
+            return;
+        }
+    });
+    function refresh () {console.log('refresh');setTimeout(function () {start = false; end = false; return;}, 500);}
 }();
 
 </script>
