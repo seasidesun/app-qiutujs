@@ -20,6 +20,7 @@ app.use(favicon(__dirname + '/favicon.ico'));
 app.use(express.static(path.join(__dirname, publicPath)));
 
 app.get('/', function (req, res) { res.sendFile(path.resolve(__dirname) + '/' + publicPath + '/index_' + env + '.html'); });
+app.get('/bak', function (req, res) { res.sendFile(path.resolve(__dirname) + '/' + publicPath + '/index_' + 'dev_bak' + '.html'); });
 app.get('/movement', function (req, res) { res.sendFile(path.resolve(__dirname) + '/' + publicPath + '/index_movement.html'); });
 app.get('/ping', function (req, res) { res.send('ok'); });
 app.use('/api', apiRouter);

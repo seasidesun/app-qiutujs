@@ -3,10 +3,136 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>DEV</title>
+    <title>囚徒健身</title>
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8"> -->
     <link href='http://fonts.useso.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <style media="screen">
+        html, body {
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            -webkit-overflow-scrolling: touch;
+        }
+        .body {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .body-head {
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 200px;
+
+            transition: all .2s ease-in-out;
+        }
+        .body-head.up {
+            transform: scale(0.95);
+            opacity: 0.5;
+        }
+        .body-head img.body-head-bg {
+            display: block;
+            width: 100%;
+        }
+        .body-head .title {
+            position: relative;
+            margin-top: -200px;
+        }
+        .body-head .title h1 {
+            position: absolute;
+
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 3px;
+        }
+        .body-head .title h1.l1 {
+            top: 10px;
+            left: 10px;
+
+            color: #fff;
+        }
+        .body-head .title h1.l2 {
+            top: 50px;
+            left: 10px;
+
+            color: #fff;
+        }
+        .body-head .title h1.left {
+            left: 8px;
+
+            color: #37a4ef;
+        }
+        .body-head .title h1.right {
+            left: 12px;
+
+            color: #ed4a21
+        }
+        .body-head .title p {
+            position: absolute;
+            top: 150px;
+            left: 10px;
+
+            color: #fff;
+        }
+        .wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+
+            overflow: scroll;
+        }
+        .wrapper .view {
+            margin-top: 200px;
+        }
+        .wrapper .list {
+            /*position: relative;*/
+        }
+        .wrapper .list .item {
+            position: relative;
+            height: 120px;
+            width: 100%;
+        }
+        .wrapper .list .item .l {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -25px;
+            height: 50px;
+            width: 50px;
+
+            opacity: 0.85;
+        }
+        .wrapper .list .item .r {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -25px;
+            height: 50px;
+            width: 50px;
+
+            opacity: 0.85;
+        }
+        .wrapper .list .item h1 {
+            position: absolute;
+            left: 75px;
+            top: 30px;
+            margin: 0px;
+
+            color: #fff;
+            font-size: 24px;
+            font-family: 'Oswald', sans-serif;
+        }
+        .wrapper .list .item p {
+            position: absolute;
+            left: 75px;
+            top: 55px;
+
+            color: #fff;
+            font-size: 11px;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,15 +142,15 @@
         <!-- <img class="body-head-bg" src="http://storage.yunpro.cn/file/8d588bf6ddf5d343139a" alt="" /> -->
         <img class="body-head-bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/articles_6630076006211942378.jpg" alt="" />
 
-        <div class="info">
-            <h1 class="l1" style="color: #37a4ef; top: 20px; left: 8.5px;">CONVICT</h1>
-            <h1 class="l1" style="color: #ed4a21; top: 20px; left: 12.5px;">CONVICT</h1>
+        <div class="title">
+            <h1 class="l1 left">CONVICT</h1>
+            <h1 class="l1 right">CONVICT</h1>
             <h1 class="l1">CONVICT</h1>
-            <h1 class="l2" style="color: #37a4ef; top: 50px; left: 8.5px;">CONDITIONING</h1>
-            <h1 class="l2" style="color: #ed4a21; top: 50px; left: 12.5px;">CONDITIONING</h1>
+            <h1 class="l2 left">CONDITIONING</h1>
+            <h1 class="l2 right">CONDITIONING</h1>
             <h1 class="l2">CONDITIONING</h1>
 
-            <p>囚徒健身速查手册</p>
+            <!-- <p>囚徒健身速查手册</p> -->
         </div>
     </div>
 
@@ -32,48 +158,46 @@
         <div class="view">
             <div class="list">
                 <div class="item">
-                    <div class="bg1"></div>
-                    <h1>Movement Testing</h1>
-                    <p>第一部分，自我指导</p>
-                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
-                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                    <!-- <div class="bg"></div> -->
+                    <h1>One Hand Push Up</h1>
+                    <p>俯卧撑</p>
+                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png" alt="" />
+                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
                 </div>
                 <div class="item">
-                    <div class="bg2"></div>
-
-                    <!-- <img class="bg2" src="http://7xl4qs.com1.z0.glb.clouddn.com/articles_14bOOOPIC87_1024.jpg" alt="" /> -->
-                    <h1>Movement Testing</h1>
-                    <p>第一部分，自我指导</p>
-                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
-                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                    <!-- <div class="bg"></div> -->
+                    <h1>Squat</h1>
+                    <p>深蹲</p>
+                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png" alt="" />
+                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
                 </div>
                 <div class="item">
-                    <div class="bg3"></div>
-                    <h1>Movement Testing</h1>
-                    <p>第一部分，自我指导</p>
-                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
-                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                    <!-- <div class="bg"></div> -->
+                    <h1>Pull Up</h1>
+                    <p>引体向上</p>
+                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png" alt="" />
+                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
                 </div>
                 <div class="item">
-                    <div class="bg4"></div>
-                    <h1>Movement Testing</h1>
-                    <p>第一部分，自我指导</p>
-                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
-                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                    <!-- <div class="bg"></div> -->
+                    <h1>Leg Raise</h1>
+                    <p>举腿</p>
+                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_legraise.png" alt="" />
+                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
                 </div>
                 <div class="item">
-                    <div class="bg5"></div>
-                    <h1>Movement Testing</h1>
-                    <p>第一部分，自我指导</p>
-                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
-                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                    <!-- <div class="bg"></div> -->
+                    <h1>Bridges</h1>
+                    <p>铁板桥</p>
+                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png" alt="" />
+                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
                 </div>
                 <div class="item">
-                    <div class="bg6"></div>
-                    <h1>Movement Testing</h1>
-                    <p>第一部分，自我指导</p>
-                    <img class="l" src="http://storage.yunpro.cn/file/dbfe2915b94fcf150b31" alt="" />
-                    <img class="r" src="http://storage.yunpro.cn/file/f0cb73cf3bba34164664" alt="" />
+                    <!-- <div class="bg"></div> -->
+                    <h1>Hand Stand</h1>
+                    <p>倒立撑</p>
+                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png" alt="" />
+                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
                 </div>
             </div>
         </div>
@@ -90,7 +214,7 @@
         var top = $('.list').offset().top;
 
         if (top < _lastScrollTop && top < 180)
-            $('.body-head').attr('class', 'body-head zoom');
+            $('.body-head').attr('class', 'body-head up');
         else if (top > 150)
             $('.body-head').attr('class', 'body-head');
 

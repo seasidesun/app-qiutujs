@@ -119,7 +119,7 @@
             // $('.slider').css('left', left+'px');
             // pot--;
             // sliding = false;
-            $('.slider').animate({left: left + 'px'}, refresh);
+            $('.slider').stop().animate({left: left + 'px'}, refresh);
             pot--;
             return;
         } else {
