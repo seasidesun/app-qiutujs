@@ -1,11 +1,11 @@
 'use strict';
 
-var ctcd_info = require('const_ctd.js'); // {movements: {}, steps: {}}
+var ctcd_info = require('./const_ctcd.js'); // {movements: {}, steps: {}}
 
 module.exports.getCtcdStepBySId = function (req, res, next) {
 
-    var mID = req.parmas.mID;
-    var sID = req.parmas.sID;
+    var mId = req.params.mId;
+    var sId = req.params.sId;
 
-    res.json(ctcd_info.steps[mID][sID]);
+    res.json(ctcd_info.steps[mId][sId]);
 };
