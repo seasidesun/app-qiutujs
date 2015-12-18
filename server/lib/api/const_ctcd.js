@@ -1,4 +1,6 @@
-{
+'use strict';
+
+module.exports = {
   "movements": {
     "1": {
       "name": "俯卧撑",

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>movement</title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='http://www.youziku.com/webfont/CSS/a93d2288e5a8ed4d0463fa82abbeffec' rel='stylesheet' type='text/css'/>
+    <!-- <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8"> -->
+</head>
+<body>
+
+<style>
+html, body {
+    padding: 0;
+    margin: 0;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #333;
+    -webkit-overflow-scrolling: touch;
+}
+#list {
+    padding-left: 0px;
+}
+#list li{
+    float:left;
+    width: 375px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+
+    box-sizing: border-box;
+    list-style:none;
+}
+#list img{
+    width: 100%;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 320px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.25);
+    margin-left: -160px;
+}
+.foot .tags {
+    position: relative;
+    height: 30px;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+/*width: 22.85px;*/
+
+.foot .item {
+    display: inline-block;
+    float: left;
+    margin: 12px 8.42px;
+    width: 6px;
+    height: 6px;
+
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.foot .item.active {
+    margin: 5px;
+    height: 20px;
+    width: 114.25px;
+
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.foot .slider {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: -20px;
+    height: 20px;
+    width: 114.25px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+li .item {
+    width: 100%;
+    color: #E6E6E6;
+}
+
+li .item .content {
+    line-height: 20px;
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+}
+li .item .content img {
+    margin-bottom: 10px;
+}
+
+li .item .title {
+    border-left: 5px solid #FF9F04;
+    padding-left: 5px;
+}
+
+</style>
+
+<div class="body">
+    <div id="steps" style="overflow:hidden;position:relative;padding:0;">
+        <ul id="list" style="overflow:hidden;"></ul>
+        <div class="banner_mask">
+            <nav class="banner_nav"></nav>
+        </div>
+    </div>
+</div>
+
+<div class="foot">
+    <ul class="tags" id="tags"></ul>
+</div>
+
+<script type="text/javascript">
+!function () {
+
+    var banner = {
+        init : function (arrImage) {
+            var oBanner = document.getElementById('steps');
+            banner.oList = document.getElementById('list');
+            var oNav = document.getElementById('tags');
+            // var oNav = oBanner.getElementsByTagName('tags')[0];
+            // var arrLi = banner.oList.getElementsByTagName('li');
+            banner.iCount = arrImage.length;
+            banner.iW = banner.view().w > 450 ? 450 : banner.view().w;//获取屏幕的宽度
+            oBanner.style.height = banner.view().h + 'px';
+            // oBanner.style.height = banner.iW / 72 * 26 + 'px';
+            // banner.autotime = 2000;
+            banner.autotime = 2000*2000;
+            banner.iNow = 0;
+            banner.iX = 0;
+            banner.iStartX = 0;
+            banner.oTimer = null;
+            banner.iStartTouchX = 0;
+            //初始化banner_list , banner_list li 的宽度
+            banner.oList.style.width = banner.iW * banner.iCount + 'px';
+            oBanner.style.height = banner.oList.style.height = banner.view().h + 'px';
+            // oBanner.style.height = banner.oList.style.height = banner.iW / 72 * 26 + 'px';
+            for (var i = 0; i < banner.iCount; i++) {
+                var _li = banner.createStepDom("!");
+                // var _li = document.createElement('li');
+
+                _li.style.width = banner.iW + 'px';
+                _li.style.height = banner.view().h + 'px';
+                // _li.style.height = banner.iW / 72 * 26 + 'px';
+                // _li.innerHTML = '<img src="' + arrImage[i].imageID + '" />';
+
+                banner.oList.appendChild(_li);
+            }
+            for (var i = 0; i < banner.iCount; i++) {
+                var _tag = document.createElement('li');
+                // _tag.innerHTML = '<i></i>';
+                _tag.className = 'item';
+                // _tag = '<li class="item"><i></i></li>'
+                oNav.appendChild(_tag);
+            }
+
+            banner.arrNav = oNav.children;
+            //绑定点击事件
+            for (var i = 0; i < banner.iCount; i++) {
+                if (i == 0) banner.addClass(banner.arrNav[i], 'active');
+                banner.arrNav[i].index = i;
+                banner.bind(banner.arrNav[i], 'click', banner.clickHandler);
+            }
+            //绑定移动端事件
+            banner.bind(oBanner, 'touchstart', banner.touchStartHandler);
+            banner.bind(oBanner, 'touchmove', banner.touchMoveHandler);
+            banner.bind(oBanner, 'touchend', banner.touchEndHandler);
+            //自动播放
+            banner.auto();
+        },
+        /*
+         *  移动端事件
+         */
+        touchStartHandler : function (event) {
+            banner.oList.style.transition = 'none';
+            banner.iStartTouchX = event.changedTouches[0].pageX;
+            banner.iStartTouchY = event.changedTouches[0].pageY;
+            banner.iStartX = banner.iX;
+            banner.iStartY = banner.iY;
+            clearInterval(banner.oTimer);
+        },
+        touchMoveHandler : function (event) {
+            var iDeltaY = event.changedTouches[0].pageY - banner.iStartTouchY;
+            var iDeltaX = event.changedTouches[0].pageX - banner.iStartTouchX;
+            if (iDeltaY > 10 || iDeltaY < -10) return;
+            banner.iX = banner.iStartX + iDeltaX;
+            if (banner.iX > -3)
+                banner.iX = 0;
+            if (banner.iX < -banner.iW * (banner.iCount - 1) + 3)
+                banner.iX = -banner.iW * (banner.iCount - 1);
+            banner.oList.style.WebkitTransform
+                    = banner.oList.style.transform
+                    = 'translateX(' + banner.iX + 'px)';
+            // event.preventDefault();  // 阻止默认事件
+            event.stopPropagation(); // 阻止冒泡
+
+        },
+        touchEndHandler : function (event) {
+            banner.iNow = -Math.round(banner.iX / banner.iW);
+            if (banner.iNow < 0) banner.iNow = 0;
+            if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
+            banner.slide();
+            // banner.auto();
+        },
+        // touchStartHandler : function (event) {
+        //     banner.oList.style.transition = 'none';
+        //     banner.iStartTouchX = event.changedTouches[0].pageX;
+        //     console.log("iStartTouchX: ", banner.iStartTouchX);
+        //     banner.iStartX = banner.iX;
+        //     clearInterval(banner.oTimer);
+        // },
+        // touchMoveHandler : function (event) {
+        //     var iDeltaX = event.changedTouches[0].pageX - banner.iStartTouchX;
+        //     banner.iX = banner.iStartX + iDeltaX;
+        //     if (banner.iX > -3)
+        //         banner.iX = 0;
+        //     if (banner.iX < -banner.iW * (banner.iCount - 1) + 3)
+        //         banner.iX = -banner.iW * (banner.iCount - 1);
+        //     banner.oList.style.WebkitTransform
+        //             = banner.oList.style.transform
+        //             = 'translateX(' + banner.iX + 'px)';
+        //     // event.preventDefault();  // 阻止默认事件
+        //     event.stopPropagation(); // 阻止冒泡
+        //
+        // },
+        // touchEndHandler : function (event) {
+        //     banner.iNow = -Math.round(banner.iX / banner.iW);
+        //     if (banner.iNow < 0) banner.iNow = 0;
+        //     if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
+        //     banner.slide();
+        //     // banner.auto();
+        // },
+        //滑动
+        slide : function () {
+            banner.iX = -banner.iNow * banner.iW;
+            banner.oList.style.transition = '0.5s';
+            banner.oList.style.WebkitTransform
+                = banner.oList.style.transform
+                = 'translateX(' + banner.iX + 'px)';
+            for (var i = 0; i < banner.iCount; i++) {
+                banner.removeClass(banner.arrNav[i], 'active');
+            }
+            // banner.arrNav[banner.iNow].style.transition = '0.5s';
+            // banner.arrNav[banner.iNow].style.width = '30px';
+            banner.addClass(banner.arrNav[banner.iNow], 'active');
+
+
+            // var slider = document.getElementById('slider');
+            // slider.style.transition = '0.5s';
+            // slider.style.WebkitTransform
+            //     = slider.style.transform
+            //     = 'translateX(' + banner.iNow * 22.8 + 'px)';
+        },
+        //自动滚动
+        auto : function () {
+            banner.oTimer = setInterval(function () {
+                banner.iNow++;
+                banner.iNow = banner.iNow % banner.iCount;
+                banner.slide();
+            }, banner.autotime);
+        },
+        //点击
+        clickHandler : function () {
+            clearInterval(banner.oTimer);
+            banner.iNow = this.index;
+            banner.slide();
+            banner.auto();
+        },
+        /*
+         *  工具类
+         */
+        //获取视图数据
+        view : function () {
+            return {
+                w: window.screen.width,
+                h: window.screen.height
+            };
+        },
+        //绑定
+        bind : function (obj, event, callback) {
+            if (obj.addEventListener) {
+                obj.addEventListener(event, callback, false);
+            } else {
+                obj.attachEvent('on' + event, function() {
+                    callback.call(obj);
+                });
+            }
+        },
+        //添加样式
+        addClass : function (obj, sClass) {
+            var arrClass = obj.className.split(' ');
+            if (!obj.className) {
+                obj.className = sClass;
+                return
+            };
+            //判断是否已存在
+            for (var i = 0, l = arrClass.length; i < l; i++) {
+                if (arrClass[i] === sClass) return;
+            }
+            obj.className += ' ' + sClass;
+        },
+        //移除样式
+        removeClass : function (obj, sClass) {
+            var arrClass = obj.className.split(' ');
+            if (!obj.className) return;
+            //判断并移除
+            for (var i = 0, l = arrClass.length; i < l; i++) {
+                if (arrClass[i] === sClass) {
+                    arrClass.splice(i, 1);
+                    obj.className = arrClass.join(' ');
+                    break;
+                }
+            }
+        },
+        createStepDom: function (data) {
+            var li = document.createElement('li');
+            li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;面对墙壁站立,双脚并拢,双臂伸直,与肩同宽,双手平放在墙上,手掌与胸等高。这 是该动作的起始姿势(图 1)。弯曲肘部,直到前额轻触墙面。这是该动作的结束姿势(图 2)。 然后将自己推回到起始姿势,如此重复。 解析 俯卧撑动作共有十式,墙壁俯卧撑只是第一式。既然是第一式,也就最容易的,毫无疑 问普通人都能做。墙壁俯卧撑也是第一个有治疗效果的练习。刚受伤、做过手术或身体正处 于恢复期的人若想加快恢复速度、尽快拥有强健的体魄,可以选择这个动作。肘、腕、肩(尤 其是柔弱的肩袖)极易出现慢性或急性损伤,这项练习能够轻柔地刺激这些部位,并改善血 液循环。不熟悉徒手体操的初学者应该以较轻柔的动作开始训练,然后逐步提高自己的运动 技巧,循序渐进地增强自己的运动能力。我建议就从这个练习动作开始。</div></div>'
+            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content"><img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_1.png?imageMogr2/thumbnail/250x250" alt="" />    <img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_2.png?imageMogr2/thumbnail/250x250" alt="" /></div>';
+
+            return li;
+        }
+    };
+
+    function getMovenment() {
+
+    }
+
+    //测试数据
+    var arrImage = [
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png"'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png'}
+    ];
+    banner.init(arrImage);
+
+    // var _lastPositon = null;
+    // var pot = 1;
+    // var sliding = false;
+    // $('.body').on('touchstart', function (e) {
+    //     // if (move) return;
+    //     // move = true;
+    //     _lastPositon = e.originalEvent.touches[0].pageX;
+    // });
+    // $('.body').on('touchend', function (e) {
+    //     console.log(sliding);
+    //     if (!sliding) sliding = true;
+    //     else return;
+    //     var nowPosition = e.originalEvent.changedTouches[0].pageX;
+    //     var changed = nowPosition - _lastPositon;
+    //     // if(!_lastPositon) return;
+    //
+    //     if (nowPosition < _lastPositon) {
+    //         console.log('right');
+    //         if (pot >= 10) return sliding = false;
+    //         var left = $('.slider').position().left + 22.85;
+    //         // $('.slider').css('left', left+'px');
+    //         // pot++;
+    //         // sliding = false;
+    //         $('.slider').animate({left: left + 'px'}, function () {
+    //             pot++;
+    //             sliding = false;
+    //             return;
+    //         });
+    //     } else if (nowPosition > _lastPositon) {
+    //         console.log('left');
+    //         if (pot <= 1) return sliding = false;
+    //         var left = $('.slider').position().left - 22.85;
+    //         // $('.slider').css('left', left+'px');
+    //         // pot--;
+    //         // sliding = false;
+    //         $('.slider').animate({left: left + 'px'}, function () {
+    //             pot--;
+    //             sliding = false;
+    //             return;
+    //         });
+    //     } else {
+    //         sliding = false;
+    //         return;
+    //     }
+    // });
+    // var start = false;
+    // var end = false;
+    // $('.body').on('touchstart', function (e) {
+    //     console.log('start: ', start);
+    //     if (!start) start = true;
+    //     else return;
+    //     _lastPositon = e.originalEvent.touches[0].pageX;
+    // });
+    // $('.body').on('touchend', function (e) {
+    //     console.log('end: ', end);
+    //     if (!end) end = true;
+    //     else return;
+    //     var nowPosition = e.originalEvent.changedTouches[0].pageX;
+    //     var changed = nowPosition - _lastPositon;
+    //
+    //     if (nowPosition < _lastPositon) {
+    //         console.log('right');
+    //         if (pot >= 10) {start = false; end = false; return;}
+    //         var left = $('.slider').position().left + 22.85;
+    //         // $('.slider').css('left', left+'px');
+    //         // pot++;
+    //         // start = false;
+    //         $('.slider').animate({left: left + 'px'}, refresh);
+    //         pot++;
+    //         return;
+    //     } else if (nowPosition > _lastPositon) {
+    //         console.log('left');
+    //         if (pot <= 1) {start = false; end = false; return;}
+    //         var left = $('.slider').position().left - 22.85;
+    //         // $('.slider').css('left', left+'px');
+    //         // pot--;
+    //         // sliding = false;
+    //         $('.slider').stop().animate({left: left + 'px'}, refresh);
+    //         pot--;
+    //         return;
+    //     } else {
+    //         start = false;
+    //         end = false;
+    //         return;
+    //     }
+    // });
+    // function refresh () {console.log('refresh');setTimeout(function () {start = false; end = false; return;}, 500);}
+
+
+}();
+
+</script>
+
+</body>
+</html>

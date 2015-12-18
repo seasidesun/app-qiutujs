@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>囚徒健身</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="/ctcd.js" type="text/javascript"></script>
+
+    <link href='http://www.youziku.com/webfont/CSS/a93d2288e5a8ed4d0463fa82abbeffec' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.useso.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='/ctcd.css' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<div class="body">
+    <div class="f-body" style="">
+        <div class="f-head">
+            <img class="f-head-bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/pushup1.png" alt="" />
+            <div class="title">
+                <h1 class="l1 left">CONVICT</h1>
+                <h1 class="l1 right">CONVICT</h1>
+                <h1 class="l1">CONVICT</h1>
+                <h1 class="l2 left">CONDITIONING</h1>
+                <h1 class="l2 right">CONDITIONING</h1>
+                <h1 class="l2">CONDITIONING</h1>
+                <p class="l3">你要做的，就是比昨天更强大</p>
+                <P class="l4">STRONGER THEN YESTERDAY</P>
+            </div>
+        </div>
+        <div class="f-wrapper">
+            <div class="view">
+                <div class="bg"></div>
+                <div class="list" id="f-list">
+                    <div class="item">
+                        <h1>One Arm Push Up</h1>
+                        <p>俯卧撑</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>One Leg Squat</h1>
+                        <p>深蹲</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>One Arm Pull Up</h1>
+                        <p>引体向上</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>Hanging Leg Raise</h1>
+                        <p>举腿</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_legraise.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>Stand To Stand Bridges</h1>
+                        <p>铁板桥</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>Hand Stand PushUp</h1>
+                        <p>倒立撑</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="s-body" style="display:none">
+        <div id="s-step" class="steps">
+            <ul id="s-list" class="list"></ul>
+        </div>
+        <div class="s-foot">
+            <ul class="tags" id="tags"></ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+!function() {
+    var fBodyView = $('.f-body');
+    var sBodyView = $('.s-body');
+    var _screen = {
+        w: window.screen.width,
+        h: window.screen.height
+    };
+    var banner = {};
+
+    var _m = {};
+    f_run();
+
+    function f_run() {
+        var _lastScrollTop = 200;
+
+        $('.f-wrapper').scroll(function(e) {
+            var top = $('.f-wrapper .list').offset().top;
+
+            if (top < _lastScrollTop && top < 180)
+                $('.f-head').addClass('up');
+            else if (top > 150)
+                $('.f-head').removeClass('up');
+
+            _lastScrollTop = top;
+        });
+
+        var movements = $('#f-list').children();
+        for (var i = 0; i < movements.length; i++) {
+            movements[i].index = i + 1;
+            bind(movements[i], 'click', function () {
+                console.log(this.index);
+                fBodyView.css('display', 'none');
+                s_run.refreshSteps(this.index);
+                sBodyView.css('display', 'block');
+            });
+        }
+    }
+
+    function bind(obj, event, callback) {
+        if (obj.addEventListener) {
+            obj.addEventListener(event, callback, false);
+        } else {
+            obj.attachEvent('on' + event, function() {
+                callback.call(obj);
+            });
+        }
+    }
+    function getCtcdStepsByMId(mId, callback) {
+        if (_m[mId]) return callback(null, _m[mId]);
+        var domain = window.location.origin;
+        $.ajax({
+            url: domain + '/api/ctcd/movements/' + mId,
+            type: 'GET',
+            success: function (data) {
+                // console.log(data);
+                return callback(null, data)
+            }
+        });
+    }
+
+    var s_run = {
+        init: function () {
+            banner = {
+                sStepsView: document.getElementById('s-step'),
+                sStepsList: document.getElementById('s-list'),
+                tagsView: document.getElementById('tags'),
+                iCount: 10,
+                iW: _screen.w > 450 ? 450: _screen.w,
+                iNow: 0,
+                iX: 0,
+                iStartX: 0,
+                iStartTouchX: 0
+            }
+            banner.sStepsList.style.width = banner.iW * banner.iCount + 'px';
+            banner.sStepsList.style.height = _screen.h + 'px';
+            // banner.sStepsView.style.height = _screen.h + 'px';
+
+            // for (var i = 0; i < banner.iCount; i++) {
+            //     var _li = s_run.createStepDom();
+            //
+            //     _li.style.width = banner.iW + 'px';
+            //     _li.style.height = _screen.h + 'px';
+            //
+            //     banner.sStepsList.appendChild(_li);
+            // }
+
+            for (var i = 0; i < banner.iCount; i++) {
+                var _tag = document.createElement('li');
+                _tag.className = 'item';
+                banner.tagsView.appendChild(_tag);
+            }
+
+            banner.arrNav = banner.tagsView.children;
+            //绑定点击事件
+            for (var i = 0; i < banner.iCount; i++) {
+                if (i == 0) s_run.addClass(banner.arrNav[i], 'active');
+                banner.arrNav[i].index = i;
+                bind(banner.arrNav[i], 'click', s_run.clickHandler);
+            }
+            //绑定移动端事件
+            bind(banner.sStepsView, 'touchstart', s_run.touchStartHandler);
+            bind(banner.sStepsView, 'touchmove', s_run.touchMoveHandler);
+            bind(banner.sStepsView, 'touchend', s_run.touchEndHandler);
+        },
+        touchStartHandler : function (event) {
+            banner.sStepsList.style.transition = 'none';
+            banner.iStartTouchX = event.changedTouches[0].pageX;
+            banner.iStartTouchY = event.changedTouches[0].pageY;
+            banner.iStartX = banner.iX;
+            banner.iStartY = banner.iY;
+            clearInterval(banner.oTimer);
+        },
+        touchMoveHandler : function (event) {
+            var iDeltaY = event.changedTouches[0].pageY - banner.iStartTouchY;
+            var iDeltaX = event.changedTouches[0].pageX - banner.iStartTouchX;
+            if (iDeltaY > 10 || iDeltaY < -10) return;
+            banner.iX = banner.iStartX + iDeltaX;
+            if (banner.iX > -3)
+                banner.iX = 0;
+            if (banner.iX < -banner.iW * (banner.iCount - 1) + 3)
+                banner.iX = -banner.iW * (banner.iCount - 1);
+            banner.sStepsList.style.WebkitTransform
+                    = banner.sStepsList.style.transform
+                    = 'translateX(' + banner.iX + 'px)';
+            // event.preventDefault();  // 阻止默认事件
+            event.stopPropagation(); // 阻止冒泡
+
+        },
+        touchEndHandler : function (event) {
+            banner.iNow = -Math.round(banner.iX / banner.iW);
+            if (banner.iNow < 0) banner.iNow = 0;
+            if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
+            s_run.slide();
+        },
+        slide : function () {
+            banner.iX = -banner.iNow * banner.iW;
+            banner.sStepsList.style.transition = '0.5s';
+            banner.sStepsList.style.WebkitTransform
+                = banner.sStepsList.style.transform
+                = 'translateX(' + banner.iX + 'px)';
+            for (var i = 0; i < banner.iCount; i++) {
+                s_run.removeClass(banner.arrNav[i], 'active');
+            }
+            s_run.addClass(banner.arrNav[banner.iNow], 'active');
+        },
+        refreshSteps: function (mId) {
+            getCtcdStepsByMId(mId, function (error, data) {
+                if (error || !data) return;
+                // banner.sStepsList.innerHTML = '';
+                for (var i = 0; i < banner.iCount; i++) {
+                    var _li = s_run.createStepDom(data[i+1]);
+
+                    _li.style.width = banner.iW + 'px';
+                    _li.style.height = _screen.h + 'px';
+
+                    banner.sStepsList.appendChild(_li);
+                }
+            });
+        },
+        //添加样式
+        addClass : function (obj, sClass) {
+            var arrClass = obj.className.split(' ');
+            if (!obj.className) {
+                obj.className = sClass;
+                return
+            };
+            //判断是否已存在
+            for (var i = 0, l = arrClass.length; i < l; i++) {
+                if (arrClass[i] === sClass) return;
+            }
+            obj.className += ' ' + sClass;
+        },
+        //移除样式
+        removeClass : function (obj, sClass) {
+            var arrClass = obj.className.split(' ');
+            if (!obj.className) return;
+            //判断并移除
+            for (var i = 0, l = arrClass.length; i < l; i++) {
+                if (arrClass[i] === sClass) {
+                    arrClass.splice(i, 1);
+                    obj.className = arrClass.join(' ');
+                    break;
+                }
+            }
+        },
+        //点击
+        clickHandler : function () {
+            banner.iNow = this.index;
+            s_run.slide();
+        },
+        createStepDom: function (data) {
+            var li = document.createElement('li');
+            li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.description + '</div></div>'
+
+            var html = '<div class="item"><div class="title"><h4>图解</h4></div><div class="content">';
+            for (var i = 0; i < data.imgList.length; i++) {
+                html += data.imgList[i].description + '<img src="http://7xl4qs.com1.z0.glb.clouddn.com/' + data.imgList[i].imgUrl + '?imageMogr2/thumbnail/250x250" alt="' + data.imgList[i].description + '"/>';
+            }
+            html += '</div></div>';
+            li.innerHTML += html;
+
+            li.innerHTML += '<div class="item"><div class="title"><h4>心得</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.analysis + '</div></div>';
+
+            html = '<div class="item"><div class="title"><h4>训练目标</h4></div><div class="content">';
+            for (var i = 0; i < data.level.length; i++) {
+                html += '<li>' + data.level[i].description + '</li>'
+            }
+            html += '</div></div>';
+            li.innerHTML += html;
+
+            li.innerHTML += '<div class="item"><div class="title"><h4>稳扎稳打</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.suggest + '</div>';
+            return li;
+        }
+    };
+    s_run.init();
+
+    //测试数据
+    var arrImage = [
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png"'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png'}
+    ];
+    // banner.init(arrImage);
+}();
+
+</script>
+
+</body>
+</html>

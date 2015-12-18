@@ -1,6 +1,11 @@
 "use strict";
 
 myApp.controller('mainCtrl', ['$scope', '$location', function mainCtrl ($scope, $location) {
+
+    if (isWechat()) {
+        $scope.hidden = true;
+    }
+
     $scope.navigations = [
         { title: '个人心得', href: 'article',  pos: 'left'},
         { title: '六艺十式', href: 'movement', pos: 'middle'},
@@ -12,4 +17,13 @@ myApp.controller('mainCtrl', ['$scope', '$location', function mainCtrl ($scope, 
     $scope.selectNav = function (index) {
         $scope.selectedNow = index;
     };
+
+    function isWechat() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }]);
