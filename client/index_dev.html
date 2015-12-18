@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="body">
-    <div class="f-body" >
+    <div class="f-body" style="">
         <div class="f-head">
             <img class="f-head-bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/pushup1.png" alt="" />
             <div class="title">
@@ -30,7 +30,7 @@
         <div class="f-wrapper">
             <div class="view">
                 <div class="bg"></div>
-                <div class="list" id="s-list">
+                <div class="list" id="f-list">
                     <div class="item">
                         <h1>One Arm Push Up</h1>
                         <p>俯卧撑</p>
@@ -109,12 +109,13 @@
             _lastScrollTop = top;
         });
 
-        var movements = $('#s-list').children();
+        var movements = $('#f-list').children();
         for (var i = 0; i < movements.length; i++) {
             movements[i].index = i + 1;
             bind(movements[i], 'click', function () {
+                console.log(this.index);
                 fBodyView.css('display', 'none');
-                // refreshSteps(this.index);
+                s_run.refreshSteps(this.index);
                 sBodyView.css('display', 'block');
             });
         }
@@ -129,13 +130,15 @@
             });
         }
     }
-    function getCtcdStepBySId(mId, sId) {
+    function getCtcdStepsByMId(mId, callback) {
+        if (_m[mId]) return callback(null, _m[mId]);
         var domain = window.location.origin;
         $.ajax({
-            url: domain + '/api/ctcd/movements/1/steps/1',
+            url: domain + '/api/ctcd/movements/' + mId,
             type: 'GET',
             success: function (data) {
-                console.log(data);
+                // console.log(data);
+                return callback(null, data)
             }
         });
     }
@@ -153,8 +156,18 @@
                 iStartX: 0,
                 iStartTouchX: 0
             }
-            banner.sStepsList.style.width = banner.iW * banner.iCount;
-            banner.sStepsView.style.height = _screen.h;
+            banner.sStepsList.style.width = banner.iW * banner.iCount + 'px';
+            banner.sStepsList.style.height = _screen.h + 'px';
+            banner.sStepsView.style.height = _screen.h + 'px';
+
+            // for (var i = 0; i < banner.iCount; i++) {
+            //     var _li = s_run.createStepDom();
+            //
+            //     _li.style.width = banner.iW + 'px';
+            //     _li.style.height = _screen.h + 'px';
+            //
+            //     banner.sStepsList.appendChild(_li);
+            // }
 
             for (var i = 0; i < banner.iCount; i++) {
                 var _tag = document.createElement('li');
@@ -202,7 +215,7 @@
             banner.iNow = -Math.round(banner.iX / banner.iW);
             if (banner.iNow < 0) banner.iNow = 0;
             if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
-            banner.slide();
+            s_run.slide();
         },
         slide : function () {
             banner.iX = -banner.iNow * banner.iW;
@@ -214,6 +227,20 @@
                 s_run.removeClass(banner.arrNav[i], 'active');
             }
             s_run.addClass(banner.arrNav[banner.iNow], 'active');
+        },
+        refreshSteps: function (mId) {
+            getCtcdStepsByMId(mId, function (error, data) {
+                if (error || !data) return;
+                // banner.sStepsList.innerHTML = '';
+                for (var i = 0; i < banner.iCount; i++) {
+                    var _li = s_run.createStepDom(data[i+1]);
+
+                    _li.style.width = banner.iW + 'px';
+                    _li.style.height = _screen.h + 'px';
+
+                    banner.sStepsList.appendChild(_li);
+                }
+            });
         },
         //添加样式
         addClass : function (obj, sClass) {
@@ -248,29 +275,26 @@
         },
         createStepDom: function (data) {
             var li = document.createElement('li');
-            li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;面对墙壁站立,双脚并拢,双臂伸直,与肩同宽,双手平放在墙上,手掌与胸等高。这 是该动作的起始姿势(图 1)。弯曲肘部,直到前额轻触墙面。这是该动作的结束姿势(图 2)。 然后将自己推回到起始姿势,如此重复。 解析 俯卧撑动作共有十式,墙壁俯卧撑只是第一式。既然是第一式,也就最容易的,毫无疑 问普通人都能做。墙壁俯卧撑也是第一个有治疗效果的练习。刚受伤、做过手术或身体正处 于恢复期的人若想加快恢复速度、尽快拥有强健的体魄,可以选择这个动作。肘、腕、肩(尤 其是柔弱的肩袖)极易出现慢性或急性损伤,这项练习能够轻柔地刺激这些部位,并改善血 液循环。不熟悉徒手体操的初学者应该以较轻柔的动作开始训练,然后逐步提高自己的运动 技巧,循序渐进地增强自己的运动能力。我建议就从这个练习动作开始。</div></div>'
-            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content"><img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_1.png?imageMogr2/thumbnail/250x250" alt="" />    <img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_2.png?imageMogr2/thumbnail/250x250" alt="" /></div>';
+            li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.description + '</div></div>'
+            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content"><img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_1.png?imageMogr2/thumbnail/250x250" alt="" />    <img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_2.png?imageMogr2/thumbnail/250x250" alt="" /></div></div>';
+            li.innerHTML += '<div class="item"><div class="title"><h4>心得</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.analysis + '</div></div>';
+            // li.innerHTML += '<div class="item"><div class="title"><h4>训练目标</h4></div><div class="content">' + data.analysis + '</div></div>';
+            li.innerHTML += '<div class="item"><div class="title"><h4>稳扎稳打</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.suggest + '</div></div>';
 
             return li;
         }
     };
     s_run.init();
 
-    // function s_run(){
-    //     return {
-    //
-    //     }
-    // };
-
-        //测试数据
-        var arrImage = [
-            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png'},
-            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png'},
-            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png"'},
-            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png'},
-            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png'}
-        ];
-        // banner.init(arrImage);
+    //测试数据
+    var arrImage = [
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png"'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png'},
+        {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png'}
+    ];
+    // banner.init(arrImage);
 }();
 
 </script>

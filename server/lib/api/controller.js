@@ -9,3 +9,10 @@ module.exports.getCtcdStepBySId = function (req, res, next) {
 
     res.json(ctcd_info.steps[mId][sId]);
 };
+
+module.exports.getCtcdStepsByMId = function (req, res, next) {
+
+    var mId = req.params.mId;
+
+    res.json(ctcd_info.steps[mId]);
+};

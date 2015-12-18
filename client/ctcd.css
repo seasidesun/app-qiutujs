@@ -169,8 +169,9 @@ html, body {
 /*secend html css*/
 .s-body .steps {
     position:relative;
-    overflow:hidden;
     padding:0;
+    margin-bottom: 50px;
+    overflow:hidden;
 }
 .s-body .steps .list {
     overflow:hidden;
