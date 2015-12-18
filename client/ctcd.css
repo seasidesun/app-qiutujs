@@ -193,16 +193,30 @@ html, body {
 .s-body .steps .list li .item {
     width: 100%;
     color: #E6E6E6;
+    margin-top: -10px;
 }
 
+/*.s-body .steps .list li .item:before{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 2px;
+    margin-top: 20px;
+
+    background-color:  #FF9F04;
+}*/
+
 .s-body .steps .list li .item .content {
-    line-height: 20px;
     font-size: 13px;
     font-family: 'Oswald', sans-serif;
 }
+.s-body .steps .list li .item .content li{
+    float: none;
+}
 .s-body .steps .list li .item .content img {
-    margin-bottom: 10px;
     width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .s-body .steps .list li .item .title {

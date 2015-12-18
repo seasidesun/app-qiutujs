@@ -158,7 +158,7 @@
             }
             banner.sStepsList.style.width = banner.iW * banner.iCount + 'px';
             banner.sStepsList.style.height = _screen.h + 'px';
-            banner.sStepsView.style.height = _screen.h + 'px';
+            // banner.sStepsView.style.height = _screen.h + 'px';
 
             // for (var i = 0; i < banner.iCount; i++) {
             //     var _li = s_run.createStepDom();
@@ -277,21 +277,23 @@
             var li = document.createElement('li');
             li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.description + '</div></div>'
 
-            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content">';
+            var html = '<div class="item"><div class="title"><h4>图解</h4></div><div class="content">';
             for (var i = 0; i < data.imgList.length; i++) {
-                li.innerHTML += '<img src="http://7xl4qs.com1.z0.glb.clouddn.com/' + data.imgList[i].imgUrl + '?imageMogr2/thumbnail/250x250" alt="" />' + data.imgList[i].description
+                html += data.imgList[i].description + '<img src="http://7xl4qs.com1.z0.glb.clouddn.com/' + data.imgList[i].imgUrl + '?imageMogr2/thumbnail/250x250" alt="' + data.imgList[i].description + '"/>';
             }
-            li.innerHTML += '';
-            li.innerHTML += '</div></div>';
+            html += '</div></div>';
+            li.innerHTML += html;
 
             li.innerHTML += '<div class="item"><div class="title"><h4>心得</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.analysis + '</div></div>';
 
-            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content">';
-            // li.innerHTML += '<div class="item"><div class="title"><h4>训练目标</h4></div><div class="content">' + data.analysis + '</div></div>';
-            li.innerHTML += '</div></div>';
+            html = '<div class="item"><div class="title"><h4>训练目标</h4></div><div class="content">';
+            for (var i = 0; i < data.level.length; i++) {
+                html += '<li>' + data.level[i].description + '</li>'
+            }
+            html += '</div></div>';
+            li.innerHTML += html;
 
-            li.innerHTML += '<div class="item"><div class="title"><h4>稳扎稳打</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.suggest + '</div></div>';
-
+            li.innerHTML += '<div class="item"><div class="title"><h4>稳扎稳打</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.suggest + '</div>';
             return li;
         }
     };
