@@ -276,9 +276,20 @@
         createStepDom: function (data) {
             var li = document.createElement('li');
             li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.description + '</div></div>'
-            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content"><img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_1.png?imageMogr2/thumbnail/250x250" alt="" />    <img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_2.png?imageMogr2/thumbnail/250x250" alt="" /></div></div>';
+
+            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content">';
+            for (var i = 0; i < data.imgList.length; i++) {
+                li.innerHTML += '<img src="http://7xl4qs.com1.z0.glb.clouddn.com/' + data.imgList[i].imgUrl + '?imageMogr2/thumbnail/250x250" alt="" />' + data.imgList[i].description
+            }
+            li.innerHTML += '';
+            li.innerHTML += '</div></div>';
+
             li.innerHTML += '<div class="item"><div class="title"><h4>心得</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.analysis + '</div></div>';
+
+            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content">';
             // li.innerHTML += '<div class="item"><div class="title"><h4>训练目标</h4></div><div class="content">' + data.analysis + '</div></div>';
+            li.innerHTML += '</div></div>';
+
             li.innerHTML += '<div class="item"><div class="title"><h4>稳扎稳打</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;' + data.suggest + '</div></div>';
 
             return li;
