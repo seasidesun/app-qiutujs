@@ -4,265 +4,131 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <title>囚徒健身</title>
-    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8"> -->
-    <link href='http://fonts.useso.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="/ctcd.js" type="text/javascript"></script>
+
     <link href='http://www.youziku.com/webfont/CSS/a93d2288e5a8ed4d0463fa82abbeffec' rel='stylesheet' type='text/css'/>
-    <style media="screen">
-        html, body {
-            padding: 0;
-            margin: 0;
-            background-color: #333;
-            -webkit-overflow-scrolling: touch;
-        }
-        .body {
-            /*position: fixed;*/
-            /*top: 0;*/
-            /*bottom: 0;*/
-            width: 100%;
-            height: 100%;
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .body-head {
-            /*display: block;*/
-            /*position: absolute;*/
-            width: 100%;
-            height: 200px;
-
-            overflow: hidden;
-            transition: all .2s ease-in-out;
-        }
-        .body-head.up {
-            transform: scale(0.95);
-            opacity: 0.5;
-        }
-        .body-head img.body-head-bg {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        .body-head .title {
-            position: relative;
-            margin-top: -200px;
-        }
-        .body-head .title h1 {
-            position: absolute;
-
-            font-family: 'Oswald', sans-serif;
-            letter-spacing: 2px;
-        }
-        .body-head .title h1.l1 {
-            top: 10px;
-            right: 10px;
-
-            color: #fff;
-        }
-        .body-head .title h1.l2 {
-            top: 50px;
-            right: 10px;
-
-            color: #fff;
-        }
-        .body-head .title h1.left {
-            right: 8px;
-
-            color: #37a4ef;
-        }
-        .body-head .title h1.right {
-            right: 12px;
-
-            color: #ed4a21
-        }
-        .body-head .title p {
-            position: absolute;
-            top: 110px;
-            right: 10px;
-
-            font-family:hdjxyt584433;
-            color: #fff;
-            font-size: 14px;
-        }
-        .body-head .title p.l3 {
-            top: 110px;
-            right: 10px;
-
-            color: #fff;
-        }
-        .body-head .title p.l4 {
-            top: 130px;
-            right: 10px;
-
-            color: #fff;
-        }
-        .wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-            max-width: 450px;
-
-            overflow: scroll;
-        }
-        .wrapper .view {
-            margin-top: 200px;
-
-            background: #333;
-        }
-        .wrapper .view .bg {
-            position: absolute;
-            width: 100%;
-            height: 720px;
-
-            /*background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/82eb1149edcb6852bdd0e62956d38b2a.jpg);*/
-            background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/364fff360831c90b6629bcc2da926cf6.jpg);
-
-            background-position: 50%;
-            opacity: 0.3;
-        }
-        .wrapper .list {
-            position: relative;
-
-            box-shadow: 2px 0px 10px #000;
-        }
-        .wrapper .list .item {
-            position: relative;
-            height: 120px;
-            width: 100%;
-
-            border-bottom: 1.5px solid #000;
-        }
-
-        .wrapper .list .item .l {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            margin-top: -25px;
-            height: 40px;
-            width: 40px;
-
-            opacity: 0.85;
-        }
-        .wrapper .list .item .r {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            margin-top: -20px;
-            height: 40px;
-            width: 40px;
-
-            opacity: 0.85;
-        }
-        .wrapper .list .item h1 {
-            position: absolute;
-            left: 65px;
-            top: 30px;
-            margin: 0px;
-
-            color: #fff;
-            font-size: 24px;
-            font-family: 'Oswald', sans-serif;
-        }
-        .wrapper .list .item p {
-            position: absolute;
-            left: 65px;
-            top: 55px;
-
-            color: #fff;
-            font-size: 11px;
-        }
-
-    </style>
+    <link href='http://fonts.useso.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='/ctcd.css' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-
 <div class="body">
-
-    <div class="body-head">
-        <!-- <img class="body-head-bg" src="http://storage.yunpro.cn/file/8d588bf6ddf5d343139a" alt="" /> -->
-        <img class="body-head-bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/pushup1.png" alt="" />
-
-        <div class="title">
-            <h1 class="l1 left">CONVICT</h1>
-            <h1 class="l1 right">CONVICT</h1>
-            <h1 class="l1">CONVICT</h1>
-            <h1 class="l2 left">CONDITIONING</h1>
-            <h1 class="l2 right">CONDITIONING</h1>
-            <h1 class="l2">CONDITIONING</h1>
-            <p class="l3">你要做的，就是比昨天更强大</p>
-            <P class="l4">STRONGER THEN YESTERDAY</P>
+    <div class="f-body" >
+        <div class="f-head">
+            <img class="f-head-bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/pushup1.png" alt="" />
+            <div class="title">
+                <h1 class="l1 left">CONVICT</h1>
+                <h1 class="l1 right">CONVICT</h1>
+                <h1 class="l1">CONVICT</h1>
+                <h1 class="l2 left">CONDITIONING</h1>
+                <h1 class="l2 right">CONDITIONING</h1>
+                <h1 class="l2">CONDITIONING</h1>
+                <p class="l3">你要做的，就是比昨天更强大</p>
+                <P class="l4">STRONGER THEN YESTERDAY</P>
+            </div>
         </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="view">
-            <div class="bg"></div>
-            <div class="list">
-                <div class="item">
-                    <!-- <img class="bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/pushup.png" alt="" /> -->
-                    <h1>One Arm Push Up</h1>
-                    <p>俯卧撑</p>
-                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png" alt="" />
-                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
-                </div>
-                <div class="item">
-                    <!-- <img class="bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/4b75b7574ef22bd749aaab4c336fc31c.jpg" alt="" /> -->
-                    <h1>One Leg Squat</h1>
-                    <p>深蹲</p>
-                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png" alt="" />
-                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
-                </div>
-                <div class="item">
-                    <!-- <img class="bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/82eb1149edcb6852bdd0e62956d38b2a.jpg" alt="" /> -->
-                    <h1>One Arm Pull Up</h1>
-                    <p>引体向上</p>
-                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png" alt="" />
-                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
-                </div>
-                <div class="item">
-                    <!-- <img class="bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/364fff360831c90b6629bcc2da926cf6.jpg" alt="" /> -->
-                    <h1>Hanging Leg Raise</h1>
-                    <p>举腿</p>
-                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_legraise.png" alt="" />
-                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
-                </div>
-                <div class="item">
-                    <!-- <img class="bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/74b84a142c36e5d13468f21cea1f0b4d.jpg" alt="" /> -->
-                    <h1>Stand To Stand Bridges</h1>
-                    <p>铁板桥</p>
-                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png" alt="" />
-                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
-                </div>
-                <div class="item">
-                    <!-- <img class="bg" src="http://7xl4qs.com1.z0.glb.clouddn.com/images%20(3).jpeg" alt="" /> -->
-                    <h1>Hand Stand PushUp</h1>
-                    <p>倒立撑</p>
-                    <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png" alt="" />
-                    <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+        <div class="f-wrapper">
+            <div class="view">
+                <div class="bg"></div>
+                <div class="list" id="s-list">
+                    <div class="item">
+                        <h1>One Arm Push Up</h1>
+                        <p>俯卧撑</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>One Leg Squat</h1>
+                        <p>深蹲</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>One Arm Pull Up</h1>
+                        <p>引体向上</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>Hanging Leg Raise</h1>
+                        <p>举腿</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_legraise.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>Stand To Stand Bridges</h1>
+                        <p>铁板桥</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
+                    <div class="item">
+                        <h1>Hand Stand PushUp</h1>
+                        <p>倒立撑</p>
+                        <img class="l" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png" alt="" />
+                        <img class="r" src="http://7xl4qs.com1.z0.glb.clouddn.com/icon_next.svg" alt="" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="foot"></div>
+    <div class="s-body" style="display:none">
+        <div id="s-step" class="steps">
+            <ul id="s-list" class="list"></ul>
+        </div>
+        <div class="s-foot">
+            <ul class="tags" id="tags"></ul>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript">
 !function() {
-    var _lastScrollTop = 200;
+    var fBodyView = $('.f-body');
+    var sBodyView = $('.s-body');
+    var _screen = {
+        w: window.screen.width,
+        h: window.screen.height
+    };
+    var banner = {};
 
-    $('.wrapper').scroll(function(e) {
-        var top = $('.list').offset().top;
+    var _m = {};
+    f_run();
 
-        if (top < _lastScrollTop && top < 180)
-            $('.body-head').attr('class', 'body-head up');
-        else if (top > 150)
-            $('.body-head').attr('class', 'body-head');
+    function f_run() {
+        var _lastScrollTop = 200;
 
-        _lastScrollTop = top;
-    })
+        $('.f-wrapper').scroll(function(e) {
+            var top = $('.f-wrapper .list').offset().top;
 
+            if (top < _lastScrollTop && top < 180)
+                $('.f-head').addClass('up');
+            else if (top > 150)
+                $('.f-head').removeClass('up');
+
+            _lastScrollTop = top;
+        });
+
+        var movements = $('#s-list').children();
+        for (var i = 0; i < movements.length; i++) {
+            movements[i].index = i + 1;
+            bind(movements[i], 'click', function () {
+                fBodyView.css('display', 'none');
+                // refreshSteps(this.index);
+                sBodyView.css('display', 'block');
+            });
+        }
+    }
+
+    function bind(obj, event, callback) {
+        if (obj.addEventListener) {
+            obj.addEventListener(event, callback, false);
+        } else {
+            obj.attachEvent('on' + event, function() {
+                callback.call(obj);
+            });
+        }
+    }
     function getCtcdStepBySId(mId, sId) {
         var domain = window.location.origin;
         $.ajax({
@@ -273,8 +139,138 @@
             }
         });
     }
-    // getCtcdStepBySId(1,1);
 
+    var s_run = {
+        init: function () {
+            banner = {
+                sStepsView: document.getElementById('s-step'),
+                sStepsList: document.getElementById('s-list'),
+                tagsView: document.getElementById('tags'),
+                iCount: 10,
+                iW: _screen.w > 450 ? 450: _screen.w,
+                iNow: 0,
+                iX: 0,
+                iStartX: 0,
+                iStartTouchX: 0
+            }
+            banner.sStepsList.style.width = banner.iW * banner.iCount;
+            banner.sStepsView.style.height = _screen.h;
+
+            for (var i = 0; i < banner.iCount; i++) {
+                var _tag = document.createElement('li');
+                _tag.className = 'item';
+                banner.tagsView.appendChild(_tag);
+            }
+
+            banner.arrNav = banner.tagsView.children;
+            //绑定点击事件
+            for (var i = 0; i < banner.iCount; i++) {
+                if (i == 0) s_run.addClass(banner.arrNav[i], 'active');
+                banner.arrNav[i].index = i;
+                bind(banner.arrNav[i], 'click', s_run.clickHandler);
+            }
+            //绑定移动端事件
+            bind(banner.sStepsView, 'touchstart', s_run.touchStartHandler);
+            bind(banner.sStepsView, 'touchmove', s_run.touchMoveHandler);
+            bind(banner.sStepsView, 'touchend', s_run.touchEndHandler);
+        },
+        touchStartHandler : function (event) {
+            banner.sStepsList.style.transition = 'none';
+            banner.iStartTouchX = event.changedTouches[0].pageX;
+            banner.iStartTouchY = event.changedTouches[0].pageY;
+            banner.iStartX = banner.iX;
+            banner.iStartY = banner.iY;
+            clearInterval(banner.oTimer);
+        },
+        touchMoveHandler : function (event) {
+            var iDeltaY = event.changedTouches[0].pageY - banner.iStartTouchY;
+            var iDeltaX = event.changedTouches[0].pageX - banner.iStartTouchX;
+            if (iDeltaY > 10 || iDeltaY < -10) return;
+            banner.iX = banner.iStartX + iDeltaX;
+            if (banner.iX > -3)
+                banner.iX = 0;
+            if (banner.iX < -banner.iW * (banner.iCount - 1) + 3)
+                banner.iX = -banner.iW * (banner.iCount - 1);
+            banner.sStepsList.style.WebkitTransform
+                    = banner.sStepsList.style.transform
+                    = 'translateX(' + banner.iX + 'px)';
+            // event.preventDefault();  // 阻止默认事件
+            event.stopPropagation(); // 阻止冒泡
+
+        },
+        touchEndHandler : function (event) {
+            banner.iNow = -Math.round(banner.iX / banner.iW);
+            if (banner.iNow < 0) banner.iNow = 0;
+            if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
+            banner.slide();
+        },
+        slide : function () {
+            banner.iX = -banner.iNow * banner.iW;
+            banner.sStepsList.style.transition = '0.5s';
+            banner.sStepsList.style.WebkitTransform
+                = banner.sStepsList.style.transform
+                = 'translateX(' + banner.iX + 'px)';
+            for (var i = 0; i < banner.iCount; i++) {
+                s_run.removeClass(banner.arrNav[i], 'active');
+            }
+            s_run.addClass(banner.arrNav[banner.iNow], 'active');
+        },
+        //添加样式
+        addClass : function (obj, sClass) {
+            var arrClass = obj.className.split(' ');
+            if (!obj.className) {
+                obj.className = sClass;
+                return
+            };
+            //判断是否已存在
+            for (var i = 0, l = arrClass.length; i < l; i++) {
+                if (arrClass[i] === sClass) return;
+            }
+            obj.className += ' ' + sClass;
+        },
+        //移除样式
+        removeClass : function (obj, sClass) {
+            var arrClass = obj.className.split(' ');
+            if (!obj.className) return;
+            //判断并移除
+            for (var i = 0, l = arrClass.length; i < l; i++) {
+                if (arrClass[i] === sClass) {
+                    arrClass.splice(i, 1);
+                    obj.className = arrClass.join(' ');
+                    break;
+                }
+            }
+        },
+        //点击
+        clickHandler : function () {
+            banner.iNow = this.index;
+            s_run.slide();
+        },
+        createStepDom: function (data) {
+            var li = document.createElement('li');
+            li.innerHTML = '<div class="item"><div class="title"><h4>动作</h4></div><div class="content">&nbsp;&nbsp;&nbsp;&nbsp;面对墙壁站立,双脚并拢,双臂伸直,与肩同宽,双手平放在墙上,手掌与胸等高。这 是该动作的起始姿势(图 1)。弯曲肘部,直到前额轻触墙面。这是该动作的结束姿势(图 2)。 然后将自己推回到起始姿势,如此重复。 解析 俯卧撑动作共有十式,墙壁俯卧撑只是第一式。既然是第一式,也就最容易的,毫无疑 问普通人都能做。墙壁俯卧撑也是第一个有治疗效果的练习。刚受伤、做过手术或身体正处 于恢复期的人若想加快恢复速度、尽快拥有强健的体魄,可以选择这个动作。肘、腕、肩(尤 其是柔弱的肩袖)极易出现慢性或急性损伤,这项练习能够轻柔地刺激这些部位,并改善血 液循环。不熟悉徒手体操的初学者应该以较轻柔的动作开始训练,然后逐步提高自己的运动 技巧,循序渐进地增强自己的运动能力。我建议就从这个练习动作开始。</div></div>'
+            li.innerHTML += '<div class="item"><div class="title"><h4>图解</h4></div><div class="content"><img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_1.png?imageMogr2/thumbnail/250x250" alt="" />    <img src="http://7xl4qs.com1.z0.glb.clouddn.com/steps_1_1_2.png?imageMogr2/thumbnail/250x250" alt="" /></div>';
+
+            return li;
+        }
+    };
+    s_run.init();
+
+    // function s_run(){
+    //     return {
+    //
+    //     }
+    // };
+
+        //测试数据
+        var arrImage = [
+            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pushup.png'},
+            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_squat.png'},
+            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_pullup.png"'},
+            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_bridges.png'},
+            {url : '111', name : '222', imageID : 'http://7xl4qs.com1.z0.glb.clouddn.com/icon_handstand.png'}
+        ];
+        // banner.init(arrImage);
 }();
 
 </script>

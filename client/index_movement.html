@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <title>movement</title>
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='http://www.youziku.com/webfont/CSS/a93d2288e5a8ed4d0463fa82abbeffec' rel='stylesheet' type='text/css'/>
     <!-- <link rel="stylesheet" href="/app/main/main.css" media="screen" title="no title" charset="utf-8"> -->
 </head>
 <body>
 
 <style>
-/*.body {
-    background-image: url(http://www.kfc.com/assets/images/touts/busy-people.jpg);
-    background-position: 50%;
-}*/
 html, body {
     padding: 0;
     margin: 0;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #333;
     -webkit-overflow-scrolling: touch;
 }
@@ -63,6 +63,7 @@ html, body {
     width: 6px;
     height: 6px;
 
+    transition: 0.5s ease-in-out;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -74,34 +75,7 @@ html, body {
     border-radius: 10px;
     background-color: #fff;
 }
-/*.foot .item {
-    display: inline-block;
-    float: left;
-    width: 22.85px;
-    height: 20px;
 
-    margin: 5px 0;
-    list-style:none;
-    opacity: 0.5;
-}
-.foot .item i {
-    display: inline-block;
-    margin: 7px 8.42px;
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-    background-color: #fff;
-}*/
-/*.foot .item i.active {
-    margin: 0;
-    width: 100%;
-
-
-    border-radius: 10px;
-    /*width: 30px;*/
-    opacity: 1;
-}*/
 .foot .slider {
     display: inline-block;
     margin-top: 5px;
@@ -118,6 +92,11 @@ li .item {
     color: #E6E6E6;
 }
 
+li .item .content {
+    line-height: 20px;
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+}
 li .item .content img {
     margin-bottom: 10px;
 }
@@ -139,10 +118,7 @@ li .item .title {
 </div>
 
 <div class="foot">
-    <ul class="tags" id="tags">
-        <!-- <div class="slider" id="slider"></div> -->
-    </ul>
-
+    <ul class="tags" id="tags"></ul>
 </div>
 
 <script type="text/javascript">
@@ -275,7 +251,7 @@ li .item .title {
             for (var i = 0; i < banner.iCount; i++) {
                 banner.removeClass(banner.arrNav[i], 'active');
             }
-            banner.arrNav[banner.iNow].style.transition = '0.5s';
+            // banner.arrNav[banner.iNow].style.transition = '0.5s';
             // banner.arrNav[banner.iNow].style.width = '30px';
             banner.addClass(banner.arrNav[banner.iNow], 'active');
 
@@ -355,6 +331,10 @@ li .item .title {
             return li;
         }
     };
+
+    function getMovenment() {
+
+    }
 
     //测试数据
     var arrImage = [

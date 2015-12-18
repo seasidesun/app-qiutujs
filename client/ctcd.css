@@ -1,0 +1,259 @@
+
+/*base css*/
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    -webkit-overflow-scrolling: touch;
+}
+.body {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*first html css*/
+.f-head {
+    /*display: block;*/
+    /*position: absolute;*/
+    width: 100%;
+    height: 200px;
+
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+.f-head.up {
+    transform: scale(0.95);
+    opacity: 0.5;
+}
+.f-head img.f-head-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.f-head .title {
+    position: relative;
+    margin-top: -200px;
+}
+.f-head .title h1 {
+    position: absolute;
+
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+.f-head .title h1.l1 {
+    top: 10px;
+    right: 10px;
+
+    color: #fff;
+}
+.f-head .title h1.l2 {
+    top: 50px;
+    right: 10px;
+
+    color: #fff;
+}
+.f-head .title h1.left {
+    right: 8px;
+
+    color: #37a4ef;
+}
+.f-head .title h1.right {
+    right: 12px;
+
+    color: #ed4a21
+}
+.f-head .title p {
+    position: absolute;
+    top: 110px;
+    right: 10px;
+
+    font-family:hdjxyt584433;
+    color: #fff;
+    font-size: 14px;
+}
+.f-head .title p.l3 {
+    top: 110px;
+    right: 10px;
+
+    color: #fff;
+}
+.f-head .title p.l4 {
+    top: 130px;
+    right: 10px;
+
+    color: #fff;
+}
+.f-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 450px;
+
+    overflow: scroll;
+}
+.f-wrapper .view {
+    margin-top: 200px;
+
+    background: #333;
+}
+.f-wrapper .view .bg {
+    position: absolute;
+    width: 100%;
+    height: 720px;
+
+    /*background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/82eb1149edcb6852bdd0e62956d38b2a.jpg);*/
+    background-image: url(http://7xl4qs.com1.z0.glb.clouddn.com/364fff360831c90b6629bcc2da926cf6.jpg);
+
+    background-position: 50%;
+    opacity: 0.3;
+}
+.f-wrapper .list {
+    position: relative;
+
+    box-shadow: 2px 0px 10px #000;
+}
+.f-wrapper .list .item {
+    position: relative;
+    height: 120px;
+    width: 100%;
+
+    border-bottom: 1.5px solid #000;
+}
+
+.f-wrapper .list .item .l {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -25px;
+    height: 40px;
+    width: 40px;
+
+    opacity: 0.85;
+}
+.f-wrapper .list .item .r {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -20px;
+    height: 40px;
+    width: 40px;
+
+    opacity: 0.85;
+}
+.f-wrapper .list .item h1 {
+    position: absolute;
+    left: 65px;
+    top: 30px;
+    margin: 0px;
+
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+}
+.f-wrapper .list .item p {
+    position: absolute;
+    left: 65px;
+    top: 55px;
+
+    color: #fff;
+    font-size: 11px;
+}
+
+/*secend html css*/
+.s-body .steps {
+    position:relative;
+    overflow:hidden;
+    padding:0;
+}
+.s-body .steps .list {
+    overflow:hidden;
+}
+
+.s-body .steps .list {
+    padding-left: 0px;
+}
+.s-body .steps .list li{
+    float:left;
+    width: 375px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+
+    box-sizing: border-box;
+    list-style:none;
+}
+.s-body .steps .list li .item {
+    width: 100%;
+    color: #E6E6E6;
+}
+
+.s-body .steps .list li .item .content {
+    line-height: 20px;
+    font-size: 13px;
+    font-family: 'Oswald', sans-serif;
+}
+.s-body .steps .list li .item .content img {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.s-body .steps .list li .item .title {
+    border-left: 5px solid #FF9F04;
+    padding-left: 5px;
+}
+
+.s-foot {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 320px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.25);
+    margin-left: -160px;
+}
+.s-foot .tags {
+    position: relative;
+    height: 30px;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.s-foot .item {
+    display: inline-block;
+    float: left;
+    margin: 12px 8.42px;
+    width: 6px;
+    height: 6px;
+
+    transition: 0.5s ease-in-out;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.s-foot .item.active {
+    margin: 5px;
+    height: 20px;
+    width: 114.25px;
+
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.s-foot .slider {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: -20px;
+    height: 20px;
+    width: 114.25px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+}
