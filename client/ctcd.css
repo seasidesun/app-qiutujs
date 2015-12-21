@@ -196,22 +196,23 @@ html, body {
     margin-top: -10px;
 }
 
-/*.s-body .steps .list li .item:before{
-    content: "";
-    display: block;
-    width: 20%;
-    height: 2px;
-    margin-top: 20px;
-
-    background-color:  #FF9F04;
-}*/
-
 .s-body .steps .list li .item .content {
     font-size: 13px;
     font-family: 'Oswald', sans-serif;
 }
-.s-body .steps .list li .item .content li{
-    float: none;
+.s-body .steps .list li .item .content .tar{
+    margin-left: 10px;
+}
+.s-body .steps .list li .item .content .tar:before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    margin-bottom: 2.5px;
+
+    border-radius: 50%;
+    background-color: #eee;
 }
 .s-body .steps .list li .item .content img {
     width: 100%;
