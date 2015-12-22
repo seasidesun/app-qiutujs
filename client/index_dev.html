@@ -148,11 +148,14 @@
             banner = {
                 sStepsView: document.getElementById('s-step'),
                 sStepsList: document.getElementById('s-list'),
+                sStepsArry: document.getElementById('s-list').children,
                 tagsView: document.getElementById('tags'),
                 iCount: 10,
                 iW: _screen.w > 450 ? 450: _screen.w,
                 iNow: 0,
                 iX: 0,
+                iDirect: 'l', //r is left, l is right
+                iYArry: [0,0,0,0,0,0,0,0,0,0],
                 iStartX: 0,
                 iStartTouchX: 0
             }
@@ -192,13 +195,16 @@
             banner.iStartTouchX = event.changedTouches[0].pageX;
             banner.iStartTouchY = event.changedTouches[0].pageY;
             banner.iStartX = banner.iX;
-            banner.iStartY = banner.iY;
             clearInterval(banner.oTimer);
         },
         touchMoveHandler : function (event) {
             var iDeltaY = event.changedTouches[0].pageY - banner.iStartTouchY;
             var iDeltaX = event.changedTouches[0].pageX - banner.iStartTouchX;
-            if (iDeltaY > 10 || iDeltaY < -10) return;
+            if (iDeltaX > 0)  banner.iDirect = 'r';
+            else banner.iDirect = 'l';
+            if (iDeltaY > 5 || iDeltaY < -5) {
+                return;
+            }
             banner.iX = banner.iStartX + iDeltaX;
             if (banner.iX > -3)
                 banner.iX = 0;
@@ -207,12 +213,21 @@
             banner.sStepsList.style.WebkitTransform
                     = banner.sStepsList.style.transform
                     = 'translateX(' + banner.iX + 'px)';
-            // event.preventDefault();  // 阻止默认事件
+            event.preventDefault();  // 阻止默认事件
             event.stopPropagation(); // 阻止冒泡
 
         },
         touchEndHandler : function (event) {
-            banner.iNow = -Math.round(banner.iX / banner.iW);
+            var postion = banner.iX / banner.iW;
+            console.log(postion);
+            console.log(banner.iNow);
+            console.log(postion.toFixed(2).slice(-2));
+            console.log(banner.iDirect);
+
+            if (banner.iDirect === 'l' && postion.toFixed(2).slice(-2) >= 17) banner.iNow = -parseInt(postion) + 1;
+            else if (banner.iDirect === 'r' && postion.toFixed(2).slice(-2) <= 83) banner.iNow = -parseInt(postion);
+            console.log(banner.iNow);
+            // banner.iNow = -Math.round(banner.iX / banner.iW);
             if (banner.iNow < 0) banner.iNow = 0;
             if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
             s_run.slide();
@@ -288,7 +303,7 @@
 
             html = '<div class="item"><div class="title"><h4>训练目标</h4></div><div class="content">';
             for (var i = 0; i < data.level.length; i++) {
-                html += '<div class="tar">' + data.level[i].description + '</div>'
+                html += '<div class="tar">' + data.level[i].description + '</div>';
             }
             html += '</div></div>';
             li.innerHTML += html;
