@@ -111,7 +111,7 @@
 
         var movements = $('#f-list').children();
         for (var i = 0; i < movements.length; i++) {
-            movements[i].index = i + 1;
+            movements[i].index = i;
             bind(movements[i], 'click', function () {
                 console.log(this.index);
                 fBodyView.css('display', 'none');
