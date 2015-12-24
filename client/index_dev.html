@@ -137,7 +137,6 @@
             url: domain + '/api/ctcd/movements/' + mId,
             type: 'GET',
             success: function (data) {
-                // console.log(data);
                 return callback(null, data)
             }
         });
@@ -243,6 +242,7 @@
             }
             s_run.addClass(banner.arrNav[banner.iNow], 'active');
         },
+        //根据点击的动作刷新steps的innerHtml
         refreshSteps: function (mId) {
             getCtcdStepsByMId(mId, function (error, data) {
                 if (error || !data) return;
