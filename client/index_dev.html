@@ -112,12 +112,17 @@
         var movements = $('#f-list').children();
         for (var i = 0; i < movements.length; i++) {
             movements[i].index = i;
-            bind(movements[i], 'click', function () {
-                console.log(this.index);
+            bind(movements[i], 'click', function (e) {
+                history.pushState('', '', '/m/' + (this.index + 1));
                 fBodyView.css('display', 'none');
                 s_run.refreshSteps(this.index);
                 sBodyView.css('display', 'block');
             });
+        }
+        window.onpopstate = function(e){
+            e.preventDefault();
+            fBodyView.css('display', 'block');
+            sBodyView.css('display', 'none');
         }
     }
 
