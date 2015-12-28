@@ -256,7 +256,7 @@ html, body {
     background-color: #fff;
 }
 .s-foot .item.active {
-    margin: 5px;
+    margin: 5px 0;
     height: 20px;
     width: 114.25px;
 
