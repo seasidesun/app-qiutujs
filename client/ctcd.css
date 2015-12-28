@@ -176,10 +176,11 @@ html, body {
 
 .s-body .steps .list {
     padding-left: 0px;
+    margin: 0px;
 
     overflow: hidden;
 }
-.s-body .steps .list li{
+.s-body .steps .list li {
     float: left;
     width: 375px;
     padding-left: 10px;
