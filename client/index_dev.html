@@ -142,6 +142,7 @@
             url: domain + '/api/ctcd/movements/' + mId,
             type: 'GET',
             success: function (data) {
+                _m[mId] = data;
                 return callback(null, data)
             }
         });
