@@ -6,9 +6,7 @@
         h: window.screen.height
     };
     var banner = {};
-
     var _m = {};
-    f_run();
 
     function f_run() {
         var _lastScrollTop = 200;
@@ -41,6 +39,8 @@
         }
     }
 
+    f_run();
+
     function bind(obj, event, callback) {
         if (obj.addEventListener) {
             obj.addEventListener(event, callback, false);
@@ -68,29 +68,18 @@
             banner = {
                 sStepsView: document.getElementById('s-step'),
                 sStepsList: document.getElementById('s-list'),
-                sStepsArry: document.getElementById('s-list').children,
                 tagsView: document.getElementById('tags'),
                 iCount: 10,
                 iW: _screen.w > 450 ? 450: _screen.w,
                 iNow: 0,
                 iX: 0,
                 iDirect: 'l', //r is left, l is right
-                iYArry: [0,0,0,0,0,0,0,0,0,0],
                 iStartX: 0,
                 iStartTouchX: 0
             }
             banner.sStepsList.style.width = banner.iW * banner.iCount + 'px';
             banner.sStepsList.style.height = _screen.h + 'px';
             // banner.sStepsView.style.height = _screen.h + 'px';
-
-            // for (var i = 0; i < banner.iCount; i++) {
-            //     var _li = s_run.createStepDom();
-            //
-            //     _li.style.width = banner.iW + 'px';
-            //     _li.style.height = _screen.h + 'px';
-            //
-            //     banner.sStepsList.appendChild(_li);
-            // }
 
             for (var i = 0; i < banner.iCount; i++) {
                 var _tag = document.createElement('li');
