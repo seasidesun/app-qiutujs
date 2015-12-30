@@ -79,7 +79,8 @@
                 iStartTouchX: 0
             }
             banner.sStepsList.style.width = banner.iW * banner.iCount + 'px';
-            banner.sStepsList.style.height = _screen.h + 'px';
+            banner.sStepsList.style.height = '100%';
+            // banner.sStepsList.style.height = _screen.h + 'px';
             // banner.sStepsView.style.height = _screen.h + 'px';
 
             for (var i = 0; i < banner.iCount; i++) {
@@ -161,7 +162,8 @@
                     var _li = s_run.createStepDom(data[i+1]);
 
                     _li.style.width = banner.iW + 'px';
-                    _li.style.height = _screen.h + 'px';
+                    // _li.style.height = '100%';
+                    // _li.style.height = _screen.h + 'px';
 
                     banner.sStepsList.appendChild(_li);
                 }
