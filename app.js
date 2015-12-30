@@ -12,7 +12,7 @@ var app = express();
 var env = process.env.NODE_ENV || 'dev';
 var publicPath = 'client';
 if (env === 'pro') {
-    var publicPath = '.tmp';
+    publicPath = '.tmp';
 }
 
 app.use(morgan('dev'));
