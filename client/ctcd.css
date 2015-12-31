@@ -238,8 +238,10 @@ html, body {
     left: 50%;
     width: 320px;
     height: 30px;
-    background-color: rgba(0,0,0,0.25);
     margin-left: -160px;
+
+    text-align: center;
+    background-color: rgba(0,0,0,0.25);
 }
 .s-foot .tags {
     position: relative;
@@ -257,6 +259,7 @@ html, body {
     width: 6px;
     height: 6px;
 
+    overflow: hidden;
     transition: 0.5s ease-in-out;
     border-radius: 50%;
     background-color: #fff;
@@ -267,9 +270,17 @@ html, body {
     width: 114.25px;
 
     border-radius: 10px;
-    background-color: #fff;
 }
-
+.s-foot .item .wrapper {
+    transform: scale(0);
+    transition: 1s ease-in-out;
+}
+.s-foot .item .wrapper.active {
+    transform: scale(1);
+}
+.s-foot .item a {
+    line-height: 20px;
+}
 .s-foot .slider {
     display: inline-block;
     margin-top: 5px;

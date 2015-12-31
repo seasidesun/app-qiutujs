@@ -92,7 +92,6 @@
             banner.arrNav = banner.tagsView.children;
             //绑定点击事件
             for (var i = 0; i < banner.iCount; i++) {
-                if (i == 0) s_run.addClass(banner.arrNav[i], 'active');
                 banner.arrNav[i].index = i;
                 bind(banner.arrNav[i], 'click', s_run.clickHandler);
             }
@@ -151,8 +150,10 @@
                 = 'translateX(' + banner.iX + 'px)';
             for (var i = 0; i < banner.iCount; i++) {
                 s_run.removeClass(banner.arrNav[i], 'active');
+                s_run.removeClass(banner.arrNav[i].childNodes[0], 'active');
             }
             s_run.addClass(banner.arrNav[banner.iNow], 'active');
+            s_run.addClass(banner.arrNav[banner.iNow].childNodes[0], 'active');
         },
         //根据点击的动作刷新steps的innerHtml
         refreshSteps: function (mId) {
@@ -160,12 +161,20 @@
                 if (error || !data) return;
                 for (var i = 0; i < banner.iCount; i++) {
                     var _li = s_run.createStepDom(data[i+1]);
-
                     _li.style.width = banner.iW + 'px';
-                    // _li.style.height = '100%';
-                    // _li.style.height = _screen.h + 'px';
-
                     banner.sStepsList.appendChild(_li);
+
+                    var wrapper = document.createElement('div');
+                    wrapper.className = 'wrapper';
+                    var a = document.createElement('a');
+                    a.text = data[i+1].name;
+                    wrapper.appendChild(a);
+                    banner.arrNav[i].appendChild(wrapper);
+
+                    if (i == 0) {
+                        s_run.addClass(banner.arrNav[i], 'active');
+                        s_run.addClass(banner.arrNav[i].childNodes[0], 'active');
+                    }
                 }
             });
         },
