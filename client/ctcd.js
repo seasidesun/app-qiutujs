@@ -134,8 +134,8 @@
             console.log(postion.toFixed(2).slice(-2));
             console.log(banner.iDirect);
 
-            if (banner.iDirect === 'l' && postion.toFixed(2).slice(-2) >= 17) banner.iNow = -parseInt(postion) + 1;
-            else if (banner.iDirect === 'r' && postion.toFixed(2).slice(-2) <= 83) banner.iNow = -parseInt(postion);
+            if (banner.iDirect === 'l' && postion.toFixed(2).slice(-2) >= 10) banner.iNow = -parseInt(postion) + 1;
+            else if (banner.iDirect === 'r' && postion.toFixed(2).slice(-2) <= 90) banner.iNow = -parseInt(postion);
             console.log(banner.iNow);
             // banner.iNow = -Math.round(banner.iX / banner.iW);
             if (banner.iNow < 0) banner.iNow = 0;
