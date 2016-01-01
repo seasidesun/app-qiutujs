@@ -174,6 +174,9 @@
                     if (i == 0) {
                         s_run.addClass(banner.arrNav[i], 'active');
                         s_run.addClass(banner.arrNav[i].childNodes[0], 'active');
+                    } else {
+                        s_run.removeClass(banner.arrNav[i], 'active');
+                        s_run.removeClass(banner.arrNav[i].childNodes[0], 'active');
                     }
                 }
             });
