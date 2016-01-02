@@ -28,7 +28,6 @@
             bind(movements[i], 'click', function (e) {
                 history.pushState('', '', '/m/' + (this.index + 1));
                 fBodyView.css('display', 'none');
-                banner.sStepsList.innerHTML = '';
                 s_run.refreshSteps(this.index);
                 sBodyView.css('display', 'block');
             });
@@ -86,6 +85,13 @@
             for (var i = 0; i < banner.iCount; i++) {
                 var _tag = document.createElement('li');
                 _tag.className = 'item';
+
+                var wrapper = document.createElement('div');
+                wrapper.className = 'wrapper';
+                var a = document.createElement('a');
+                wrapper.appendChild(a);
+                _tag.appendChild(wrapper);
+
                 banner.tagsView.appendChild(_tag);
             }
 
@@ -159,17 +165,15 @@
         refreshSteps: function (mId) {
             getCtcdStepsByMId(mId, function (error, data) {
                 if (error || !data) return;
+                banner.sStepsList.innerHTML = '';
                 for (var i = 0; i < banner.iCount; i++) {
                     var _li = s_run.createStepDom(data[i+1]);
                     _li.style.width = banner.iW + 'px';
                     banner.sStepsList.appendChild(_li);
-
-                    var wrapper = document.createElement('div');
-                    wrapper.className = 'wrapper';
-                    var a = document.createElement('a');
-                    a.text = data[i+1].name;
-                    wrapper.appendChild(a);
-                    banner.arrNav[i].appendChild(wrapper);
+                    banner.sStepsList.style.WebkitTransform
+                        = banner.sStepsList.style.transform
+                        = '';
+                    banner.arrNav[i].firstChild.firstChild.text = data[i+1].name;
 
                     if (i == 0) {
                         s_run.addClass(banner.arrNav[i], 'active');
