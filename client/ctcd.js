@@ -162,6 +162,7 @@
         refreshSteps: function (mId) {
             getCtcdStepsByMId(mId, function (error, data) {
                 if (error || !data) return;
+                banner.iX = 0;
                 banner.sStepsList.innerHTML = '';
                 for (var i = 0; i < banner.iCount; i++) {
                     var _li = s_run.createStepDom(data[i+1]);
