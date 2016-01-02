@@ -79,8 +79,6 @@
             }
             banner.sStepsList.style.width = banner.iW * banner.iCount + 'px';
             banner.sStepsList.style.height = '100%';
-            // banner.sStepsList.style.height = _screen.h + 'px';
-            // banner.sStepsView.style.height = _screen.h + 'px';
 
             for (var i = 0; i < banner.iCount; i++) {
                 var _tag = document.createElement('li');
@@ -143,7 +141,6 @@
             if (banner.iDirect === 'l' && postion.toFixed(2).slice(-2) >= 10) banner.iNow = -parseInt(postion) + 1;
             else if (banner.iDirect === 'r' && postion.toFixed(2).slice(-2) <= 90) banner.iNow = -parseInt(postion);
             console.log(banner.iNow);
-            // banner.iNow = -Math.round(banner.iX / banner.iW);
             if (banner.iNow < 0) banner.iNow = 0;
             if (banner.iNow > banner.iCount - 1) banner.iNow = banner.iCount - 1;
             s_run.slide();
