@@ -125,14 +125,14 @@ html, body {
 .f-wrapper .list {
     position: relative;
 
-    box-shadow: 2px 0px 10px #000;
+    box-shadow: 2px 0px 10px #FF9F04;
 }
 .f-wrapper .list .item {
     position: relative;
     height: 120px;
     width: 100%;
 
-    border-bottom: 1.5px solid #000;
+    border-bottom: 1.5px solid #FF9F04;
 }
 
 .f-wrapper .list .item .l {
