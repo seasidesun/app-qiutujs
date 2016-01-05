@@ -11,9 +11,9 @@ var app = express();
 
 var env = process.env.NODE_ENV || 'dev';
 var publicPath = 'client';
-if (env === 'pro') {
-    publicPath = '.tmp';
-}
+// if (env === 'pro') {
+//     publicPath = '.tmp';
+// }
 
 app.use(morgan('dev'));
 app.use(favicon(__dirname + '/favicon.ico'));
