@@ -76,7 +76,7 @@ module.exports = function(grunt) {
             report: 'min'
           },
           files: {
-            '.tmp/dist/default.ctcd.min.js': ['client/ctcd.js']
+            'client/default.ctcd.min.js': ['client/ctcd.js']
           }
         }
       },
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
          },
          compress: {
              files: {
-                 '.tmp/dist/default.ctcd.min.css': ['client/ctcd.css']
+                 'client/default.ctcd.min.css': ['client/ctcd.css']
              }
          }
       },
