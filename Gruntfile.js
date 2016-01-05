@@ -10,8 +10,8 @@ module.exports = function(grunt) {
       // pkg: grunt.file.readJSON('package.json'),
       watch: {
         express: {
-          files:  [ 'client/app/**/*.{jade,css}', 'client/app/**/*.js', 'client/components/**/*.js', 'client/index.html' ],
-          tasks:  [ 'express:dev', 'jade', 'copy', 'concat', 'cssmin'],
+          files:  [ 'client/*.{js,css}', 'client/*.html' ],
+          tasks:  [ 'express:dev'],
           options: {
             spawn: false,
             livereload: true
@@ -34,49 +34,49 @@ module.exports = function(grunt) {
           }
         }
       },
-      jade: {
-        compile: {
-          options: {
-            data: {
-              debug: false
-            }
-          },
-          files: [{
-            expand: true,
-            cwd: 'client',
-            src: [
-              'app/**/*.jade'
-            ],
-            // dest: '.tmp',
-            dest: 'client',
-            ext: '.html'
-          }]
-        }
-      },
-      copy: {
-        build: {
-          cwd: 'client',
-          src: [ 'bower_components/**/*', 'app/**/*.{js,css}', 'components/**/*.js', '*.html' ],
-          dest: '.tmp',
-          expand: true
-        },
-      },
-      concat: {
-        options: {
-          separator: ';'
-        },
-        js: {
-          src: [ 'client/bower_components/angular/angular.js', 'client/bower_components/angular-ui-router/release/angular-ui-router.js', 'client/app/**/*.js', 'client/components/**/*.js' ],
-          dest: '.tmp/dist/default.js'
-        }
-      },
+    //   jade: {
+    //     compile: {
+    //       options: {
+    //         data: {
+    //           debug: false
+    //         }
+    //       },
+    //       files: [{
+    //         expand: true,
+    //         cwd: 'client',
+    //         src: [
+    //           'app/**/*.jade'
+    //         ],
+    //         // dest: '.tmp',
+    //         dest: 'client',
+    //         ext: '.html'
+    //       }]
+    //     }
+    //   },
+    //   copy: {
+    //     build: {
+    //       cwd: 'client',
+    //       src: [ 'bower_components/**/*', 'app/**/*.{js,css}', 'components/**/*.js', '*.html' ],
+    //       dest: '.tmp',
+    //       expand: true
+    //     },
+    //   },
+    //   concat: {
+    //     options: {
+    //       separator: ';'
+    //     },
+    //     js: {
+    //       src: [ 'client/bower_components/angular/angular.js', 'client/bower_components/angular-ui-router/release/angular-ui-router.js', 'client/app/**/*.js', 'client/components/**/*.js' ],
+    //       dest: '.tmp/dist/default.js'
+    //     }
+    //   },
       uglify: {
         dist: {
           option: {
             report: 'min'
           },
           files: {
-            '.tmp/dist/default.min.js': ['.tmp/dist/default.js']
+            '.tmp/dist/default.ctcd.min.js': ['client/ctcd.js']
           }
         }
       },
@@ -86,15 +86,15 @@ module.exports = function(grunt) {
          },
          compress: {
              files: {
-                 '.tmp/dist/default.min.css': [ 'client/app/**/*.css', 'client/components/**/*.css' ]
+                 '.tmp/dist/default.ctcd.min.css': ['client/ctcd.css']
              }
          }
       },
-      jshint: {
-          all: [ 'client/app/**/*.js', 'client/components/**/*.js' ],
-      }
-
+    //   jshint: {
+    //       all: [ 'client/app/**/*.js', 'client/components/**/*.js' ],
+    //   }
     });
+
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -104,14 +104,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-
     grunt.registerTask('server', function (argument) {
         grunt.task.run([
           'express:dev',
-          'copy',
-          'jade',
-          'concat',
-          'cssmin',
+        //   'copy',
+        //   'jade',
+        //   'concat',
+        //   'cssmin',
         //   'uglify',
           'watch'
         ]);
@@ -119,9 +118,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', function (argument) {
         grunt.task.run([
-          'copy',
-          'jade',
-          'concat',
+        //   'copy',
+        //   'jade',
+        //   'concat',
           'uglify',
           'cssmin'
         ]);
