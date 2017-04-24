@@ -10,7 +10,7 @@ var config      = require('./config'),
 
 var app         = express(),
     env         = process.env.NODE_ENV || 'dev',
-    publicPath  = 'client',
+    publicPath  = 'build',
     filePath    = __dirname + '/' + publicPath + '/index_' + env + '.html';
 
 app.use(morgan('dev'));

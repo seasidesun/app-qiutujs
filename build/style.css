@@ -1,0 +1,26 @@
+.clear-size {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  max-width: 1080px;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+  background-color: #ededed;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body a {
+  color: #000;
+}
+body ul,
+body li {
+  padding: 0;
+  margin: 0;
+}
+body h2 {
+  padding: 0;
+  margin: 0;
+  color: #333333;
+}
