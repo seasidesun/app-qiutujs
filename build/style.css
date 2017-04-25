@@ -2,13 +2,16 @@
   padding: 0;
   margin: 0;
 }
+html {
+  font-size: 75px;
+}
 body {
   width: 100%;
   max-width: 1080px;
   padding: 0;
   margin: 0;
   margin: 0 auto;
-  background-color: #ededed;
+  background-color: #eee;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 body a {
@@ -23,4 +26,26 @@ body h2 {
   padding: 0;
   margin: 0;
   color: #333333;
+}
+body #app {
+  width: 100%;
+}
+.head {
+  width: 100%;
+  height: .554rem;
+  line-height: .554rem;
+  font-size: .267rem;
+  text-align: center;
+  background-color: #FF6701;
+}
+.slider {
+  width: 100%;
+  height: 2rem;
+  background: #666666;
+}
+.MovementsList {
+  width: 100%;
+  height: 5rem;
+  margin-top: .067rem;
+  background: #999999;
 }
