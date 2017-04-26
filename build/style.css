@@ -21,6 +21,7 @@ body ul,
 body li {
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 body h2 {
   padding: 0;
@@ -40,10 +41,13 @@ body #app {
 }
 .slider {
   width: 100%;
-  height: 2rem;
   background: #666666;
 }
-.MovementsList {
+.slider img {
+  display: block;
+  width: 100%;
+}
+.movementsList {
   width: 100%;
   height: 5rem;
   margin-top: .067rem;

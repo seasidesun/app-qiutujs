@@ -26,6 +26,7 @@ body {
     }
     ul, li {
         .clear-size;
+        list-style-type: none;
     }
     h2 {
         .clear-size;
@@ -48,11 +49,16 @@ body {
 
 .slider {
     width: 100%;
-    height: 2rem;
+    // height: 2rem;
     background: lighten(@fontColor, 20%);
 }
 
-.MovementsList {
+.slider img {
+    display: block;
+    width: 100%;
+}
+
+.movementsList {
     width: 100%;
     height: 5rem;
     margin-top: .067rem;
