@@ -51,11 +51,11 @@ body {
     width: 100%;
     // height: 2rem;
     background: lighten(@fontColor, 20%);
-}
 
-.slider img {
-    display: block;
-    width: 100%;
+    img {
+        display: block;
+        width: 100%;
+    }
 }
 
 .movementsList {
@@ -63,65 +63,64 @@ body {
     // height: 5rem;
     margin-top: .067rem;
     background: lighten(@fontColor, 100%);
-}
 
-.movementsList .wrapper {
-    padding: 0 .2rem;
-}
+    .wrapper {
+        padding: 0 .2rem;
+    }
 
+    .item {
+        display: flex;
+        position: relative;
+        height: .8rem;
+        padding: .067rem 0;
+        overflow: hidden;
+        border-bottom: 1px solid #f2f2f2;
 
-.movementsList .item {
-    display: flex;
-    position: relative;
-    height: .8rem;
-    padding: .067rem 0;
-    overflow: hidden;
-    border-bottom: 1px solid #f2f2f2;
-}
+        .icon {
+            display: inline-flex;
+            height: .8rem;
+            width: .8rem;
+            justify-content: center;
+            align-items: center;
 
-.movementsList .item .icon {
-    display: inline-flex;
-    height: .8rem;
-    width: .8rem;
-    justify-content: center;
-    align-items: center;
+            background-color: @mainColor;
+            border-radius: 5px;
 
-    background-color: @mainColor;
-    border-radius: 5px;
-}
+            img {
+                width: 70%;
+            }
+        }
 
-.movementsList .item .icon img {
-    width: 70%;
-}
+        .info {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+        }
 
-.movementsList .item .info {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
-}
-
-.movementsList .item .right {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-right: 0;
-    border-left: 15px solid @mainColor;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    transform: translate(-50%, -50%);
-}
-.movementsList .item .right::before {
-    content: "";
-    position: absolute;
-    left: -9px;
-    width: 0;
-    height: 0;
-    border-right: 0;
-    border-left: 15px solid lighten(@fontColor, 100%);;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    transform: translate(-50%, -50%);
+        .right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-right: 0;
+            border-left: 15px solid @mainColor;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            transform: translate(-50%, -50%);
+        }
+        .right::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            width: 0;
+            height: 0;
+            border-right: 0;
+            border-left: 15px solid lighten(@fontColor, 100%);;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
