@@ -105,3 +105,13 @@ body #app {
   border-bottom: 20px solid transparent;
   transform: translate(-50%, -50%);
 }
+footer {
+  position: fixed;
+  height: 1rem;
+  width: 100%;
+  background-color: #FF6701;
+  bottom: 0;
+}
+footer a {
+  display: inline-block;
+}
