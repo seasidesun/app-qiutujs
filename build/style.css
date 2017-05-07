@@ -38,7 +38,7 @@ body #app {
   line-height: .554rem;
   font-size: .267rem;
   text-align: center;
-  background-color: #FF6701;
+  background-color: #584f60;
 }
 .slider {
   width: 100%;
@@ -70,7 +70,7 @@ body #app {
   width: .8rem;
   justify-content: center;
   align-items: center;
-  background-color: #FF6701;
+  background-color: #584f60;
   border-radius: 5px;
 }
 .movementsList .item .icon img {
@@ -89,7 +89,7 @@ body #app {
   width: 0;
   height: 0;
   border-right: 0;
-  border-left: 15px solid #FF6701;
+  border-left: 15px solid #584f60;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   transform: translate(-50%, -50%);
@@ -111,7 +111,7 @@ footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: #FF6701;
+  background-color: #584f60;
   bottom: 0;
 }
 footer a {

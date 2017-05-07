@@ -1,12 +1,21 @@
 import React from 'react'
 
+import { browserHistory } from 'react-router';
+
 var Foot =  React.createClass({
     getInitialState() {
         return {
             linkList: [
-                { title: '首页', iconUrl: '/img/home.png'},
-                { title: '六艺十式', iconUrl: '/img/home.png'}
+                { title: '首页', iconUrl: '/img/home.png', link: '/'},
+                { title: '六艺十式', iconUrl: '/img/home.png', link: '/move'}
             ]
+        }
+    },
+    navClickHandler(linkUrl) {
+
+        var currentPath = browserHistory.getCurrentLocation().pathname;
+        if (currentPath != linkUrl) {
+            browserHistory.push(linkUrl);
         }
     },
     render() {
@@ -14,7 +23,7 @@ var Foot =  React.createClass({
         var self = this;
 
         var navDom = state.linkList.map(function(item, i) {
-            return <a className={"item"}><img className={'icon'} src={item.iconUrl}></img><p>{item.title}</p></a>
+            return <a className={"item"} onClick={self.navClickHandler.bind(self, item.link)}><img className={'icon'} src={item.iconUrl}></img><p>{item.title}</p></a>
         });
 
         return (
