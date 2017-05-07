@@ -7,7 +7,7 @@ var Foot =  React.createClass({
         return {
             linkList: [
                 { title: '首页', iconUrl: '/img/home.png', link: '/'},
-                { title: '六艺十式', iconUrl: '/img/home.png', link: '/move'}
+                { title: '六艺十式', iconUrl: '/img/body.png', link: '/move'}
             ]
         }
     },

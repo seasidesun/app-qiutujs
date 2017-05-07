@@ -38,6 +38,7 @@ body #app {
   line-height: .554rem;
   font-size: .267rem;
   text-align: center;
+  color: #fff;
   background-color: #584f60;
 }
 .slider {
@@ -109,19 +110,23 @@ body #app {
 footer {
   position: fixed;
   display: flex;
-  justify-content: space-around;
   width: 100%;
-  background-color: #584f60;
   bottom: 0;
+  padding-top: .134rem;
+  padding-bottom: .066rem;
+  justify-content: space-around;
+  background-color: #584f60;
 }
 footer a {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
 }
 footer a .icon {
-  width: 50px;
-  height: 50px;
-  background-image: url(/img/home.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  height: .333rem;
+}
+footer a p {
+  font-size: .16rem;
+  color: #fff;
 }

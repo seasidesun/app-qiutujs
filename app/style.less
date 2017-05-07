@@ -43,6 +43,7 @@ body {
     line-height: .554rem;
     font-size: .267rem;
     text-align: center;
+    color: #fff;
 
     background-color: @mainColor;
 }
@@ -128,22 +129,26 @@ body {
 footer {
     position: fixed;
     display: flex;
-    justify-content: space-around;
-    // height: .6rem;
     width: 100%;
-    background-color: @mainColor;
     bottom: 0;
-}
+    padding-top: .134rem;
+    padding-bottom: .066rem;
+    justify-content: space-around;
+    background-color: @mainColor;
 
-footer a {
-    display: flex;
-    flex-direction: column;
-}
+    a {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
 
-footer a .icon {
-    width: 50px;
-    height: 50px;
-    background-image: url(/img/home.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+        .icon {
+            height: .333rem;
+        }
+
+        p {
+            font-size: .16rem;
+            color: #fff;
+        }
+    }
 }
