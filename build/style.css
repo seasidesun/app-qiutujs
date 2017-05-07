@@ -23,7 +23,8 @@ body li {
   margin: 0;
   list-style-type: none;
 }
-body h2 {
+body h2,
+body p {
   padding: 0;
   margin: 0;
   color: #333333;
@@ -107,11 +108,20 @@ body #app {
 }
 footer {
   position: fixed;
-  height: 1rem;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   background-color: #FF6701;
   bottom: 0;
 }
 footer a {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+footer a .icon {
+  width: 50px;
+  height: 50px;
+  background-image: url(/img/home.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }

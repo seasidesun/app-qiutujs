@@ -28,7 +28,7 @@ body {
         .clear-size;
         list-style-type: none;
     }
-    h2 {
+    h2, p {
         .clear-size;
         color: @fontColor;
     }
@@ -127,12 +127,23 @@ body {
 
 footer {
     position: fixed;
-    height: 1rem;
+    display: flex;
+    justify-content: space-around;
+    // height: .6rem;
     width: 100%;
     background-color: @mainColor;
     bottom: 0;
 }
 
 footer a {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+footer a .icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/home.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
