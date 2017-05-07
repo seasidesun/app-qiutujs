@@ -23,6 +23,9 @@ body li {
   margin: 0;
   list-style-type: none;
 }
+body ul::-webkit-scrollbar {
+  display: none;
+}
 body h2,
 body p {
   padding: 0;
@@ -129,4 +132,32 @@ footer a .icon {
 footer a p {
   font-size: .16rem;
   color: #fff;
+}
+.news-box {
+  margin-top: .134rem;
+  padding-top: .067rem;
+  background-color: #fff;
+  padding: .2rem;
+}
+.news-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.news-scroll li {
+  display: inline-block;
+  width: 90%;
+  height: 2rem;
+}
+.news-list {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.news-list li {
+  width: 100%;
+  height: 2rem;
 }
