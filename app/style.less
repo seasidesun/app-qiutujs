@@ -164,8 +164,9 @@ footer {
     .content {
         margin-top: .2rem;
     }
-    p {
-    }
+}
+.news-box.last {
+    margin-bottom: .6rem;
 }
 
 .news-scroll {
@@ -203,13 +204,18 @@ footer {
 }
 
 .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
     li {
-        width: 100%;
-        height: 2rem;
+        width: 48%;
+        height: 2.5rem;
+        margin-bottom: .267rem;
+        background-color: @mainColor;
     }
 }

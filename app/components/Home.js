@@ -13,7 +13,7 @@ var Home =  React.createClass({
                     <p>推荐</p>
                     <RecommendedNews></RecommendedNews>
                 </div>
-                <div className={'news-box'}>
+                <div className={'news-box last'}>
                     <p>话题</p>
                     <ArticleList></ArticleList>
                 </div>
