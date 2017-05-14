@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var extractLESS = new ExtractTextPlugin('style.css');
+var extractJs = new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}});
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -27,6 +28,7 @@ module.exports = {
     ]
   },
   plugins: [
-    extractLESS
+    extractLESS,
+    // extractJs
   ]
 }
