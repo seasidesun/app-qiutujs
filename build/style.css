@@ -184,7 +184,23 @@ footer a p {
 }
 .news-list li {
   width: 48%;
-  height: 2.5rem;
   margin-bottom: .267rem;
-  background-color: #584f60;
+}
+.news-list li .bg {
+  width: 100%;
+  height: 2.5rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.news-list li p {
+  margin: .096rem 0 .112rem 0;
+  font-size: .016rem;
+  word-wrap: break-word;
+  word-break: normal;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
