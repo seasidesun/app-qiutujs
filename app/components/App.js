@@ -4,10 +4,21 @@ import Header from './Header'
 import Foot from './Foot'
 
 var App =  React.createClass({
+    getInitialState() {
+        return {
+            isWechat: this.ifWechat()
+        }
+    },
+    ifWechat() {
+        var ua = window.navigator.userAgent.toLowerCase();
+        return ua.match(/microMessenger/i)? true: false;
+    },
     render() {
+        var state = this.state;
+
         return (
             <div>
-                <Header></Header>
+                {!state.isWechat && (<div className={'part'}><Header></Header></div>)}
                 {this.props.children}
                 <Foot></Foot>
             </div>

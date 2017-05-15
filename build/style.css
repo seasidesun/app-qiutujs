@@ -34,7 +34,9 @@ body p {
 }
 body #app {
   width: 100%;
-  padding-top: 0.554rem;
+}
+body #app .part {
+  margin-top: 0.554rem;
 }
 .head {
   position: fixed;
@@ -45,6 +47,7 @@ body #app {
   font-size: .267rem;
   text-align: center;
   color: #fff;
+  z-index: 999;
   background-color: #584f60;
 }
 .slider {
@@ -123,6 +126,7 @@ footer {
   padding-bottom: .066rem;
   justify-content: space-around;
   background-color: #584f60;
+  z-index: 999;
 }
 footer a {
   display: flex;
