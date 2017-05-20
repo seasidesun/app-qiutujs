@@ -2,6 +2,25 @@
   padding: 0;
   margin: 0;
 }
+.hid-scorrl-bar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.hid-scorrl-bar::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+.hid-scorrl-bar::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.hid-scorrl-bar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.hid-scorrl-bar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.hid-scorrl-bar::-webkit-scrollbar {
+  display: none;
+}
 html {
   font-size: 75px;
 }
@@ -23,10 +42,37 @@ body li {
   margin: 0;
   list-style-type: none;
 }
-body ul::-webkit-scrollbar {
+body ul::-webkit-scrollbar,
+body li::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body ul::-webkit-scrollbar-button,
+body li::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+body ul::-webkit-scrollbar-corner,
+body li::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+body ul::-webkit-scrollbar-thumb,
+body li::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+body ul::-webkit-scrollbar-track,
+body li::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body ul::-webkit-scrollbar,
+body li::-webkit-scrollbar {
   display: none;
 }
+body h1,
 body h2,
+body h3,
+body h4,
+body h5,
+body h6,
 body p {
   padding: 0;
   margin: 0;
@@ -34,6 +80,7 @@ body p {
 }
 body #app {
   width: 100%;
+  overflow-x: hidden;
 }
 body #app .part {
   margin-top: 0.554rem;
@@ -43,6 +90,7 @@ body #app .part {
   top: 0;
   width: 100%;
   height: 0.554rem;
+  max-width: 1080px;
   line-height: .554rem;
   font-size: .267rem;
   text-align: center;
@@ -51,8 +99,33 @@ body #app .part {
   background-color: #584f60;
 }
 .slider {
-  width: 100%;
+  display: block;
+  white-space: nowrap;
   background: #666666;
+  transition: .5s;
+}
+.slider::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+.slider::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.slider::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.slider::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider li {
+  display: inline-block;
+  width: 100%;
 }
 .slider img {
   display: block;

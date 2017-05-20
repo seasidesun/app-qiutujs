@@ -60,6 +60,7 @@ body {
     }
     #app {
         width: 100%;
+        overflow-x: hidden;
 
         .part {
             margin-top: @headHeight;
@@ -84,12 +85,9 @@ body {
 
 .slider {
     display: block;
-    overflow: hidden;
-    overflow-x: auto;
-    overflow-y: hidden;
     white-space: nowrap;
     background: lighten(@fontColor, 20%);
-    transition: 1s;
+    transition: .5s;
 
     &::-webkit-scrollbar-button {
         background-color: transparent;
