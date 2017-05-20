@@ -49,15 +49,18 @@ var Slider =  React.createClass({
                 var interval = (sliderData.startPot - event.changedTouches[0].pageX)/1.3;
                 var shoudTranlate = sliderData.stratTranlate + interval;
                 if (shoudTranlate < 0 || shoudTranlate > sliderData.maxTranlate) shoudTranlate -= interval/1.2;
-                self.setState({
-                    translate: shoudTranlate
-                });
+                sliderData.el.style.transform = 'translateX(' + -shoudTranlate + 'px)';
+                sliderData.endTranlate = shoudTranlate;
                 break;
             case 'touchend':
-                var shouldBakcPot = Math.round((state.translate / sliderData.swidth)) * sliderData.swidth;
+                var shouldBakcPot = Math.round((sliderData.endTranlate / sliderData.swidth)) * sliderData.swidth;
                 if (shouldBakcPot < 0) shouldBakcPot = 0;
                 else if (shouldBakcPot > sliderData.maxTranlate) shouldBakcPot = sliderData.maxTranlate;
                 sliderData.el.style.transition = '.5s';
+                if (shouldBakcPot === state.translate) {
+                    sliderData.el.style.transform = 'translateX(' + -shouldBakcPot + 'px)';
+                    return;
+                }
                 self.setState({
                     translate: shouldBakcPot
                 });
