@@ -10,8 +10,8 @@ var Slider =  React.createClass({
                 'http://7xl4qs.com1.z0.glb.clouddn.com/portal_top.png'
             ],
             imgStyle: '?imageView2/5/w/300/h/140/q/1',
-            translate: 0,
-            intervalId: null
+            // translate: 0,
+            // intervalId: null
         }
     },
     createAutoSlider(el) {
@@ -27,6 +27,7 @@ var Slider =  React.createClass({
             sliderData.swidth = list[0].clientWidth;
             sliderData.width  = sliderData.count * sliderData.swidth;
             sliderData.maxTranlate  = (sliderData.count - 1) * sliderData.swidth;
+            sliderData.nowTranlate = 0;
 
         el.addEventListener('touchstart', this.touchHandler.bind(this, sliderData));
         el.addEventListener('touchmove', this.touchHandler.bind(this, sliderData));
@@ -43,27 +44,22 @@ var Slider =  React.createClass({
                 self.autoSliderHandler(sliderData, true);
                 sliderData.el.style.transition = 'none';
                 sliderData.startPot = event.changedTouches[0].pageX;
-                sliderData.stratTranlate = state.translate;
+                sliderData.stratTranlate = sliderData.nowTranlate;
                 break;
             case 'touchmove':
                 var interval = (sliderData.startPot - event.changedTouches[0].pageX)/1.3;
                 var shoudTranlate = sliderData.stratTranlate + interval;
                 if (shoudTranlate < 0 || shoudTranlate > sliderData.maxTranlate) shoudTranlate -= interval/1.2;
                 sliderData.el.style.transform = 'translateX(' + -shoudTranlate + 'px)';
-                sliderData.endTranlate = shoudTranlate;
+                sliderData.nowTranlate = shoudTranlate;
                 break;
             case 'touchend':
-                var shouldBakcPot = Math.round((sliderData.endTranlate / sliderData.swidth)) * sliderData.swidth;
+                var shouldBakcPot = Math.round((sliderData.nowTranlate / sliderData.swidth)) * sliderData.swidth;
                 if (shouldBakcPot < 0) shouldBakcPot = 0;
                 else if (shouldBakcPot > sliderData.maxTranlate) shouldBakcPot = sliderData.maxTranlate;
                 sliderData.el.style.transition = '.5s';
-                if (shouldBakcPot === state.translate) {
-                    sliderData.el.style.transform = 'translateX(' + -shouldBakcPot + 'px)';
-                    return;
-                }
-                self.setState({
-                    translate: shouldBakcPot
-                });
+                sliderData.el.style.transform = 'translateX(' + -shouldBakcPot + 'px)';
+                sliderData.nowTranlate = shouldBakcPot;
                 self.autoSliderHandler(sliderData);
                 break;
             default:
@@ -77,18 +73,16 @@ var Slider =  React.createClass({
 
         if (ifStop) {
             clearInterval(state.intervalId);
-            self.setState({ intervalId: null });
             return;
         }
 
         var intervalId = setInterval(function () {
-            var translate = self.state.translate;
+            var translate = sliderData.nowTranlate;
             if (translate + sliderData.swidth >= sliderData.width) translate = 0;
             else translate += sliderData.swidth;
 
-            self.setState({
-                translate: translate
-            })
+            sliderData.nowTranlate = translate;
+            sliderData.el.style.transform = 'translateX(' + -sliderData.nowTranlate + 'px)';
         }, sliderData.time);
 
         self.setState({ intervalId: intervalId });
@@ -117,12 +111,8 @@ var Slider =  React.createClass({
             return <li className={"item"}><img src={item + state.imgStyle}></img></li>
         });
 
-        var sliderStyle = {
-            transform: 'translateX(' + -(state.translate || 0) + 'px)'
-        }
-
         return (
-                <ul className={"slider"} ref="sliderBox" style={sliderStyle}>{imgListDom}</ul>
+                <ul className={"slider"} ref="sliderBox">{imgListDom}</ul>
         )
     }
 })
