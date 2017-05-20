@@ -10,7 +10,8 @@ var Slider =  React.createClass({
                 'http://7xl4qs.com1.z0.glb.clouddn.com/portal_top.png'
             ],
             imgStyle: '?imageView2/5/w/300/h/140/q/1',
-            translate: 0
+            translate: 0,
+            intervalId: null
         }
     },
     createAutoSlider(el) {
@@ -31,7 +32,7 @@ var Slider =  React.createClass({
         el.addEventListener('touchmove', this.touchHandler.bind(this, sliderData));
         el.addEventListener('touchend', this.touchHandler.bind(this, sliderData));
 
-        self.autoSliderHandler(sliderData);
+        if (sliderData.auto) self.autoSliderHandler(sliderData);
     },
     touchHandler(sliderData, event) {
         var self = this;
@@ -39,8 +40,7 @@ var Slider =  React.createClass({
         event.preventDefault();
         switch (event.type) {
             case 'touchstart':
-                clearInterval(sliderData.interval);
-                sliderData.interval = null;
+                self.autoSliderHandler(sliderData, true);
                 sliderData.el.style.transition = 'none';
                 sliderData.startPot = event.changedTouches[0].pageX;
                 sliderData.stratTranlate = state.translate;
@@ -61,20 +61,24 @@ var Slider =  React.createClass({
                 self.setState({
                     translate: shouldBakcPot
                 });
-                sliderData.auto = true;
                 self.autoSliderHandler(sliderData);
                 break;
             default:
                 return;
         }
     },
-    autoSliderHandler(sliderData) {
+    autoSliderHandler(sliderData, ifStop) {
         var self = this;
+        var state = self.state;
+        if (sliderData && !sliderData.auto) return;
 
-        if (sliderData.interval) return;
-        sliderData.interval = setInterval(function () {
-            if (!sliderData.auto) return;
+        if (ifStop) {
+            clearInterval(state.intervalId);
+            self.setState({ intervalId: null });
+            return;
+        }
 
+        var intervalId = setInterval(function () {
             var translate = self.state.translate;
             if (translate + sliderData.swidth >= sliderData.width) translate = 0;
             else translate += sliderData.swidth;
@@ -83,12 +87,24 @@ var Slider =  React.createClass({
                 translate: translate
             })
         }, sliderData.time);
+
+        self.setState({ intervalId: intervalId });
     },
     componentDidMount() {
         var self = this;
         var refs = self.refs;
 
         self.createAutoSlider(refs.sliderBox);
+    },
+    componentWillUnmount() {
+        var self = this;
+        var refs = self.refs;
+
+        refs.sliderBox.removeEventListener('touchstart', this.touchHandler);
+        refs.sliderBox.removeEventListener('touchmove', this.touchHandler);
+        refs.sliderBox.removeEventListener('touchend', this.touchHandler);
+
+        self.autoSliderHandler(null, true);
     },
     render() {
         var state = this.state;
