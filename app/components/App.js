@@ -3,6 +3,8 @@ import React from 'react'
 import Header from './Header'
 import Foot from './Foot'
 
+import AppStyle from './App.less'
+
 var App =  React.createClass({
     getInitialState() {
         return {

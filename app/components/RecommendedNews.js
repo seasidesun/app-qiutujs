@@ -1,5 +1,7 @@
 import React from 'react'
 
+import RecommendedNewsStyle from './RecommendedNews.less'
+
 var RecommendedNews =  React.createClass({
     getInitialState() {
         return {

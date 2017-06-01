@@ -1,5 +1,7 @@
 import React from 'react'
 
+import HeaderStyle from './Header.less'
+
 var Header =  React.createClass({
     render() {
         return (

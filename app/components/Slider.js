@@ -1,5 +1,7 @@
 import React from 'react'
 
+import SliderStyle from './Slider.less'
+
 var Slider =  React.createClass({
     getInitialState() {
         return {
@@ -9,9 +11,7 @@ var Slider =  React.createClass({
                 'http://7xl4qs.com1.z0.glb.clouddn.com/portal_top.png',
                 'http://7xl4qs.com1.z0.glb.clouddn.com/portal_top.png'
             ],
-            imgStyle: '?imageView2/5/w/300/h/140/q/1',
-            // translate: 0,
-            // intervalId: null
+            imgStyle: '?imageView2/5/w/300/h/140/q/1'
         }
     },
     createAutoSlider(el) {
@@ -27,7 +27,7 @@ var Slider =  React.createClass({
             sliderData.swidth = list[0].clientWidth;
             sliderData.width  = sliderData.count * sliderData.swidth;
             sliderData.maxTranlate  = (sliderData.count - 1) * sliderData.swidth;
-            sliderData.nowTranlate = 0;
+            sliderData.nowTranlate  = 0;
 
         el.addEventListener('touchstart', this.touchHandler.bind(this, sliderData));
         el.addEventListener('touchmove', this.touchHandler.bind(this, sliderData));

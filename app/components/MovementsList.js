@@ -1,5 +1,7 @@
 import React from 'react'
 
+import MovementsListStyle from './MovementsList.less'
+
 var MovementsList =  React.createClass({
     getInitialState() {
         return {

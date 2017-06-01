@@ -1,0 +1,32 @@
+@import "../common";
+
+footer {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    max-width: @maxWidth;
+    bottom: 0;
+    padding-top: .134rem;
+    padding-bottom: .066rem;
+    justify-content: space-around;
+    background-color: @mainColor;
+    z-index: 999;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+
+        .icon {
+            height: .333rem;
+        }
+
+    }
+    .item {
+        p {
+            font-size: .16rem;
+            color: #fff;
+        }
+    }
+}

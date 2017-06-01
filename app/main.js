@@ -6,7 +6,7 @@ import App from './components/App'
 import Home from './components/Home'
 import MovementsList from './components/MovementsList'
 
-import Style from './style.less'
+import BaseStyle from './base.less'
 
 (function () {
     document.getElementsByTagName('html')[0].style.fontSize = (75/375) * window.screen.width + 'px';

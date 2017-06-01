@@ -3,6 +3,7 @@ import React from 'react'
 import Slider from './Slider'
 import RecommendedNews from './RecommendedNews'
 import ArticleList from './ArticleList'
+import HomeStyle from './Home.less'
 
 var Home =  React.createClass({
     render() {

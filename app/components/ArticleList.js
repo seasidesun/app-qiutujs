@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ArticleListStyle from './ArticleList.less'
+
 var ArticleList =  React.createClass({
     getInitialState() {
         return {

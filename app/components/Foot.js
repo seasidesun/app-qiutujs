@@ -1,6 +1,7 @@
 import React from 'react'
-
 import { browserHistory } from 'react-router';
+
+import FootStyle from './Foot.less'
 
 var Foot =  React.createClass({
     getInitialState() {
