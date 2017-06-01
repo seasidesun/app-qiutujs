@@ -1,25 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-import Slider from './Slider'
-import RecommendedNews from './RecommendedNews'
-import ArticleList from './ArticleList'
-import HomeStyle from './Home.less'
+import Slider from './Slider';
+import RecommendedNews from './RecommendedNews';
+import ArticleList from './ArticleList';
+
+import HomeStyle from './Home.less';
 
 var Home =  React.createClass({
     render() {
         return (
             <div>
                 <Slider></Slider>
-                <div className={'news-box'}>
+                <div className={'content-box'}>
                     <p>推荐</p>
-                    <RecommendedNews></RecommendedNews>
+                    <RecommenList></RecommenList>
                 </div>
-                <div className={'news-box last'}>
+                <div className={'content-box last'}>
                     <p>话题</p>
                     <ArticleList></ArticleList>
                 </div>
             </div>
-        )
+        );
     }
 })
 

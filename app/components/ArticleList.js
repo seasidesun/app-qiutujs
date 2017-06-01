@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import ArticleListStyle from './ArticleList.less'
+import ArticleListStyle from './ArticleList.less';
 
 var ArticleList =  React.createClass({
     getInitialState() {
@@ -62,13 +62,13 @@ var ArticleList =  React.createClass({
                     <p>{item.des}</p>
                     {/*<div className='tag'><span>{item.star}</span><span>{item.hasSee}</span></div>*/}
                 </li>
-            )
+            );
         });
         return (
             <ul className={'news-list content'}>
                 {listDom}
             </ul>
-        )
+        );
     }
 })
 

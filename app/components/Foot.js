@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { browserHistory } from 'react-router';
 
-import FootStyle from './Foot.less'
+import FootStyle from './Foot.less';
 
 var Foot =  React.createClass({
     getInitialState() {
@@ -13,7 +13,6 @@ var Foot =  React.createClass({
         }
     },
     navClickHandler(linkUrl) {
-
         var currentPath = browserHistory.getCurrentLocation().pathname;
         if (currentPath != linkUrl) {
             browserHistory.push(linkUrl);
@@ -24,14 +23,19 @@ var Foot =  React.createClass({
         var self = this;
 
         var navDom = state.linkList.map(function(item, i) {
-            return <a className={"item"} onClick={self.navClickHandler.bind(self, item.link)}><img className={'icon'} src={item.iconUrl}></img><p>{item.title}</p></a>
+            return  (
+                <a className={"item"} onClick={self.navClickHandler.bind(self, item.link)}>
+                    <img className={'icon'} src={item.iconUrl}></img>
+                    <p>{item.title}</p>
+                </a>
+            );
         });
 
         return (
             <footer>
                 {navDom}
             </footer>
-        )
+        );
     }
 })
 

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import RecommendedNewsStyle from './RecommendedNews.less'
+import RecommenListStyle from './RecommenList.less';
 
-var RecommendedNews =  React.createClass({
+var RecommenList =  React.createClass({
     getInitialState() {
         return {
             newsList: [
@@ -38,15 +38,15 @@ var RecommendedNews =  React.createClass({
                 <li style={{backgroundImage: backgroundImage}}>
                     <header><h2>{item.title}</h2><p>{item.des}</p></header>
                 </li>
-            )
+            );
         })
 
         return (
             <ul className={'news-scroll content'}>
                 {newsListDom}
             </ul>
-        )
+        );
     }
 })
 
-module.exports = RecommendedNews;
+module.exports = RecommenList;

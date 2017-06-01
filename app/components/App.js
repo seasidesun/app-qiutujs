@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Header from './Header'
-import Foot from './Foot'
+import Header from './Header';
+import Foot from './Foot';
 
-import AppStyle from './App.less'
+import AppStyle from './App.less';
 
 var App =  React.createClass({
     getInitialState() {
@@ -20,11 +20,11 @@ var App =  React.createClass({
 
         return (
             <div>
-                {!state.isWechat && (<div className={'part'}><Header></Header></div>)}
+                {!state.isWechat && (<div className={'body-pot'}><Header></Header></div>)}
                 {this.props.children}
                 <Foot></Foot>
             </div>
-        )
+        );
     }
 })
 

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import SliderStyle from './Slider.less'
+import SliderStyle from './Slider.less';
 
 var Slider =  React.createClass({
     getInitialState() {
@@ -113,7 +113,7 @@ var Slider =  React.createClass({
 
         return (
                 <ul className={"slider"} ref="sliderBox">{imgListDom}</ul>
-        )
+        );
     }
 })
 

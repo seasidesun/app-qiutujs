@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import MovementsListStyle from './MovementsList.less'
+import MovementsListStyle from './MovementsList.less';
 
 var MovementsList =  React.createClass({
     getInitialState() {
@@ -70,7 +70,7 @@ var MovementsList =  React.createClass({
                     </div>
                     <span className={"right"}></span>
                 </li>
-            )
+            );
         });
 
         return movementsListDom;
@@ -83,7 +83,7 @@ var MovementsList =  React.createClass({
             <div className={"movementsList"}>
                 <div className={"wrapper"}>{self.getMovementsList()}</div>
             </div>
-        )
+        );
     }
 })
 
