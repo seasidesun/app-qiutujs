@@ -20,7 +20,7 @@ var App =  React.createClass({
 
         return (
             <div>
-                {!state.isWechat && (<div className={'body-pot'}><Header></Header></div>)}
+                {!state.isWechat && (<div className={'body-pot-start'}><Header></Header></div>)}
                 {this.props.children}
                 <Foot></Foot>
             </div>

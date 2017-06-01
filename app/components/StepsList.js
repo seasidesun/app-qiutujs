@@ -1,12 +1,8 @@
 import React from 'react';
 
-import Slider from './Slider';
-import RecommenList from './RecommenList';
-import ArticleList from './ArticleList';
+import StepListStyle from './StepList.less';
 
-import HomeStyle from './Home.less';
-
-var Home =  React.createClass({
+var StepList =  React.createClass({
     render() {
         return (
             <div>
@@ -24,4 +20,4 @@ var Home =  React.createClass({
     }
 })
 
-module.exports = Home;
+module.exports = StepList;

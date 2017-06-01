@@ -4,7 +4,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import App from './components/App'
 import Home from './components/Home'
-import MovementsList from './components/MovementsList'
+import MovementsPage from './components/MovementsPage'
 
 import BaseStyle from './base.less'
 
@@ -16,7 +16,7 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
         <IndexRoute component={Home}/>
-        <Route path="/move" component={MovementsList}/>
+        <Route path="/move" component={MovementsPage}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

@@ -1,90 +1,3 @@
-.clear-size {
-  padding: 0;
-  margin: 0;
-}
-.hid-scorrl-bar::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-.hid-scorrl-bar::-webkit-scrollbar-button {
-  background-color: transparent;
-}
-.hid-scorrl-bar::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-.hid-scorrl-bar::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
-.hid-scorrl-bar::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-.hid-scorrl-bar::-webkit-scrollbar {
-  display: none;
-}
-html {
-  font-size: 75px;
-}
-body {
-  width: 100%;
-  max-width: 1080px;
-  padding: 0;
-  margin: 0;
-  margin: 0 auto;
-  background-color: #eee;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-body a {
-  color: #000;
-}
-body ul,
-body li {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-body ul::-webkit-scrollbar,
-body li::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-body ul::-webkit-scrollbar-button,
-body li::-webkit-scrollbar-button {
-  background-color: transparent;
-}
-body ul::-webkit-scrollbar-corner,
-body li::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-body ul::-webkit-scrollbar-thumb,
-body li::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
-body ul::-webkit-scrollbar-track,
-body li::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-body ul::-webkit-scrollbar,
-body li::-webkit-scrollbar {
-  display: none;
-}
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6,
-body p {
-  padding: 0;
-  margin: 0;
-  color: #333333;
-}
-body #app {
-  width: 100%;
-  overflow-x: hidden;
-}
-body #app .part {
-  margin-top: 0.554rem;
-}
 .head {
   position: fixed;
   top: 0;
@@ -98,11 +11,46 @@ body #app .part {
   z-index: 999;
   background-color: #584f60;
 }
+footer {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  bottom: 0;
+  padding-top: .134rem;
+  padding-bottom: .066rem;
+  justify-content: space-around;
+  background-color: #584f60;
+  z-index: 999;
+}
+footer .item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+footer .item .icon {
+  height: .333rem;
+}
+footer .item p {
+  font-size: .16rem;
+  color: #fff;
+}
+.body-pot-start {
+  margin-top: 0.554rem;
+}
 .slider {
   display: block;
   white-space: nowrap;
   background: #666666;
   transition: .5s;
+}
+.slider::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.slider::-webkit-scrollbar {
+  display: none;
 }
 .slider::-webkit-scrollbar-button {
   background-color: transparent;
@@ -116,13 +64,6 @@ body #app .part {
 .slider::-webkit-scrollbar-track {
   background-color: transparent;
 }
-.slider::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-.slider::-webkit-scrollbar {
-  display: none;
-}
 .slider li {
   display: inline-block;
   width: 100%;
@@ -130,100 +71,6 @@ body #app .part {
 .slider img {
   display: block;
   width: 100%;
-}
-.movementsList {
-  width: 100%;
-  margin-top: .067rem;
-  background: #ffffff;
-}
-.movementsList .wrapper {
-  padding: 0 .2rem;
-}
-.movementsList .item {
-  display: flex;
-  position: relative;
-  height: .8rem;
-  padding: .067rem 0;
-  overflow: hidden;
-  border-bottom: 1px solid #f2f2f2;
-}
-.movementsList .item .icon {
-  display: inline-flex;
-  height: .8rem;
-  width: .8rem;
-  justify-content: center;
-  align-items: center;
-  background-color: #584f60;
-  border-radius: 5px;
-}
-.movementsList .item .icon img {
-  width: 70%;
-}
-.movementsList .item .info {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
-}
-.movementsList .item .right {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-right: 0;
-  border-left: 15px solid #584f60;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  transform: translate(-50%, -50%);
-}
-.movementsList .item .right::before {
-  content: "";
-  position: absolute;
-  left: -9px;
-  width: 0;
-  height: 0;
-  border-right: 0;
-  border-left: 15px solid #ffffff;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  transform: translate(-50%, -50%);
-}
-footer {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  max-width: 1080px;
-  bottom: 0;
-  padding-top: .134rem;
-  padding-bottom: .066rem;
-  justify-content: space-around;
-  background-color: #584f60;
-  z-index: 999;
-}
-footer a {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
-}
-footer a .icon {
-  height: .333rem;
-}
-footer a p {
-  font-size: .16rem;
-  color: #fff;
-}
-.news-box {
-  margin-top: .134rem;
-  background-color: #fff;
-  padding: .2rem;
-}
-.news-box .content {
-  margin-top: .2rem;
-}
-.news-box.last {
-  margin-bottom: .6rem;
 }
 .news-scroll {
   overflow: hidden;
@@ -284,4 +131,87 @@ footer a p {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.content-box {
+  margin-top: .134rem;
+  background-color: #fff;
+  padding: .2rem;
+}
+.content-box .content {
+  margin-top: .2rem;
+}
+.content-box.last {
+  margin-bottom: .6rem;
+}
+.movementsList {
+  width: 100%;
+  margin-top: .067rem;
+  background: #ffffff;
+}
+.movementsList .item {
+  height: 2rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: .2rem .2rem;
+  box-sizing: border-box;
+}
+.movementsList .item .info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+.movementsList .item .info .name-en {
+  font-size: .213rem;
+}
+.movementsList .item .info .name {
+  font-size: .16rem;
+  margin-top: .1rem;
+}
+.movementsList .item .info .muscle {
+  position: absolute;
+  bottom: 0;
+  font-size: .16rem;
+  margin-top: .2rem;
+}
+html {
+  font-size: 75px;
+}
+html body {
+  width: 100%;
+  max-width: 1080px;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+  background-color: #eee;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+html body a {
+  color: #000;
+}
+html body ul,
+html body li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body p {
+  padding: 0;
+  margin: 0;
+  color: #333333;
+}
+#app {
+  width: 100%;
+  overflow-x: hidden;
+}
+.last {
+  margin-bottom: .6rem;
 }
