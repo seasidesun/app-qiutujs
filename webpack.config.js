@@ -1,34 +1,33 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var extractLESS = new ExtractTextPlugin('style.css');
-var extractJs = new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}});
+const path = require('path')
+const PAGE = require('./webpack.pages.js')()
 
 module.exports = {
-  devtool: 'eval-source-map',
-
-  entry:  {
-    "bundle": __dirname + "/app/main.js",
-  },
-  output: {
-    path: __dirname + "/build/",
-    filename: "[name].js"
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader?presets[]=es2015&presets[]=react'
-      },
-      {
-        test : /\.(less)$/,
-        loader: ExtractTextPlugin.extract([ 'css-loader', 'less-loader' ])
-       }
-    ]
-  },
-  plugins: [
-    extractLESS,
-    // extractJs
-  ]
+    entry: PAGE.entrys,
+    output: PAGE.output,
+    module: {
+        rules: PAGE.rules,
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+        }
+    },
+    plugins: [
+        ...PAGE.plugins,
+    ],
+    devServer: {
+        host: '0.0.0.0',
+        port: 8080,
+        proxy: {
+            "/api": {
+                target: "http://localhost:3000",
+                pathRewrite: {"^/api" : ""},
+            },
+        },
+        https: false,
+        stats: PAGE.stats,
+    },
+    devtool: process.env.NODE_ENV === 'production' ? '' : 'source-map',
+    mode: process.env.NODE_ENV || 'development',
+    stats: PAGE.stats,
 }

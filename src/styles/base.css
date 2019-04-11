@@ -1,0 +1,30 @@
+html, body {
+    -webkit-font-smoothing: antialiased;
+}
+
+body, h1, h2, h3, h4, h5, h6, dl, ul, li, ol, dt, dd, table, th, tr, td, p, select, input, img, textarea, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    font-family: 'PingFangSC-Regular','Microsoft YaHei', 'Heiti', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+th {
+    font-weight: normal;
+    font-style: normal;
+}
+
+input, textarea {
+    outline: none;
+}
