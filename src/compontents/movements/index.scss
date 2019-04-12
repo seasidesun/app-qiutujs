@@ -1,0 +1,37 @@
+.movements-wrapper {
+    margin-top: .1rem;
+    width: 100%;
+    padding: .1rem .04rem;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            display: flex;
+            width: 30%;
+            height: .4rem;
+            background-color: #3f3f3f;
+            border-radius: .18rem;
+            align-items: center;
+            padding-left: .05rem;
+            box-sizing: border-box;
+
+            img {
+                height: 80%;
+            }
+
+            .info {
+                font-size: .14rem;
+                color: #fff;
+                margin-left: .05rem;
+            }
+        }
+    }
+
+    ul + ul {
+        margin-top: 10px;
+    }
+}
