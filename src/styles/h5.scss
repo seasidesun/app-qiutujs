@@ -1,5 +1,8 @@
+$grey: #e5e5e5;
+
 html, body {
     user-select: none;
     -webkit-overflow-scrolling: touch;
     -webkit-tap-highlight-color: transparent;
+    background-color: $grey;
 }
