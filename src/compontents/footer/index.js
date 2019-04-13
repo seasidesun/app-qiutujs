@@ -1,5 +1,5 @@
-import './footer.css'
-import footerTpl from './footer.hbs'
+import './index.css'
+import footerTpl from './index.hbs'
 
 let footer = footerTpl({ msg: 'footer with hbs' })
 
