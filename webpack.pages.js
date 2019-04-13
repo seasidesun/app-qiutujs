@@ -83,7 +83,7 @@ const defaultConfig = {
 const getConfig = () => {
     // 获取页面目录下的文件夹和html文件
     let pages = process.env.pages && process.env.pages.split('&') || []
-    let pagesDirList = dir.files(path.resolve(__dirname, 'src/pages'), 'dir', null, { shortName: true, sync: true })
+    let pagesDirList = dir.files(path.resolve(__dirname, 'src/pages'), 'dir', null, { shortName: true, sync: true, recursive: false })
     let pagesHtmlList = dir.files(path.resolve(__dirname, 'src/pages'), 'file', null, { shortName: true, sync: true, recursive: false })
     pages = pages.length ? pages : pagesDirList
 
