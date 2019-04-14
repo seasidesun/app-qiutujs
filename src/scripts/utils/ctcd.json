@@ -1,0 +1,144 @@
+{
+	"movements": [
+        {
+            "id": "1",
+            "name": "俯卧撑",
+            "nameEn": "Push Up",
+            "icon": "../assets/icon/pushup.png",
+            "muscleGroup": "胸肌（胸大肌和胸小肌）、三角肌前束、肱三头肌",
+            "muscleGroupImgList": "http://epaper.dfdaily.com/dfzb/res/1/1/2015-02/25/A12/res07_attpic_brief.jpg",
+            "backgroundImgUrl": "steps_1_10_1.png",
+            "descriptions": "  不同形式的俯卧撑锻炼肌肉的程度不同,但俯卧撑的所有变式都能增强力量、打肌肉。 俯卧撑尤其锻炼胸大肌、三角肌前束和胸小肌,从而最大限度地发展你躯干上的推力肌肉。 此外,俯卧撑还能够锻炼肱三头肌(上臂的主要肌肉)的三个头。",
+            "slogan": "铠甲般的胸肌与钢铁般的肱三头肌"
+        },
+        {
+            "id": "2",
+            "name": "深蹲",
+            "nameEn": "Squats",
+            "icon": "../assets/icon/squats.png",
+            "muscleGroup": "",
+            "muscleGroupImgList": "",
+            "backgroundImgUrl": "steps_2_10_1.png",
+            "descriptions": "",
+            "slogan": "升降机般的大腿"
+        },
+        {
+            "id": "3",
+            "name": "引体向上",
+            "nameEn": "Pull Up",
+            "icon": "../assets/icon/pullup.png",
+            "muscleGroup": "",
+            "muscleGroupImgList": "",
+            "backgroundImgUrl": "steps_3_10_1.png",
+            "descriptions": "",
+            "slogan": "仓门般的背部与大炮般的肱二头肌"
+        },
+        {
+            "id": "4",
+            "name": "举腿",
+            "nameEn": "Leg Raise",
+            "icon": "../assets/icon/legraise.png",
+            "muscleGroup": "",
+            "muscleGroupImgList": "",
+            "backgroundImgUrl": "steps_4_10_2.png",
+            "descriptions": "",
+            "slogan": "魔鬼六块"
+        },
+        {
+            "id": "5",
+            "name": "桥",
+            "nameEn": "Bridge",
+            "icon": "../assets/icon/bridge.png",
+            "muscleGroup": "",
+            "muscleGroupImgList": "",
+            "backgroundImgUrl": "steps_5_10_1.png",
+            "descriptions": "",
+            "slogan": "严阵以待的脊柱"
+        },
+        {
+            "id": "6",
+            "name": "倒立撑",
+            "nameEn": "Hand Stand",
+            "icon": "../assets/icon/handstand.png",
+            "muscleGroup": "",
+            "muscleGroupImgList": "",
+            "backgroundImgUrl": "steps_6_10_1.png",
+            "descriptions": "",
+            "slogan": "健康、强力的肩膀"
+        }
+    ],
+    "steps": [
+        [   
+            {"title": "第一式：墙壁俯卧撑","name": "墙壁俯卧撑"},
+            {"title": "第二式：上斜俯卧撑","name": "上斜俯卧撑"},
+            {"title": "第三式：膝盖俯卧撑","name": "膝盖俯卧撑"},
+            {"title": "第四式：半俯卧撑","name": "半俯卧撑"},
+            {"title": "第五式：标准俯卧撑","name": "标准俯卧撑"},
+            {"title": "第六式：窄距俯卧撑","name": "窄距俯卧撑"},
+            {"title": "第七式：偏重俯卧撑","name": "偏重俯卧撑"},
+            {"title": "第八式：单臂半俯卧撑","name": "单臂半俯卧撑"},
+            {"title": "第九式：杠杆俯卧撑","name": "杠杆俯卧撑"},
+            {"title": "最终式： 单臂俯卧撑","name": "单臂俯卧撑"}
+        ],
+        [
+            {"title": "第一式：肩倒立深蹲","name": "肩倒立深蹲"},
+            {"title": "第二式：折刀深蹲","name": "折刀深蹲"},
+            {"title": "第三式：支撑深蹲","name": "支撑深蹲"},
+            {"title": "第四式：半深蹲","name": "半深蹲"},
+            {"title": "第五式：标准深蹲","name": "标准深蹲"},
+            {"title": "第六式：窄距深蹲","name": "窄距深蹲"},
+            {"title": "第七式：偏重深蹲","name": "偏重深蹲"},
+            {"title": "第八式：单腿半深蹲","name": "单腿半深蹲"},
+            {"title": "第九式：单腿辅助深蹲","name": "单腿辅助深蹲"},
+            {"title": "最终式：单腿深蹲","name": "单腿深蹲"}
+        ],
+        [
+            {"title": "第一式：垂直引体","name": "垂直引体"},
+            {"title": "第二式：水平引体向上","name": "水平引体向上"},
+            {"title": "第三式：折刀引体向上","name": "折刀引体向上"},
+            {"title": "第四式：半引体向上","name": "半引体向上"},
+            {"title": "第五式：标准引体向上","name": "标准引体向上"},
+            {"title": "第六式：窄距引体向上","name": "窄距引体向上"},
+            {"title": "第七式：偏重引体向上","name": "偏重引体向上"},
+            {"title": "第八式：单臂半引体向上","name": "单臂半引体向上"},
+            {"title": "第九式：单臂辅助引体向上","name": "单臂辅助引体向上"},
+            {"title": "最终式：单臂引体向上","name": "单臂引体向上"}
+        ],
+        [
+            {"title": "第一式：坐姿屈膝","name": "坐姿屈膝"},
+            {"title": "第二式：平卧抬膝","name": "平卧抬膝"},
+            {"title": "第三式：平卧屈举腿","name": "平卧屈举腿"},
+            {"title": "第四式：平卧蛙举腿","name": "平卧蛙举腿"},
+            {"title": "第五式：平卧直举腿","name": "平卧直举腿"},
+            {"title": "第六式：悬垂屈膝","name": "悬垂屈膝"},
+            {"title": "第七式：悬垂屈举腿","name": "悬垂屈举腿"},
+            {"title": "第八式：悬垂蛙举腿","name": "悬垂蛙举腿"},
+            {"title": "第九式：悬垂半举腿","name": "悬垂半举腿"},
+            {"title": "最终式：悬垂直举腿","name": "悬垂直举腿"}
+        ],
+        [
+            {"title": "第一式：短桥","name": "短桥"},
+            {"title": "第二式：直桥","name": "直桥"},
+            {"title": "第三式：高低桥","name": "高低桥"},
+            {"title": "第四式：顶桥","name": "顶桥"},
+            {"title": "第五式：半桥","name": "半桥"},
+            {"title": "第六式：标准桥","name": "标准桥"},
+            {"title": "第七式：下行桥","name": "下行桥"},
+            {"title": "第八式：上行桥","name": "上行桥"},
+            {"title": "第九式：合桥","name": "合桥"},
+            {"title": "最终式：铁板桥","name": "铁板桥"}
+        ],
+        [
+            {"title": "第一式：靠墙顶立","name": "靠墙顶立"},
+            {"title": "第二式：乌鸦式","name": "乌鸦式"},
+            {"title": "第三式：靠墙倒立","name": "靠墙倒立"},
+            {"title": "第四式：半倒立撑","name": "半倒立撑"},
+            {"title": "第五式：标准倒立撑","name": "标准倒立撑"},
+            {"title": "第六式：窄距倒立撑","name": "窄距倒立撑"},
+            {"title": "第七式：偏重倒立撑","name": "偏重倒立撑"},
+            {"title": "第八式：单臂半倒立撑","name": "单臂半倒立撑"},
+            {"title": "第九式：杠杆倒立撑","name": "杠杆倒立撑"},
+            {"title": "最终式：单臂倒立撑","name": "单臂倒立撑"}
+        ]
+    ]
+}

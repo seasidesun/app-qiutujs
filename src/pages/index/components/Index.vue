@@ -22,7 +22,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.interval {
-    margin-top: .1rem;
-}
 </style>

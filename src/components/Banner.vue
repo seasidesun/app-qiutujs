@@ -1,5 +1,5 @@
 <template>
-    <div class="head-wrapper">
+    <div class="head-wrapper header-box theme-grey">
         <img src="../assets/header.jpg" alt="" class="banner">
     </div>
 </template>
@@ -19,7 +19,6 @@ export default {
 <style lang="scss" scoped>
 .head-wrapper {
     width: 100%;
-    height: 1.5rem;
     overflow: hidden;
 
     .banner {
@@ -28,4 +27,3 @@ export default {
     }
 }
 </style>
-

@@ -32,6 +32,20 @@ export default {
 </style>
 
 <style lang="scss">
+$grey: #3f3f3f;
+
+.theme-grey {
+    background-color: $grey;
+}
+
+.interval {
+    margin-top: .1rem;
+}
+
+.header-box {
+    height: 1.5rem;
+}
+
 .back-leave-active, .back-enter-active,
 .forward-leave-active, .forward-enter-active {
     position: fixed;
