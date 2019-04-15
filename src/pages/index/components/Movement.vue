@@ -45,6 +45,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.movement-page {
+    width: 100%;
+}
 .header {
     display: flex;
     flex-direction: column;

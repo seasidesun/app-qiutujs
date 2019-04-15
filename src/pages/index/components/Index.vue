@@ -22,4 +22,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.index-page {
+    width: 100%;
+}
 </style>

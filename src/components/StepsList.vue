@@ -1,7 +1,7 @@
 <template>
     <div class="stepsList-wrapper">
         <ul>
-            <li v-for="item in list">
+            <li v-for="item in list"  @click="toStep(item.id)">
                 {{ item.title }}
             </li>
         </ul>
@@ -23,6 +23,11 @@ export default {
     },
     created () {
     },
+    methods: {
+        toStep (sId) {
+            this.$router.push(`/step/${sId}`)
+        }
+    }
 }
 </script>
 
