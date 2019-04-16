@@ -19,14 +19,15 @@ export default {
     },
     data () {
         return {
+            mId: this.$route.params.mId,
         }
     },
     created () {
     },
     methods: {
         toStep (sId) {
-            this.$router.push(`/step/${sId}`)
-        }
+            this.$router.push(`/step/${this.mId}/${sId}`)
+        },
     }
 }
 </script>
