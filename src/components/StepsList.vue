@@ -46,22 +46,15 @@ export default {
 
         li {
             display: flex;
-            width: 40%;
+            width: 43%;
             height: .4rem;
             background-color: #3f3f3f;
             border-radius: .18rem;
             align-items: center;
-            padding-left: .05rem;
+            padding-left: .1rem;
             box-sizing: border-box;
             font-size: .14rem;
             margin-top: .1rem;
-            img {
-                height: 80%;
-            }
-
-            .info {
-                margin-left: .05rem;
-            }
         }
     }
 
