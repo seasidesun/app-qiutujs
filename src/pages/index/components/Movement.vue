@@ -52,8 +52,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding: .3rem .2rem;
     font-size: .15rem;
 
     .name {

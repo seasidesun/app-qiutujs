@@ -45,6 +45,8 @@ $grey: #3f3f3f;
 
 .header-box {
     height: 1.5rem;
+    padding: .3rem .2rem;
+    box-sizing: border-box;
 }
 
 .back-leave-active, .back-enter-active,

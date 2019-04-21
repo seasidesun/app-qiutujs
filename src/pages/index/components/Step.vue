@@ -1,21 +1,29 @@
 <template>
     <div class="step-page">
         <section class="header header-box theme-grey">
-            111
+            {{info.title}}
         </section>
     </div>
 </template>
 
 <script>
-
+import { getStep } from '@/api'
 export default {
     name: 'Step',
     components: {
     },
     data () {
         return {
+            info: {},
+            sId: this.$route.params.sId,
+            mId: this.$route.params.mId,
         }
-    }
+    },
+    created () {
+        getStep().then((ret) => {
+            this.info = ret
+        })
+    },
 }
 </script>
 <style lang="scss" scoped>

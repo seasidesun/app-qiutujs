@@ -1,7 +1,7 @@
 <template>
     <div class="stepsList-wrapper">
         <ul>
-            <li v-for="item in list"  @click="toStep(item.id)">
+            <li v-for="item in list"  @click="toStep(item.id)" :key="item.id">
                 {{ item.title }}
             </li>
         </ul>
