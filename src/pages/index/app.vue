@@ -18,7 +18,6 @@ export default {
     },
     watch: {
         '$route' (to, from) {
-            console.log(`${from.name}-${to.name}`)
             if (!from || !to) this.aniName = 'forward'
             else if (routerAniMap.includes(`${from.name}-${to.name}`)) this.aniName = 'forward'
             else this.aniName = 'back'

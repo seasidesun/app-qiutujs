@@ -7,8 +7,8 @@
         </ul>
         <ul> 
             <li class="theme-grey" @click="toMovement(4)"><img src="../assets/icon/legraise.png" alt=""><span class="info">举腿</span></li>
-            <li class="theme-grey" @click="toMovement(5)"><img src="../assets/icon/handhandstand.png" alt=""><span class="info">倒立</span></li>
-            <li class="theme-grey" @click="toMovement(6)"><img src="../assets/icon/bridges.png" alt=""><span class="info">桥</span></li>
+            <li class="theme-grey" @click="toMovement(5)"><img src="../assets/icon/bridges.png" alt=""><span class="info">桥</span></li>
+            <li class="theme-grey" @click="toMovement(6)"><img src="../assets/icon/handhandstand.png" alt=""><span class="info">倒立</span></li>
         </ul>
     </div>
 </template>
