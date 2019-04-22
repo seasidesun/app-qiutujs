@@ -46,3 +46,14 @@ export const detectOS = () => {
         android,
     }
 }
+
+/**
+ * @param {Object} obj
+ * @returns {String}
+ * eg {a:1, b:2} -> a=1&b=2
+ */
+export const getQueryFromObj = (obj) => {
+    return Object.keys(obj).map((key) => {
+        return `${key}=${obj[key]}`
+    }).join('&')
+}

@@ -20,7 +20,7 @@ export default {
         }
     },
     created () {
-        getStep().then((ret) => {
+        getStep({sId: this.sId, mId: this.mId}).then((ret) => {
             this.info = ret
         })
     },
