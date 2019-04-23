@@ -20,6 +20,7 @@ export default {
 .head-wrapper {
     width: 100%;
     overflow: hidden;
+    padding: 0;
 
     .banner {
         width: 100%;
