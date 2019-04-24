@@ -4,8 +4,14 @@
             {{info.title}}
         </section>
         <ul class="interval level">
-            <li v-for="item in info.level">{{item.description}}</li>
+            <li v-for="(item, index) in info.level" :key="index">{{item.description}}</li>
         </ul>
+        <section class="text interval theme-grey">
+            {{info.suggest}}
+        </section>
+        <section class="text interval">
+            {{info.description}}
+        </section>
     </div>
 </template>
 
@@ -44,5 +50,12 @@ export default {
     li + li {
         margin-top: .1rem;
     }
+}
+.text {
+    background-color: #fff;
+    font-size: .14rem;
+    color: #353535;
+    padding: .1rem;
+    box-sizing: border-box;
 }
 </style>
