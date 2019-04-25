@@ -35,7 +35,8 @@ export default {
 $grey: #3f3f3f;
 
 .theme-grey {
-    background-color: $grey;
+    background-color: $grey !important;
+    color: #fff !important;
 }
 
 .interval {

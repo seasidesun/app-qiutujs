@@ -9,8 +9,13 @@
         <section class="text interval theme-grey">
             {{info.suggest}}
         </section>
-        <section class="text interval">
+        <section class="text interval des theme-grey">
             {{info.description}}
+            <ul class="img-list">
+                <li v-for="(item, index) in info.imgList" :key="index">
+                    <img class="" :src="`http://qt.qn.junanchi.com/${item.imgUrl}`">
+                </li>
+            </ul>
         </section>
     </div>
 </template>
@@ -57,5 +62,17 @@ export default {
     color: #353535;
     padding: .1rem;
     box-sizing: border-box;
+
+    &.des {
+        font-size: .16rem;
+    }
+}
+.img-list {
+    width: 70%;
+    margin: .1rem auto;
+
+    img {
+        width: 100%;
+    }
 }
 </style>
