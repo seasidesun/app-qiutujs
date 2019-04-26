@@ -1,14 +1,14 @@
 <template>
     <div class="step-page">
-        <section class="header header-box theme-grey">
+        <section class="header theme-grey">
             {{info.title}}
+            <div class="suggest">
+                {{info.suggest}}
+            </div>
         </section>
         <ul class="interval level">
             <li v-for="(item, index) in info.level" :key="index">{{item.description}}</li>
         </ul>
-        <section class="text interval theme-grey">
-            {{info.suggest}}
-        </section>
         <section class="text interval des theme-grey">
             {{info.description}}
             <ul class="img-list">
@@ -42,6 +42,18 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.header {
+    height: auto;
+    min-height: 1.5rem;
+    padding: .2rem .2rem;
+    box-sizing: border-box;
+
+    .suggest {
+        margin-top: .1rem;
+        font-size: .14rem;
+    }
+}
+
 .step-page {
     width: 100%;
 }
@@ -60,7 +72,7 @@ export default {
     background-color: #fff;
     font-size: .14rem;
     color: #353535;
-    padding: .1rem;
+    padding: .2rem .15rem;
     box-sizing: border-box;
 
     &.des {
