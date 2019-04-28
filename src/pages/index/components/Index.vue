@@ -2,20 +2,20 @@
     <div class="index-page">
         <Banner />
         <MovementsList class="interval"/>
-        <ArticleL />
+        <ArticleS />
     </div>
 </template>
 
 <script>
 import Banner from '@/components/Banner.vue'
-import ArticleL from '@/components/ArticleList/ArticleL.vue'
+import ArticleS from '@/components/ArticleList/ArticleS.vue'
 import MovementsList from '@/components/MovementsList.vue'
 
 export default {
     name: 'App',
     components: {
         Banner,
-        ArticleL,
+        ArticleS,
         MovementsList,
     },
     data () {
