@@ -54,6 +54,6 @@ export const detectOS = () => {
  */
 export const getQueryFromObj = (obj) => {
     return Object.keys(obj).map((key) => {
-        return `${key}=${obj[key]}`
+        return `${key}=${encodeURIComponent(obj[key])}`
     }).join('&')
 }
