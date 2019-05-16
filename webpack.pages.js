@@ -2,6 +2,7 @@ const path = require('path')
 const dir = require('node-dir')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 // 只在打包时支持文件命的hash，开发阶段保留原始名称（如果开发阶段也加hash，会使webpack-dev-server缓存过多的文件）
 const hashTag = process.env.NODE_ENV !== 'production' ? '' : '-[hash]'
@@ -102,18 +103,30 @@ const getConfig = () => {
         ret.entrys[page] = DEFAULT_ENTRY.concat(path.join(__dirname, `src/pages/${page}/index.js`))
 
         // 生成对应html
-        ret.plugins.push(new htmlWebpackPlugin({
-            template: pagesHtmlList.includes(`${page}.html`) ? `./src/pages/${page}.html` : `./src/template.html`,
-            filename: `${page}.html`,
-            title: `${page}`,
-            chunks: [`${page}`],
-            date: time,
-            minify: {
-                minifyJS: true,
-                minifyCSS: true,
-            },
-        }))
+        ret.plugins.push(
+            new htmlWebpackPlugin({
+                template: pagesHtmlList.includes(`${page}.html`) ? `./src/pages/${page}.html` : `./src/template.html`,
+                filename: `${page}.html`,
+                title: `${page}`,
+                chunks: [`${page}`],
+                date: time,
+                minify: {
+                    minifyJS: true,
+                    minifyCSS: true,
+                },
+            })
+        )
     })
+
+    ret.plugins.push(
+        new ScriptExtHtmlWebpackPlugin({
+            custom: {
+                test: /\.js$/,
+                attribute: 'charset',
+                value: 'UTF-8',
+            },
+        })
+    )
 
     return ret
 }
